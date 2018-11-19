@@ -7,13 +7,13 @@ class Map extends React.Component {
   render() {
     return (
       <>
-        <div className=" content">
+        <div className="content">
           <Row>
             <Col md="12">
-              <Card className=" card-plain">
+              <Card className="card-plain">
                 <CardHeader>Google Maps</CardHeader>
                 <CardBody>
-                  <div className=" map" id="map" />
+                  <div className="map" id="map" />
                 </CardBody>
               </Card>
             </Col>

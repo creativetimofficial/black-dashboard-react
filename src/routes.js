@@ -60,7 +60,7 @@ var routes = [
   },
   {
     path: "/rtl",
-    name: "RLT Support",
+    name: "RTL Support",
     icon: "tim-icons icon-world",
     component: Rtl,
     layout: "/admin"

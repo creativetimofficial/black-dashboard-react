@@ -16,7 +16,7 @@ class Notifications extends React.Component {
   render() {
     return (
       <>
-        <div className=" content">
+        <div className="content">
           <Row>
             <Col md="6">
               <Card>
@@ -30,14 +30,14 @@ class Notifications extends React.Component {
                   <Alert color="info">
                     <span>This is a notification with close button.</span>
                   </Alert>
-                  <Alert className=" alert-with-icon" color="info">
-                    <span className=" tim-icons icon-bell-55" />
+                  <Alert className="alert-with-icon" color="info">
+                    <span className="tim-icons icon-bell-55" />
                     <span>
                       This is a notification with close button and icon.
                     </span>
                   </Alert>
-                  <Alert className=" alert-with-icon" color="info">
-                    <span className=" tim-icons icon-bell-55" />
+                  <Alert className="alert-with-icon" color="info">
+                    <span className="tim-icons icon-bell-55" />
                     <span>
                       This is a notification with close button and icon and have
                       many lines. You can see that the icon and the close button
@@ -90,15 +90,15 @@ class Notifications extends React.Component {
             <Col md="12">
               <Card>
                 <CardBody>
-                  <div className=" places-buttons">
+                  <div className="places-buttons">
                     <Row>
-                      <Col className=" ml-auto mr-auto text-center" md="6">
+                      <Col className="ml-auto mr-auto text-center" md="6">
                         <CardTitle tag="h4">Notifications Places</CardTitle>
-                        <p className=" category">Click to view notifications</p>
+                        <p className="category">Click to view notifications</p>
                       </Col>
                     </Row>
                     <Row>
-                      <Col className=" ml-auto mr-auto" lg="8">
+                      <Col className="ml-auto mr-auto" lg="8">
                         <Row>
                           <Col md="4">
                             <Button
@@ -131,7 +131,7 @@ class Notifications extends React.Component {
                       </Col>
                     </Row>
                     <Row>
-                      <Col className=" ml-auto mr-auto" lg="8">
+                      <Col className="ml-auto mr-auto" lg="8">
                         <Row>
                           <Col md="4">
                             <Button
