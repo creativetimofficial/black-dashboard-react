@@ -15,7 +15,7 @@ import {
   Col
 } from "reactstrap";
 
-class User extends React.Component {
+class UserProfile extends React.Component {
   render() {
     return (
       <>
@@ -176,21 +176,18 @@ class User extends React.Component {
                     <Button
                       className=" btn-icon btn-round"
                       color="facebook"
-                      href="javascript:void(0)"
                     >
                       <i className=" fab fa-facebook" />
                     </Button>
                     <Button
                       className=" btn-icon btn-round"
                       color="twitter"
-                      href="javascript:void(0)"
                     >
                       <i className=" fab fa-twitter" />
                     </Button>
                     <Button
                       className=" btn-icon btn-round"
                       color="google"
-                      href="javascript:void(0)"
                     >
                       <i className=" fab fa-google-plus" />
                     </Button>
@@ -205,4 +202,4 @@ class User extends React.Component {
   }
 }
 
-export default User;
+export default UserProfile;

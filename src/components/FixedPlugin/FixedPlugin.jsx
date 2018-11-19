@@ -85,8 +85,8 @@ class FixedPlugin extends Component {
                 <i className="nc-icon nc-paper" /> Documentation
               </Button>
             </li>
-            <li class="header-title">Want more components?</li>
-            <li class="button-container">
+            <li className="header-title">Want more components?</li>
+            <li className="button-container">
               <Button
                 href="https://www.creative-tim.com/product/black-dashboard-pro-react"
                 className="btn-round"

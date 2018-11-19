@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
                   key={key}
                 >
                   <NavLink
-                    to={prop.path}
+                    to={prop.layout + prop.path}
                     className="nav-link"
                     activeClassName="active"
                   >

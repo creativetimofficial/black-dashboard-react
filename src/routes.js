@@ -3,10 +3,10 @@ import Icons from "views/Icons.jsx";
 import Map from "views/Map.jsx";
 import Notifications from "views/Notifications.jsx";
 import Rtl from "views/Rtl.jsx";
-import Tables from "views/Tables.jsx";
+import TableList from "views/TableList.jsx";
 import Typography from "views/Typography.jsx";
 import Upgrade from "views/Upgrade.jsx";
-import User from "views/User.jsx";
+import UserProfile from "views/UserProfile.jsx";
 
 var routes = [
   {
@@ -24,10 +24,10 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/maps",
-    name: "Maps",
+    path: "/map",
+    name: "Map",
     icon: "nc-icon nc-pin-3",
-    component: Maps,
+    component: Map,
     layout: "/admin"
   },
   {
@@ -38,10 +38,10 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/user-page",
+    path: "/user-profile",
     name: "User Profile",
     icon: "nc-icon nc-single-02",
-    component: UserPage,
+    component: UserProfile,
     layout: "/admin"
   },
   {

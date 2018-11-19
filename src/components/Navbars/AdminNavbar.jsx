@@ -17,7 +17,9 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container
+  Container,
+  Modal,
+  UncontrolledCollapse
 } from "reactstrap";
 
 class AdminNavbar extends React.Component {
@@ -83,7 +85,7 @@ class AdminNavbar extends React.Component {
                   <span className=" navbar-toggler-bar bar3" />
                 </button>
               </div>
-              <NavbarBrand href="javascript:void(0)">User Profile</NavbarBrand>
+              <NavbarBrand>Dynamic Brand should be in place here</NavbarBrand>
             </div>
             <button
               aria-expanded={false}
@@ -116,7 +118,6 @@ class AdminNavbar extends React.Component {
                     caret
                     color="default"
                     data-toggle="dropdown"
-                    href="javascript:void(0)"
                     nav
                   >
                     <div className=" notification d-none d-lg-block d-xl-block" />
@@ -127,7 +128,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
                         Mike John responded to your email
@@ -136,7 +136,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         You have 5 more tasks
                       </DropdownItem>
@@ -144,7 +143,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         Your friend Michael is in town
                       </DropdownItem>
@@ -152,7 +150,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         Another notification
                       </DropdownItem>
@@ -160,7 +157,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         Another one
                       </DropdownItem>
@@ -172,7 +168,6 @@ class AdminNavbar extends React.Component {
                     caret
                     color="default"
                     data-toggle="dropdown"
-                    href="#pablo"
                     nav
                     onClick={e => e.preventDefault()}
                   >
@@ -186,7 +181,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         Profile
                       </DropdownItem>
@@ -194,7 +188,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         Settings
                       </DropdownItem>
@@ -203,7 +196,6 @@ class AdminNavbar extends React.Component {
                     <NavLink>
                       <DropdownItem
                         className=" nav-item"
-                        href="javascript:void(0)"
                       >
                         Log out
                       </DropdownItem>
