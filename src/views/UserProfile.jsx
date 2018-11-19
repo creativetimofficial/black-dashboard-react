@@ -132,8 +132,7 @@ class UserProfile extends React.Component {
                             placeholder="Here can be your description"
                             rows="4"
                             type="textarea"
-                          >
-                          </Input>
+                          />
                         </FormGroup>
                       </Col>
                     </Row>
@@ -155,7 +154,7 @@ class UserProfile extends React.Component {
                     <div className=" block block-two" />
                     <div className=" block block-three" />
                     <div className=" block block-four" />
-                    <a href="javascript:void(0)">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
                         className=" avatar"

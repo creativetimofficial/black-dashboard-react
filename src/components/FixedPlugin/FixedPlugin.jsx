@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
+// reactstrap components
 import { Button } from "reactstrap";
 
 class FixedPlugin extends Component {
