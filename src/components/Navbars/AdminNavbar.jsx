@@ -134,30 +134,22 @@ class AdminNavbar extends React.Component {
                       </DropdownItem>
                     </NavLink>
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
+                      <DropdownItem className=" nav-item">
                         You have 5 more tasks
                       </DropdownItem>
                     </NavLink>
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
+                      <DropdownItem className=" nav-item">
                         Your friend Michael is in town
                       </DropdownItem>
                     </NavLink>
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
+                      <DropdownItem className=" nav-item">
                         Another notification
                       </DropdownItem>
                     </NavLink>
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
+                      <DropdownItem className=" nav-item">
                         Another one
                       </DropdownItem>
                     </NavLink>
@@ -179,26 +171,16 @@ class AdminNavbar extends React.Component {
                   </DropdownToggle>
                   <DropdownMenu className=" dropdown-navbar">
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
-                        Profile
-                      </DropdownItem>
+                      <DropdownItem className=" nav-item">Profile</DropdownItem>
                     </NavLink>
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
+                      <DropdownItem className=" nav-item">
                         Settings
                       </DropdownItem>
                     </NavLink>
                     <DropdownItem divider />
                     <NavLink>
-                      <DropdownItem
-                        className=" nav-item"
-                      >
-                        Log out
-                      </DropdownItem>
+                      <DropdownItem className=" nav-item">Log out</DropdownItem>
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
