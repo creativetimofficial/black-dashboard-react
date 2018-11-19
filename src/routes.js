@@ -12,64 +12,65 @@ var routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: "nc-icon nc-bank",
+    icon: "tim-icons icon-chart-pie-36",
     component: Dashboard,
     layout: "/admin"
   },
   {
     path: "/icons",
     name: "Icons",
-    icon: "nc-icon nc-diamond",
+    icon: "tim-icons icon-atom",
     component: Icons,
     layout: "/admin"
   },
   {
     path: "/map",
     name: "Map",
-    icon: "nc-icon nc-pin-3",
+    icon: "tim-icons icon-pin",
     component: Map,
     layout: "/admin"
   },
   {
     path: "/notifications",
     name: "Notifications",
-    icon: "nc-icon nc-bell-55",
+    icon: "tim-icons icon-bell-55",
     component: Notifications,
     layout: "/admin"
   },
   {
     path: "/user-profile",
     name: "User Profile",
-    icon: "nc-icon nc-single-02",
+    icon: "tim-icons icon-single-02",
     component: UserProfile,
     layout: "/admin"
   },
   {
     path: "/tables",
     name: "Table List",
-    icon: "nc-icon nc-tile-56",
+    icon: "tim-icons icon-puzzle-10",
     component: TableList,
     layout: "/admin"
   },
   {
     path: "/typography",
     name: "Typography",
-    icon: "nc-icon nc-caps-small",
+    icon: "tim-icons icon-align-center",
     component: Typography,
+    layout: "/admin"
+  },
+  {
+    path: "/rtl",
+    name: "RLT Support",
+    icon: "tim-icons icon-world",
+    component: Rtl,
     layout: "/admin"
   },
   {
     pro: true,
     path: "/upgrade",
     name: "Upgrade to PRO",
-    icon: "nc-icon nc-spaceship",
-    layout: "/admin"
-  },
-  {
-    redirect: true,
-    path: "/",
-    pathTo: "/dashboard",
-    name: "Dashboard",
+    icon: "tim-icons icon-spaceship",
+    component: Upgrade,
     layout: "/admin"
   }
 ];

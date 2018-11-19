@@ -127,12 +127,12 @@ class UserProfile extends React.Component {
                           <label>About Me</label>
                           <Input
                             cols="80"
-                            defaultValue="Mike"
+                            defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in
+                            that two seat Lambo."
                             placeholder="Here can be your description"
                             rows="4"
+                            type="textarea"
                           >
-                            Lamborghini Mercy, Your chick she so thirsty, I'm in
-                            that two seat Lambo.
                           </Input>
                         </FormGroup>
                       </Col>
