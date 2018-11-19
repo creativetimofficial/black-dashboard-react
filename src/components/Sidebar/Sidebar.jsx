@@ -32,7 +32,7 @@ class Sidebar extends React.Component {
   }
   render() {
     return (
-      <div className="sidebar" color={this.props.bgColor}>
+      <div className="sidebar" data={this.props.bgColor}>
         <div className="logo">
           <a
             href="https://www.creative-tim.com"

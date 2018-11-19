@@ -26,7 +26,8 @@ class AdminNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      collapseOpen: false
+      collapseOpen: false,
+      modalSearch: false
     };
   }
   componentDidMount() {
@@ -63,6 +64,12 @@ class AdminNavbar extends React.Component {
       collapseOpen: !this.state.collapseOpen
     });
   };
+  // this function is to open the Search modal
+  toggleModalSearch = () => {
+    this.setState({
+        modalSearch: !this.state.modalSearch
+    });
+}
   render() {
     return (
       <>
@@ -99,6 +106,7 @@ class AdminNavbar extends React.Component {
                     data-target="#searchModal"
                     data-toggle="modal"
                     id="search-button"
+                    onClick={this.toggleModalSearch}
                   >
                     <i className="tim-icons icon-zoom-split" />
                     <span className="d-lg-none d-md-block">Search</span>
@@ -115,7 +123,7 @@ class AdminNavbar extends React.Component {
                     <i className="tim-icons icon-sound-wave" />
                     <p className="d-lg-none">Notifications</p>
                   </DropdownToggle>
-                  <DropdownMenu className="dropdown-navbar" right>
+                  <DropdownMenu className="dropdown-navbar" right tag="ul">
                     <NavLink tag="li">
                       <DropdownItem className="nav-item">
                         Mike John responded to your email
@@ -175,7 +183,7 @@ class AdminNavbar extends React.Component {
             </Collapse>
           </Container>
         </Navbar>
-        <Modal modalclassName="modal-search">
+        <Modal modalClassName="modal-search" isOpen={this.state.modalSearch} toggle={this.toggleModalSearch}>
           <div className="modal-header">
             <Input id="inlineFormInputGroup" placeholder="SEARCH" type="text" />
             <button
@@ -183,6 +191,7 @@ class AdminNavbar extends React.Component {
               className="close"
               data-dismiss="modal"
               type="button"
+              onClick={this.toggleModalSearch}
             >
               <i className="tim-icons icon-simple-remove" />
             </button>
