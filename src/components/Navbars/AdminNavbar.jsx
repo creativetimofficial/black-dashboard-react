@@ -60,6 +60,7 @@ class AdminNavbar extends React.Component {
   };
   // this function opens and closes the collapse on small devices
   toggleCollapse = () => {
+    console.log(this.state);
     this.setState({
       collapseOpen: !this.state.collapseOpen
     });
@@ -77,7 +78,7 @@ class AdminNavbar extends React.Component {
           <Container fluid>
             <div className="navbar-wrapper">
               <div className="navbar-toggle d-inline">
-                <button className="navbar-toggler" type="button">
+                <button className="navbar-toggler" type="button" onClick={this.toggleSidebar}>
                   <span className="navbar-toggler-bar bar1" />
                   <span className="navbar-toggler-bar bar2" />
                   <span className="navbar-toggler-bar bar3" />
@@ -93,12 +94,13 @@ class AdminNavbar extends React.Component {
               data-toggle="collapse"
               id="navigation"
               type="button"
+              onClick={this.toggleCollapse}
             >
               <span className="navbar-toggler-bar navbar-kebab" />
               <span className="navbar-toggler-bar navbar-kebab" />
               <span className="navbar-toggler-bar navbar-kebab" />
             </button>
-            <Collapse navbar isOpen={this.state.isOpen}>
+            <Collapse navbar isOpen={this.state.collapseOpen}>
               <Nav className="ml-auto" navbar>
                 <InputGroup className="search-bar">
                   <Button
