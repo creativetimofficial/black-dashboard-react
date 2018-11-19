@@ -7,14 +7,14 @@ class FixedPlugin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classes: "dropdown show"
+      classes: "dropdown show-dropdown"
     };
   }
   handleClick = () => {
-    if (this.state.classes === "dropdown") {
-      this.setState({ classes: "dropdown show" });
+    if (this.state.classes === "dropdown show-dropdown") {
+      this.setState({ classes: "dropdown show-dropdown show" });
     } else {
-      this.setState({ classes: "dropdown" });
+      this.setState({ classes: "dropdown show-dropdown" });
     }
   };
   render() {
@@ -73,8 +73,6 @@ class FixedPlugin extends Component {
               >
                 Download now
               </Button>
-            </li>
-            <li className="button-container">
               <Button
                 color="default"
                 block
@@ -91,6 +89,7 @@ class FixedPlugin extends Component {
                 href="https://www.creative-tim.com/product/black-dashboard-pro-react"
                 className="btn-round"
                 disabled
+                block
                 color="danger"
               >
                 Get pro version
