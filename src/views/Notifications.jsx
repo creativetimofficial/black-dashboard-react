@@ -1,8 +1,11 @@
 import React from "react";
+// react plugin for creating notifications over the dashboard
+import NotificationAlert from "react-notification-alert";
 
 // reactstrap components
 import {
   Alert,
+  UncontrolledAlert,
   Button,
   Card,
   CardHeader,
@@ -13,10 +16,51 @@ import {
 } from "reactstrap";
 
 class Notifications extends React.Component {
+
+  notify = (place) => {
+    var color = Math.floor(Math.random() * 5 + 1);
+    var type;
+    switch (color) {
+      case 1:
+        type = "primary";
+        break;
+      case 2:
+        type = "success";
+        break;
+      case 3:
+        type = "danger";
+        break;
+      case 4:
+        type = "warning";
+        break;
+      case 5:
+        type = "info";
+        break;
+      default:
+        break;
+    }
+    var options = {};
+    options = {
+      place: place,
+      message: (
+        <div>
+          <div>
+            Welcome to <b>Paper Dashboard React</b> - a beautiful freebie for
+            every web developer.
+          </div>
+        </div>
+      ),
+      type: type,
+      icon: "tim-icons icon-bell-55",
+      autoDismiss: 7
+    };
+    this.refs.notificationAlert.notificationAlert(options);
+  }
   render() {
     return (
       <>
         <div className="content">
+          <NotificationAlert ref="notificationAlert" />
           <Row>
             <Col md="6">
               <Card>
@@ -27,24 +71,24 @@ class Notifications extends React.Component {
                   <Alert color="info">
                     <span>This is a plain notification</span>
                   </Alert>
-                  <Alert color="info">
+                  <UncontrolledAlert color="info">
                     <span>This is a notification with close button.</span>
-                  </Alert>
-                  <Alert className="alert-with-icon" color="info">
-                    <span className="tim-icons icon-bell-55" />
-                    <span>
+                  </UncontrolledAlert>
+                  <UncontrolledAlert className="alert-with-icon" color="info">
+                    <span className="tim-icons icon-bell-55" data-notify="icon"/>
+                    <span data-notify="message">
                       This is a notification with close button and icon.
                     </span>
-                  </Alert>
-                  <Alert className="alert-with-icon" color="info">
-                    <span className="tim-icons icon-bell-55" />
-                    <span>
+                  </UncontrolledAlert>
+                  <UncontrolledAlert className="alert-with-icon" color="info">
+                    <span className="tim-icons icon-bell-55" data-notify="icon"/>
+                    <span data-notify="message">
                       This is a notification with close button and icon and have
                       many lines. You can see that the icon and the close button
                       are always vertically aligned. This is a beautiful
                       notification. So you don't have to worry about the style.
                     </span>
-                  </Alert>
+                  </UncontrolledAlert>
                 </CardBody>
               </Card>
             </Col>
@@ -54,36 +98,36 @@ class Notifications extends React.Component {
                   <CardTitle tag="h4">Notification states</CardTitle>
                 </CardHeader>
                 <CardBody>
-                  <Alert color="primary">
+                  <UncontrolledAlert color="primary">
                     <span>
-                      <b>Primary -</b>
+                      <b>Primary - </b>
                       This is a regular notification made with ".alert-primary"
                     </span>
-                  </Alert>
-                  <Alert color="info">
+                  </UncontrolledAlert>
+                  <UncontrolledAlert color="info">
                     <span>
-                      <b>Info -</b>
+                      <b>Info - </b>
                       This is a regular notification made with ".alert-info"
                     </span>
-                  </Alert>
-                  <Alert color="success">
+                  </UncontrolledAlert>
+                  <UncontrolledAlert color="success">
                     <span>
-                      <b>Success -</b>
+                      <b>Success - </b>
                       This is a regular notification made with ".alert-success"
                     </span>
-                  </Alert>
-                  <Alert color="warning">
+                  </UncontrolledAlert>
+                  <UncontrolledAlert color="warning">
                     <span>
-                      <b>Warning -</b>
+                      <b>Warning - </b>
                       This is a regular notification made with ".alert-warning"
                     </span>
-                  </Alert>
-                  <Alert color="danger">
+                  </UncontrolledAlert>
+                  <UncontrolledAlert color="danger">
                     <span>
-                      <b>Danger -</b>
+                      <b>Danger - </b>
                       This is a regular notification made with ".alert-danger"
                     </span>
-                  </Alert>
+                  </UncontrolledAlert>
                 </CardBody>
               </Card>
             </Col>
@@ -104,7 +148,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick="demo.showNotification('top','left')"
+                              onClick={()=>this.notify("tl")}
                             >
                               Top Left
                             </Button>
@@ -113,7 +157,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick="demo.showNotification('top','center')"
+                              onClick={()=>this.notify("tc")}
                             >
                               Top Center
                             </Button>
@@ -122,7 +166,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick="demo.showNotification('top','right')"
+                              onClick={()=>this.notify("tr")}
                             >
                               Top Right
                             </Button>
@@ -137,7 +181,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick="demo.showNotification('bottom','left')"
+                              onClick={()=>this.notify("bl")}
                             >
                               Bottom Left
                             </Button>
@@ -146,7 +190,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick="demo.showNotification('bottom','center')"
+                              onClick={()=>this.notify("bc")}
                             >
                               Bottom Center
                             </Button>
@@ -155,7 +199,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick="demo.showNotification('bottom','right')"
+                              onClick={()=>this.notify("br")}
                             >
                               Bottom Right
                             </Button>

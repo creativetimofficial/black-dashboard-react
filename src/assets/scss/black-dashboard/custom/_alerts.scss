@@ -21,6 +21,19 @@
         text-shadow: none;
         line-height: 0;
         outline: 0;
+        &::after{
+          display: inline-block;
+          font: normal normal normal 1em/1 'Nucleo';
+          vertical-align: middle;
+          speak: none;
+          text-transform: none;
+          -webkit-font-smoothing: antialiased;
+          font-size: 1rem;
+          content: "\ea48"
+        }
+        span {
+          display: none !important;
+        }
     }
 
     span[data-notify="icon"]{
@@ -54,12 +67,6 @@
 
 .alert-dismissible {
     .close {
-        top: 50%;
-        right: $alert-padding-x;
-        padding: 0;
-        transform: translateY(-50%);
-        color: rgba($white, .6);
-        opacity: 1;
 
         &:hover,
         &:focus {
