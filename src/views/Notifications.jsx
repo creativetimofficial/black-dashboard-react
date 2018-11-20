@@ -16,8 +16,7 @@ import {
 } from "reactstrap";
 
 class Notifications extends React.Component {
-
-  notify = (place) => {
+  notify = place => {
     var color = Math.floor(Math.random() * 5 + 1);
     var type;
     switch (color) {
@@ -55,7 +54,7 @@ class Notifications extends React.Component {
       autoDismiss: 7
     };
     this.refs.notificationAlert.notificationAlert(options);
-  }
+  };
   render() {
     return (
       <>
@@ -75,13 +74,19 @@ class Notifications extends React.Component {
                     <span>This is a notification with close button.</span>
                   </UncontrolledAlert>
                   <UncontrolledAlert className="alert-with-icon" color="info">
-                    <span className="tim-icons icon-bell-55" data-notify="icon"/>
+                    <span
+                      className="tim-icons icon-bell-55"
+                      data-notify="icon"
+                    />
                     <span data-notify="message">
                       This is a notification with close button and icon.
                     </span>
                   </UncontrolledAlert>
                   <UncontrolledAlert className="alert-with-icon" color="info">
-                    <span className="tim-icons icon-bell-55" data-notify="icon"/>
+                    <span
+                      className="tim-icons icon-bell-55"
+                      data-notify="icon"
+                    />
                     <span data-notify="message">
                       This is a notification with close button and icon and have
                       many lines. You can see that the icon and the close button
@@ -137,8 +142,11 @@ class Notifications extends React.Component {
                   <div className="places-buttons">
                     <Row>
                       <Col className="ml-auto mr-auto text-center" md="6">
-                        <CardTitle tag="h4">Notifications Places</CardTitle>
-                        <p className="category">Click to view notifications</p>
+                        <CardTitle tag="h4">
+                          Notifications Places<p className="category">
+                            Click to view notifications
+                          </p>
+                        </CardTitle>
                       </Col>
                     </Row>
                     <Row>
@@ -148,7 +156,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick={()=>this.notify("tl")}
+                              onClick={() => this.notify("tl")}
                             >
                               Top Left
                             </Button>
@@ -157,7 +165,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick={()=>this.notify("tc")}
+                              onClick={() => this.notify("tc")}
                             >
                               Top Center
                             </Button>
@@ -166,7 +174,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick={()=>this.notify("tr")}
+                              onClick={() => this.notify("tr")}
                             >
                               Top Right
                             </Button>
@@ -181,7 +189,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick={()=>this.notify("bl")}
+                              onClick={() => this.notify("bl")}
                             >
                               Bottom Left
                             </Button>
@@ -190,7 +198,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick={()=>this.notify("bc")}
+                              onClick={() => this.notify("bc")}
                             >
                               Bottom Center
                             </Button>
@@ -199,7 +207,7 @@ class Notifications extends React.Component {
                             <Button
                               block
                               color="primary"
-                              onClick={()=>this.notify("br")}
+                              onClick={() => this.notify("br")}
                             >
                               Bottom Right
                             </Button>
