@@ -179,10 +179,7 @@ class Typography extends React.Component {
                     <p>
                       This is <code>.css-class-as-code</code>
                       , an example of an inline code element. Wrap inline code
-                      within a{" "}
-                      <code>
-                        <code>...</code>
-                      </code>
+                      within a <code>{`<code>...</code>`}</code>
                       tag.
                     </p>
                     <pre>

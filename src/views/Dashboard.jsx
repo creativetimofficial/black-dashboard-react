@@ -39,11 +39,11 @@ class Dashboard extends React.Component {
       bigChartData: "data1"
     };
   }
-  setBgChartData(name) {
+  setBgChartData = name => {
     this.setState({
       bigChartData: name
     });
-  }
+  };
   render() {
     return (
       <>

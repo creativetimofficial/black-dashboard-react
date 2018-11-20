@@ -1,4 +1,7 @@
 import React from "react";
+import classNames from "classnames";
+// react plugin used to create charts
+import { Line, Bar } from "react-chartjs-2";
 
 // reactstrap components
 import {
@@ -21,7 +24,48 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
+// core components
+import {
+  chartExample1,
+  chartExample2,
+  chartExample3,
+  chartExample4
+} from "variables/charts.jsx";
+
 class Rtl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bigChartData: "data1"
+    };
+  }
+  componentDidMount() {
+    // on this page, we need on the body tag the classes .rtl and .menu-on-right
+    document.body.classList.add("rtl", "menu-on-right");
+    // we also need the rtl bootstrap
+    // so we add it dynamically to the head
+    let head = document.head;
+    let link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.id = "rtl-id";
+    link.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css";
+    head.appendChild(link);
+  }
+  componentWillUnmount() {
+    // when we exit this page, we need to delete the classes .rtl and .menu-on-right
+    // from the body tag
+    document.body.classList.remove("rtl", "menu-on-right");
+    // we also need to delete the rtl bootstrap, so it does not break the other pages
+    // that do not make use of rtl
+    document.getElementById("rtl-id").remove();
+  }
+  setBgChartData = name => {
+    this.setState({
+      bigChartData: name
+    });
+  };
   render() {
     return (
       <>
@@ -37,16 +81,25 @@ class Rtl extends React.Component {
                     </Col>
                     <Col sm="6">
                       <ButtonGroup
-                        className="btn-group-toggle"
+                        className="btn-group-toggle float-left"
                         data-toggle="buttons"
                       >
                         <Button
-                          className="btn-simple active"
+                          tag="label"
+                          className={classNames("btn-simple", {
+                            active: this.state.bigChartData === "data1"
+                          })}
                           color="primary"
                           id="0"
                           size="sm"
+                          onClick={() => this.setBgChartData("data1")}
                         >
-                          <input defaultChecked name="options" type="radio" />
+                          <input
+                            defaultChecked
+                            className="d-none"
+                            name="options"
+                            type="radio"
+                          />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                             حسابات
                           </span>
@@ -55,13 +108,17 @@ class Rtl extends React.Component {
                           </span>
                         </Button>
                         <Button
-                          className="btn-simple"
                           color="primary"
                           id="1"
                           size="sm"
+                          tag="label"
+                          className={classNames("btn-simple", {
+                            active: this.state.bigChartData === "data2"
+                          })}
+                          onClick={() => this.setBgChartData("data2")}
                         >
                           <input
-                            className="d-none d-sm-none"
+                            className="d-none"
                             name="options"
                             type="radio"
                           />
@@ -73,10 +130,14 @@ class Rtl extends React.Component {
                           </span>
                         </Button>
                         <Button
-                          className="btn-simple"
                           color="primary"
                           id="2"
                           size="sm"
+                          tag="label"
+                          className={classNames("btn-simple", {
+                            active: this.state.bigChartData === "data3"
+                          })}
+                          onClick={() => this.setBgChartData("data3")}
                         >
                           <input
                             className="d-none"
@@ -96,7 +157,10 @@ class Rtl extends React.Component {
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <canvas id="chartBig1" />
+                    <Line
+                      data={chartExample1[this.state.bigChartData]}
+                      options={chartExample1.options}
+                    />
                   </div>
                 </CardBody>
               </Card>
@@ -108,13 +172,16 @@ class Rtl extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">شحنات كاملة</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-bell-55 text-primary" />
+                    <i className="tim-icons icon-bell-55 text-primary" />{" "}
                     763,215
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <canvas id="chartLinePurple" />
+                    <Line
+                      data={chartExample2.data}
+                      options={chartExample2.options}
+                    />
                   </div>
                 </CardBody>
               </Card>
@@ -124,13 +191,16 @@ class Rtl extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">المبيعات اليومية</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-delivery-fast text-info" />
+                    <i className="tim-icons icon-delivery-fast text-info" />{" "}
                     3,500€
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <canvas id="CountryChart" />
+                    <Bar
+                      data={chartExample3.data}
+                      options={chartExample3.options}
+                    />
                   </div>
                 </CardBody>
               </Card>
@@ -140,13 +210,15 @@ class Rtl extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">المهام المكتملة</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-send text-success" />
-                    12,100K
+                    <i className="tim-icons icon-send text-success" /> 12,100K
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <canvas id="chartLineGreen" />
+                    <Line
+                      data={chartExample4.data}
+                      options={chartExample4.options}
+                    />
                   </div>
                 </CardBody>
               </Card>
@@ -192,236 +264,239 @@ class Rtl extends React.Component {
                   </UncontrolledDropdown>
                 </CardHeader>
                 <CardBody>
-                  <Table responsive>
-                    <tbody>
-                      <tr>
-                        <td className="text-center">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign">
-                                <span className="check" />
-                              </span>
-                            </Label>
-                          </FormGroup>
-                        </td>
-                        <td className="text-right">
-                          <p className="title">مركز معالجة موقع محور</p>
-                          <p className="text-muted">نص آخر هناالوثائق</p>
-                        </td>
-                        <td className="td-actions">
-                          <Button
-                            color="link"
-                            id="tooltip591536518"
-                            title=""
-                            type="button"
-                          >
-                            <i className="tim-icons icon-settings" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip591536518"
-                          >
-                            مهمة تحرير
-                          </UncontrolledTooltip>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign">
-                                <span className="check" />
-                              </span>
-                            </Label>
-                          </FormGroup>
-                        </td>
-                        <td className="text-right">
-                          <p className="title">لامتثال GDPR</p>
-                          <p className="text-muted">
-                            الناتج المحلي الإجمالي هو نظام يتطلب من الشركات
-                            حماية البيانات الشخصية والخصوصية لمواطني أوروبا
-                            بالنسبة للمعاملات التي تتم داخل الدول الأعضاء في
-                            الاتحاد الأوروبي.
-                          </p>
-                        </td>
-                        <td className="td-actions">
-                          <Button
-                            color="link"
-                            id="tooltip36890049"
-                            title=""
-                            type="button"
-                          >
-                            <i className="tim-icons icon-settings" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip36890049"
-                          >
-                            مهمة تحرير
-                          </UncontrolledTooltip>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign">
-                                <span className="check" />
-                              </span>
-                            </Label>
-                          </FormGroup>
-                        </td>
-                        <td className="text-right">
-                          <p className="title">القضاياالقضايا</p>
-                          <p className="text-muted">
-                            سيكونونقال 50٪ من جميع المستجيبين أنهم سيكونون أكثر
-                            عرضة للتسوق في شركة
-                          </p>
-                        </td>
-                        <td className="td-actions">
-                          <Button
-                            color="link"
-                            id="tooltip5456779"
-                            title=""
-                            type="button"
-                          >
-                            <i className="tim-icons icon-settings" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip5456779"
-                          >
-                            مهمة تحرير
-                          </UncontrolledTooltip>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign">
-                                <span className="check" />
-                              </span>
-                            </Label>
-                          </FormGroup>
-                        </td>
-                        <td className="text-right">
-                          <p className="title">
-                            تصدير الملفات التي تمت معالجتها
-                          </p>
-                          <p className="text-muted">
-                            كما يبين التقرير أن المستهلكين لن يغفروا شركة بسهولة
-                            بمجرد حدوث خرق يعرض بياناتهم الشخصية.
-                          </p>
-                        </td>
-                        <td className="td-actions">
-                          <Button
-                            color="link"
-                            id="tooltip989428493"
-                            title=""
-                            type="button"
-                          >
-                            <i className="tim-icons icon-settings" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip989428493"
-                          >
-                            مهمة تحرير
-                          </UncontrolledTooltip>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign">
-                                <span className="check" />
-                              </span>
-                            </Label>
-                          </FormGroup>
-                        </td>
-                        <td className="text-right">
-                          <p className="title">الوصول إلى عملية التصدير</p>
-                          <p className="text-muted">
-                            سياسة السيء إنطلاق في قبل, مساعدة والمانيا أخذ قد.
-                            بل أما أمام ماشاء الشتاء،, تكاليف الإقتصادي بـ حين.
-                            ٣٠ يتعلّق للإتحاد ولم, وتم هناك مدينة بتحدّي إذ, كان
-                            بل عمل
-                          </p>
-                        </td>
-                        <td className="td-actions">
-                          <Button
-                            color="link"
-                            id="tooltip169784793"
-                            title=""
-                            type="button"
-                          >
-                            <i className="tim-icons icon-settings" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip169784793"
-                          >
-                            مهمة تحرير
-                          </UncontrolledTooltip>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign">
-                                <span className="check" />
-                              </span>
-                            </Label>
-                          </FormGroup>
-                        </td>
-                        <td className="text-right">
-                          <p className="title">الافراج عن v2.0.0</p>
-                          <p className="text-muted">
-                            عن رئيس طوكيو البولندي لمّ, مايو مرجع وباءت قبل هو,
-                            تسمّى الطريق الإقتصادي ذات أن. لغات الإطلاق الفرنسية
-                            دار ان, بين بتخصيص الساحة اقتصادية أم. و الآخ
-                          </p>
-                        </td>
-                        <td className="td-actions">
-                          <Button
-                            color="link"
-                            id="tooltip554497871"
-                            title=""
-                            type="button"
-                          >
-                            <i className="tim-icons icon-settings" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip554497871"
-                          >
-                            مهمة تحرير
-                          </UncontrolledTooltip>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </Table>
+                  <div className="table-full-width table-responsive">
+                    <Table>
+                      <tbody>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input
+                                  defaultChecked
+                                  defaultValue=""
+                                  type="checkbox"
+                                />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">مركز معالجة موقع محور</p>
+                            <p className="text-muted">نص آخر هناالوثائق</p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip591536518"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip591536518"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultValue="" type="checkbox" />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">لامتثال GDPR</p>
+                            <p className="text-muted">
+                              الناتج المحلي الإجمالي هو نظام يتطلب من الشركات
+                              حماية البيانات الشخصية والخصوصية لمواطني أوروبا
+                              بالنسبة للمعاملات التي تتم داخل الدول الأعضاء في
+                              الاتحاد الأوروبي.
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip36890049"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip36890049"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultValue="" type="checkbox" />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">القضاياالقضايا</p>
+                            <p className="text-muted">
+                              سيكونونقال 50٪ من جميع المستجيبين أنهم سيكونون
+                              أكثر عرضة للتسوق في شركة
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip5456779"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip5456779"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input
+                                  defaultChecked
+                                  defaultValue=""
+                                  type="checkbox"
+                                />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">
+                              تصدير الملفات التي تمت معالجتها
+                            </p>
+                            <p className="text-muted">
+                              كما يبين التقرير أن المستهلكين لن يغفروا شركة
+                              بسهولة بمجرد حدوث خرق يعرض بياناتهم الشخصية.
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip989428493"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip989428493"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input
+                                  defaultChecked
+                                  defaultValue=""
+                                  type="checkbox"
+                                />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">الوصول إلى عملية التصدير</p>
+                            <p className="text-muted">
+                              سياسة السيء إنطلاق في قبل, مساعدة والمانيا أخذ قد.
+                              بل أما أمام ماشاء الشتاء،, تكاليف الإقتصادي بـ
+                              حين. ٣٠ يتعلّق للإتحاد ولم, وتم هناك مدينة بتحدّي
+                              إذ, كان بل عمل
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip169784793"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip169784793"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultValue="" type="checkbox" />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">الافراج عن v2.0.0</p>
+                            <p className="text-muted">
+                              عن رئيس طوكيو البولندي لمّ, مايو مرجع وباءت قبل
+                              هو, تسمّى الطريق الإقتصادي ذات أن. لغات الإطلاق
+                              الفرنسية دار ان, بين بتخصيص الساحة اقتصادية أم. و
+                              الآخ
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip554497871"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip554497871"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </div>
                 </CardBody>
               </Card>
             </Col>
