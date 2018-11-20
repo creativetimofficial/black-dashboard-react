@@ -276,9 +276,13 @@ class Map extends React.Component {
               <Card className="card-plain">
                 <CardHeader>Google Maps</CardHeader>
                 <CardBody>
-                  <div className="map" id="map">
+                  <div
+                    id="map"
+                    className="map"
+                    style={{ position: "relative", overflow: "hidden" }}
+                  >
                     <MapWrapper
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"
                       loadingElement={<div style={{ height: `100%` }} />}
                       containerElement={<div style={{ height: `100%` }} />}
                       mapElement={<div style={{ height: `100%` }} />}
