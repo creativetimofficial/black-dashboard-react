@@ -242,24 +242,26 @@ let chartExample3 = {
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, 'rgba(29,140,248,0.2)');
-    gradientStroke.addColorStop(0.4, 'rgba(29,140,248,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); //blue colors
+    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
     return {
-      labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
-      datasets: [{
-        label: "Countries",
-        fill: true,
-        backgroundColor: gradientStroke,
-        hoverBackgroundColor: gradientStroke,
-        borderColor: '#1f8ef1',
-        borderWidth: 2,
-        borderDash: [],
-        borderDashOffset: 0.0,
-        data: [53, 20, 10, 80, 100, 45],
-      }]
-    }
+      labels: ["USA", "GER", "AUS", "UK", "RO", "BR"],
+      datasets: [
+        {
+          label: "Countries",
+          fill: true,
+          backgroundColor: gradientStroke,
+          hoverBackgroundColor: gradientStroke,
+          borderColor: "#1f8ef1",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          data: [53, 20, 10, 80, 100, 45]
+        }
+      ]
+    };
   },
   options: {
     maintainAspectRatio: false,
@@ -267,9 +269,9 @@ let chartExample3 = {
       display: false
     },
     tooltips: {
-      backgroundColor: '#f5f5f5',
-      titleFontColor: '#333',
-      bodyFontColor: '#666',
+      backgroundColor: "#f5f5f5",
+      titleFontColor: "#333",
+      bodyFontColor: "#666",
       bodySpacing: 4,
       xPadding: 12,
       mode: "nearest",
@@ -278,33 +280,37 @@ let chartExample3 = {
     },
     responsive: true,
     scales: {
-      yAxes: [{
-        gridLines: {
-          drawBorder: false,
-          color: 'rgba(29,140,248,0.1)',
-          zeroLineColor: "transparent",
-        },
-        ticks: {
-          suggestedMin: 60,
-          suggestedMax: 120,
-          padding: 20,
-          fontColor: "#9e9e9e"
+      yAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(29,140,248,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            suggestedMin: 60,
+            suggestedMax: 120,
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
         }
-      }],
-      xAxes: [{
-        gridLines: {
-          drawBorder: false,
-          color: 'rgba(29,140,248,0.1)',
-          zeroLineColor: "transparent",
-        },
-        ticks: {
-          padding: 20,
-          fontColor: "#9e9e9e"
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(29,140,248,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
         }
-      }]
+      ]
     }
   }
-}
+};
 
 // #########################################
 // // // used inside src/views/Dashboard.jsx
@@ -315,30 +321,32 @@ const chartExample4 = {
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
-    gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)'); //green colors
-    gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
 
     return {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
-      datasets: [{
-        label: "My First dataset",
-        fill: true,
-        backgroundColor: gradientStroke,
-        borderColor: '#00d6b4',
-        borderWidth: 2,
-        borderDash: [],
-        borderDashOffset: 0.0,
-        pointBackgroundColor: '#00d6b4',
-        pointBorderColor: 'rgba(255,255,255,0)',
-        pointHoverBackgroundColor: '#00d6b4',
-        pointBorderWidth: 20,
-        pointHoverRadius: 4,
-        pointHoverBorderWidth: 15,
-        pointRadius: 4,
-        data: [90, 27, 60, 12, 80],
-      }]
-    }
+      labels: ["JUL", "AUG", "SEP", "OCT", "NOV"],
+      datasets: [
+        {
+          label: "My First dataset",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [90, 27, 60, 12, 80]
+        }
+      ]
+    };
   },
   options: {
     maintainAspectRatio: false,
@@ -347,9 +355,9 @@ const chartExample4 = {
     },
 
     tooltips: {
-      backgroundColor: '#f5f5f5',
-      titleFontColor: '#333',
-      bodyFontColor: '#666',
+      backgroundColor: "#f5f5f5",
+      titleFontColor: "#333",
+      bodyFontColor: "#666",
       bodySpacing: 4,
       xPadding: 12,
       mode: "nearest",
@@ -358,40 +366,44 @@ const chartExample4 = {
     },
     responsive: true,
     scales: {
-      yAxes: [{
-        barPercentage: 1.6,
-        gridLines: {
-          drawBorder: false,
-          color: 'rgba(29,140,248,0.0)',
-          zeroLineColor: "transparent",
-        },
-        ticks: {
-          suggestedMin: 50,
-          suggestedMax: 125,
-          padding: 20,
-          fontColor: "#9e9e9e"
+      yAxes: [
+        {
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(29,140,248,0.0)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            suggestedMin: 50,
+            suggestedMax: 125,
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
         }
-      }],
+      ],
 
-      xAxes: [{
-        barPercentage: 1.6,
-        gridLines: {
-          drawBorder: false,
-          color: 'rgba(0,242,195,0.1)',
-          zeroLineColor: "transparent",
-        },
-        ticks: {
-          padding: 20,
-          fontColor: "#9e9e9e"
+      xAxes: [
+        {
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(0,242,195,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
         }
-      }]
+      ]
     }
   }
-}
+};
 
 module.exports = {
   chartExample1, // in src/views/Dashboard.jsx
   chartExample2, // in src/views/Dashboard.jsx
   chartExample3, // in src/views/Dashboard.jsx
-  chartExample4, // in src/views/Dashboard.jsx
+  chartExample4 // in src/views/Dashboard.jsx
 };

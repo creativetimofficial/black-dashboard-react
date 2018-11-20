@@ -25,7 +25,12 @@ import {
 } from "reactstrap";
 
 // core components
-import { chartExample1, chartExample2, chartExample3, chartExample4 } from "variables/charts.jsx";
+import {
+  chartExample1,
+  chartExample2,
+  chartExample3,
+  chartExample4
+} from "variables/charts.jsx";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -145,8 +150,8 @@ class Dashboard extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">Total Shipments</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-bell-55 text-primary" />
-                    {" "}763,215
+                    <i className="tim-icons icon-bell-55 text-primary" />{" "}
+                    763,215
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
@@ -164,8 +169,8 @@ class Dashboard extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">Daily Sales</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-delivery-fast text-info" />
-                    {" "}3,500€
+                    <i className="tim-icons icon-delivery-fast text-info" />{" "}
+                    3,500€
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
@@ -183,16 +188,15 @@ class Dashboard extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">Completed Tasks</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-send text-success" />
-                    {" "}12,100K
+                    <i className="tim-icons icon-send text-success" /> 12,100K
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                  <Line
-                    data={chartExample4.data}
-                    options={chartExample4.options}
-                  />
+                    <Line
+                      data={chartExample4.data}
+                      options={chartExample4.options}
+                    />
                   </div>
                 </CardBody>
               </Card>
@@ -203,7 +207,7 @@ class Dashboard extends React.Component {
               <Card className="card-tasks">
                 <CardHeader>
                   <h6 className="title d-inline">Tasks(5)</h6>
-                  <p className="card-category d-inline">{" "}today</p>
+                  <p className="card-category d-inline"> today</p>
                   <UncontrolledDropdown>
                     <DropdownToggle
                       caret
