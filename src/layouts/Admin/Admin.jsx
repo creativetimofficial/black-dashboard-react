@@ -16,7 +16,7 @@ class Admin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: "primary"
+      backgroundColor: "blue"
     };
   }
   componentDidMount() {

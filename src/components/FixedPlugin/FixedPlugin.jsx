@@ -17,6 +17,17 @@ class FixedPlugin extends Component {
       this.setState({ classes: "dropdown show-dropdown" });
     }
   };
+  activateMode = (mode) => {
+    console.log("hey");
+    switch (mode) {
+      case "light":
+        document.body.classList.add("white-content");
+        break;
+      default:
+        document.body.classList.remove("white-content");
+        break;
+    }
+  }
   render() {
     return (
       <div className="fixed-plugin">
@@ -38,7 +49,7 @@ class FixedPlugin extends Component {
                   onClick={() => {
                     this.props.handleBgClick("primary");
                   }}
-                />
+                />{" "}
                 <span
                   className={
                     this.props.bgColor === "blue"
@@ -49,7 +60,7 @@ class FixedPlugin extends Component {
                   onClick={() => {
                     this.props.handleBgClick("blue");
                   }}
-                />
+                />{" "}
                 <span
                   className={
                     this.props.bgColor === "green"
@@ -60,10 +71,15 @@ class FixedPlugin extends Component {
                   onClick={() => {
                     this.props.handleBgClick("green");
                   }}
-                />
+                />{" "}
               </div>
             </li>
-            <li className="adjustments-line" />
+            <li className="adjustments-line text-center color-change">
+          <span className="color-label">LIGHT MODE</span>{" "}
+          <span className="badge light-badge mr-2" onClick={()=>this.activateMode("light")}></span>{" "}
+          <span className="badge dark-badge ml-2" onClick={()=>this.activateMode("dark")}></span>{" "}
+          <span className="color-label">DARK MODE</span>{" "}
+        </li>
             <li className="button-container">
               <Button
                 href="https://www.creative-tim.com/product/black-dashboard-react"
@@ -71,7 +87,7 @@ class FixedPlugin extends Component {
                 block
                 className="btn-round"
               >
-                Download now
+                Download Now
               </Button>
               <Button
                 color="default"
