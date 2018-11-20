@@ -1,5 +1,7 @@
 import React from "react";
 import classNames from "classnames";
+// react plugin used to create charts
+import { Line, Bar, Doughnut } from "react-chartjs-2";
 
 // reactstrap components
 import {
@@ -22,11 +24,16 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
+// core components
+import {
+  chartExample1
+} from "variables/charts.jsx";
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bigChartData: "Accounts"
+      bigChartData: "data1"
     };
   }
   setBgChartData(name) {
@@ -55,12 +62,12 @@ class Dashboard extends React.Component {
                         <Button
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.bigChartData === "Accounts"
+                            active: this.state.bigChartData === "data1"
                           })}
                           color="primary"
                           id="0"
                           size="sm"
-                          onClick={() => this.setBgChartData("Accounts")}
+                          onClick={() => this.setBgChartData("data1")}
                         >
                           <input
                             defaultChecked
@@ -81,9 +88,9 @@ class Dashboard extends React.Component {
                           size="sm"
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.bigChartData === "Purchases"
+                            active: this.state.bigChartData === "data2"
                           })}
-                          onClick={() => this.setBgChartData("Purchases")}
+                          onClick={() => this.setBgChartData("data2")}
                         >
                           <input
                             className="d-none"
@@ -103,9 +110,9 @@ class Dashboard extends React.Component {
                           size="sm"
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.bigChartData === "Sessions"
+                            active: this.state.bigChartData === "data3"
                           })}
-                          onClick={() => this.setBgChartData("Sessions")}
+                          onClick={() => this.setBgChartData("data3")}
                         >
                           <input
                             className="d-none"
@@ -125,7 +132,10 @@ class Dashboard extends React.Component {
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <canvas id="chartBig1" />
+                  <Line
+                    data={chartExample1[this.state.bigChartData]}
+                    options={chartExample1.options}
+                  />
                   </div>
                 </CardBody>
               </Card>

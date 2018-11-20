@@ -17,7 +17,7 @@ class FixedPlugin extends Component {
       this.setState({ classes: "dropdown show-dropdown" });
     }
   };
-  activateMode = (mode) => {
+  activateMode = mode => {
     console.log("hey");
     switch (mode) {
       case "light":
@@ -27,7 +27,7 @@ class FixedPlugin extends Component {
         document.body.classList.remove("white-content");
         break;
     }
-  }
+  };
   render() {
     return (
       <div className="fixed-plugin">
@@ -75,11 +75,17 @@ class FixedPlugin extends Component {
               </div>
             </li>
             <li className="adjustments-line text-center color-change">
-          <span className="color-label">LIGHT MODE</span>{" "}
-          <span className="badge light-badge mr-2" onClick={()=>this.activateMode("light")}></span>{" "}
-          <span className="badge dark-badge ml-2" onClick={()=>this.activateMode("dark")}></span>{" "}
-          <span className="color-label">DARK MODE</span>{" "}
-        </li>
+              <span className="color-label">LIGHT MODE</span>{" "}
+              <span
+                className="badge light-badge mr-2"
+                onClick={() => this.activateMode("light")}
+              />{" "}
+              <span
+                className="badge dark-badge ml-2"
+                onClick={() => this.activateMode("dark")}
+              />{" "}
+              <span className="color-label">DARK MODE</span>{" "}
+            </li>
             <li className="button-container">
               <Button
                 href="https://www.creative-tim.com/product/black-dashboard-react"

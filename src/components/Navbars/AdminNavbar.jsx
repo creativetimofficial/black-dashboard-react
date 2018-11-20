@@ -68,9 +68,9 @@ class AdminNavbar extends React.Component {
   // this function is to open the Search modal
   toggleModalSearch = () => {
     this.setState({
-        modalSearch: !this.state.modalSearch
+      modalSearch: !this.state.modalSearch
     });
-}
+  };
   render() {
     return (
       <>
@@ -78,7 +78,11 @@ class AdminNavbar extends React.Component {
           <Container fluid>
             <div className="navbar-wrapper">
               <div className="navbar-toggle d-inline">
-                <button className="navbar-toggler" type="button" onClick={this.toggleSidebar}>
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  onClick={this.toggleSidebar}
+                >
                   <span className="navbar-toggler-bar bar1" />
                   <span className="navbar-toggler-bar bar2" />
                   <span className="navbar-toggler-bar bar3" />
@@ -185,7 +189,11 @@ class AdminNavbar extends React.Component {
             </Collapse>
           </Container>
         </Navbar>
-        <Modal modalClassName="modal-search" isOpen={this.state.modalSearch} toggle={this.toggleModalSearch}>
+        <Modal
+          modalClassName="modal-search"
+          isOpen={this.state.modalSearch}
+          toggle={this.toggleModalSearch}
+        >
           <div className="modal-header">
             <Input id="inlineFormInputGroup" placeholder="SEARCH" type="text" />
             <button
