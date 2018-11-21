@@ -78,12 +78,12 @@ class Sidebar extends React.Component {
     return (
       <div className="sidebar" data={bgColor}>
         <div className="sidebar-wrapper" ref="sidebar">
-        {logoImg !== null || logoText !== null ? (
-          <div className="logo">
-            {logoImg}
-            {logoText}
-          </div>
-        ) : null}
+          {logoImg !== null || logoText !== null ? (
+            <div className="logo">
+              {logoImg}
+              {logoText}
+            </div>
+          ) : null}
           <Nav>
             {routes.map((prop, key) => {
               if (prop.redirect) return null;
