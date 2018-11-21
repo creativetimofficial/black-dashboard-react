@@ -1,4 +1,6 @@
 import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 
 // reactstrap components
 import {
@@ -23,7 +25,9 @@ class AdminNavbar extends React.Component {
     super(props);
     this.state = {
       collapseOpen: false,
-      modalSearch: false
+      modalSearch: false,
+      sidebarOpened:
+        document.documentElement.className.indexOf("nav-open") !== -1
     };
   }
   componentDidMount() {
@@ -53,6 +57,7 @@ class AdminNavbar extends React.Component {
   // this function opens and closes the sidebar on small devices
   toggleSidebar = () => {
     document.documentElement.classList.toggle("nav-open");
+    this.setState({ sidebarOpened: !this.state.sidebarOpened });
   };
   // this function opens and closes the collapse on small devices
   toggleCollapse = () => {
@@ -73,7 +78,11 @@ class AdminNavbar extends React.Component {
         <Navbar className="navbar-absolute navbar-transparent" expand="lg">
           <Container fluid>
             <div className="navbar-wrapper">
-              <div className="navbar-toggle d-inline">
+              <div
+                className={classNames("navbar-toggle d-inline", {
+                  toggled: this.state.sidebarOpened
+                })}
+              >
                 <button
                   className="navbar-toggler"
                   type="button"
