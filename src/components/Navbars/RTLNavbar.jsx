@@ -26,8 +26,7 @@ class AdminNavbar extends React.Component {
     this.state = {
       collapseOpen: false,
       modalSearch: false,
-      sidebarOpened:
-        document.documentElement.className.indexOf("nav-open") !== -1
+      color: "navbar-transparent"
     };
   }
   componentDidMount() {
@@ -47,6 +46,15 @@ class AdminNavbar extends React.Component {
   };
   // this function opens and closes the collapse on small devices
   toggleCollapse = () => {
+    if (this.state.collapseOpen) {
+      this.setState({
+        color: "navbar-transparent"
+      });
+    } else {
+      this.setState({
+        color: "bg-white"
+      });
+    }
     this.setState({
       collapseOpen: !this.state.collapseOpen
     });
@@ -60,7 +68,9 @@ class AdminNavbar extends React.Component {
   render() {
     return (
       <>
-        <Navbar className="navbar-absolute navbar-transparent" expand="lg">
+      <Navbar className={
+        classNames("navbar-absolute",
+        this.state.color)} expand="lg">
           <Container fluid>
             <div className="navbar-wrapper">
               <div
