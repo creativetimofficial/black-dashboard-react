@@ -92,39 +92,41 @@ class Admin extends React.Component {
   };
   render() {
     return (
-      <div className="wrapper">
-        <Sidebar
-          {...this.props}
-          routes={routes}
-          bgColor={this.state.backgroundColor}
-          rtlActive
-          logo={{
-            outterLink: "https://www.creative-tim.com/",
-            text: "الإبداعية تيم",
-            imgSrc: logo
-          }}
-        />
-        <div
-          className="main-panel"
-          ref="mainPanel"
-          data={this.state.backgroundColor}
-        >
-          <RTLNavbar
+      <>
+        <div className="wrapper">
+          <Sidebar
             {...this.props}
-            handleMiniClick={this.handleMiniClick}
-            brandText={this.getBrandText(this.props.location.pathname)}
+            routes={routes}
+            bgColor={this.state.backgroundColor}
+            rtlActive
+            logo={{
+              outterLink: "https://www.creative-tim.com/",
+              text: "الإبداعية تيم",
+              imgSrc: logo
+            }}
           />
-          <Switch>{this.getRoutes(routes)}</Switch>
-          {// we don't want the Footer to be rendered on map page
-          this.props.location.pathname.indexOf("maps") !== -1 ? null : (
-            <Footer fluid />
-          )}
+          <div
+            className="main-panel"
+            ref="mainPanel"
+            data={this.state.backgroundColor}
+          >
+            <RTLNavbar
+              {...this.props}
+              handleMiniClick={this.handleMiniClick}
+              brandText={this.getBrandText(this.props.location.pathname)}
+            />
+            <Switch>{this.getRoutes(routes)}</Switch>
+            {// we don't want the Footer to be rendered on map page
+            this.props.location.pathname.indexOf("maps") !== -1 ? null : (
+              <Footer fluid />
+            )}
+          </div>
         </div>
         <FixedPlugin
           bgColor={this.state.backgroundColor}
           handleBgClick={this.handleBgClick}
         />
-      </div>
+      </>
     );
   }
 }
