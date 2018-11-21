@@ -184,17 +184,7 @@ textarea.form-control{
     max-height: 80px;
     padding: 10px 10px 0 0;
     resize: none;
-    border: none;
-    border-bottom: 1px solid lighten($black,5%);
-    border-radius: 0;
     line-height: 2;
-
-    &:focus,
-    &:active{
-        border-left: none;
-        border-top: none;
-        border-right: none;
-    }
 }
 
 .has-success,

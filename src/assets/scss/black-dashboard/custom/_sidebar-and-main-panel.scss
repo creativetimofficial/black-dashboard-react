@@ -471,27 +471,29 @@
 
 
 .perfect-scrollbar-on{
-  .sidebar,
   .main-panel{
       height: 100%;
       max-height: 100%;
   }
 }
 
+.sidebar,
+.main-panel,
+.sidebar-wrapper{
+  -webkit-overflow-scrolling: touch;
+}
 
 @media (min-width: 991px) {
-    .sidebar,
-    .main-panel,
-    .sidebar-wrapper{
-      -webkit-transition-property: top,bottom,width;
-      transition-property: top,bottom, width;
-      -webkit-transition-duration: .2s,.2s, .35s;
-      transition-duration: .2s,.2s, .35s;
-      -webkit-transition-timing-function: linear,linear,ease;
-      transition-timing-function: linear,linear,ease;
-      -webkit-overflow-scrolling: touch;
-    }
-
+  .sidebar,
+  .main-panel,
+  .sidebar-wrapper{
+    -webkit-transition-property: top,bottom,width;
+    transition-property: top,bottom, width;
+    -webkit-transition-duration: .2s,.2s, .35s;
+    transition-duration: .2s,.2s, .35s;
+    -webkit-transition-timing-function: linear,linear,ease;
+    transition-timing-function: linear,linear,ease;
+  }
 
     .sidebar-mini{
         .visible-on-sidebar-regular{
@@ -694,6 +696,9 @@
             right: 260px;
             left: auto;
         }
+      }
+      .fixed-plugin {
+        display: none;
       }
   }
 

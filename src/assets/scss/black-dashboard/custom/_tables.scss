@@ -163,29 +163,3 @@
 #tables .table-responsive{
     margin-bottom: 30px;
 }
-
-table.tablesorter thead tr .header{
-	// background-image: url("../img/bg.gif");
-  background-repeat: no-repeat;
-  background-position: center right;
-  cursor: pointer;
-}
-
-table.tablesorter thead tr .headerSortUp {
-	// background-image: url("../img/asc.gif");
-}
-table.tablesorter thead tr .headerSortDown {
-	// background-image: url("../img/desc.gif");
-}
-
-// datatables
-
-.dataTables_wrapper {
-  .table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0,0,0,.05);
-  }
-
-  .form-control-sm {
-    font-size: 10px;
-  }
-}

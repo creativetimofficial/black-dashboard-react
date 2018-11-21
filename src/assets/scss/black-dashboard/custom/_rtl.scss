@@ -228,6 +228,10 @@
       }
     }
   }
+  .sidebar .nav li.active > a:not([data-toggle="collapse"]):before, .off-canvas-sidebar .nav li.active > a:not([data-toggle="collapse"]):before{
+    left: unset;
+    right: -4px;
+  }
 }
 
 
