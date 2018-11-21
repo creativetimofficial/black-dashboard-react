@@ -68,9 +68,10 @@ class AdminNavbar extends React.Component {
   render() {
     return (
       <>
-        <Navbar className={
-          classNames("navbar-absolute",
-          this.state.color)} expand="lg">
+        <Navbar
+          className={classNames("navbar-absolute", this.state.color)}
+          expand="lg"
+        >
           <Container fluid>
             <div className="navbar-wrapper">
               <div

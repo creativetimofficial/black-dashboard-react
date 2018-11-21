@@ -36,7 +36,7 @@ class Sidebar extends React.Component {
   }
   linkOnClick = () => {
     document.documentElement.classList.remove("nav-open");
-  }
+  };
   render() {
     const { bgColor, routes, rtlActive, logo } = this.props;
     let logoImg = null;
@@ -67,14 +67,22 @@ class Sidebar extends React.Component {
         );
       } else {
         logoImg = (
-          <Link to={logo.innerLink} className="simple-text logo-mini" onClick={this.props.toggleSidebar}>
+          <Link
+            to={logo.innerLink}
+            className="simple-text logo-mini"
+            onClick={this.props.toggleSidebar}
+          >
             <div className="logo-img">
               <img src={logo.imgSrc} alt="react-logo" />
             </div>
           </Link>
         );
         logoText = (
-          <Link to={logo.innerLink} className="simple-text logo-normal" onClick={this.props.toggleSidebar}>
+          <Link
+            to={logo.innerLink}
+            className="simple-text logo-normal"
+            onClick={this.props.toggleSidebar}
+          >
             {logo.text}
           </Link>
         );

@@ -29,6 +29,10 @@ class Admin extends React.Component {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
       ps = new PerfectScrollbar(this.refs.mainPanel);
+      let tables = document.querySelectorAll(".table-responsive");
+      for (let i = 0; i < tables.length; i++) {
+        ps = new PerfectScrollbar(tables[i]);
+      }
     }
     // on this page, we need on the body tag the classes .rtl and .menu-on-right
     document.body.classList.add("rtl", "menu-on-right");
