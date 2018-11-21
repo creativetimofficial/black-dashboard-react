@@ -202,6 +202,32 @@
     overflow-y: scroll;
     overflow-x: hidden;
   }
+  .fixed-plugin {
+    border-radius: 0 8px 8px 0;
+    left: 0;
+    right: unset;
+    .dropdown-menu {
+      left: 80px !important;
+      right: auto !important;
+      &:before,&:after {
+        left: 10px;
+        margin-right: auto;
+        right: auto;
+      }
+      &:before {
+        right: unset;
+        left: -16px;
+        border-left: unset;
+        border-right: .4em solid rgba(0,0,0,.2);
+      }
+      &:after {
+        right: unset;
+        left: -16px;
+        border-left: unset;
+        border-right: .4em solid $black;
+      }
+    }
+  }
 }
 
 
