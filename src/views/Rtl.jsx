@@ -206,7 +206,7 @@ class Rtl extends React.Component {
             <Col className="text-center" lg="6" sm="6">
               <Card className="card-tasks text-left">
                 <CardHeader className="text-right">
-                  <h6 className="title d-inline">تتبع</h6>
+                  <h6 className="title d-inline">تتبع</h6>{" "}
                   <p className="card-category d-inline">اليوم</p>
                   <UncontrolledDropdown className="float-left">
                     <DropdownToggle
@@ -276,6 +276,7 @@ class Rtl extends React.Component {
                             <UncontrolledTooltip
                               delay={0}
                               target="tooltip591536518"
+                              placement="right"
                             >
                               مهمة تحرير
                             </UncontrolledTooltip>
@@ -313,6 +314,7 @@ class Rtl extends React.Component {
                             <UncontrolledTooltip
                               delay={0}
                               target="tooltip36890049"
+                              placement="right"
                             >
                               مهمة تحرير
                             </UncontrolledTooltip>
@@ -348,6 +350,7 @@ class Rtl extends React.Component {
                             <UncontrolledTooltip
                               delay={0}
                               target="tooltip5456779"
+                              placement="right"
                             >
                               مهمة تحرير
                             </UncontrolledTooltip>
@@ -389,6 +392,7 @@ class Rtl extends React.Component {
                             <UncontrolledTooltip
                               delay={0}
                               target="tooltip989428493"
+                              placement="right"
                             >
                               مهمة تحرير
                             </UncontrolledTooltip>
@@ -430,6 +434,7 @@ class Rtl extends React.Component {
                             <UncontrolledTooltip
                               delay={0}
                               target="tooltip169784793"
+                              placement="right"
                             >
                               مهمة تحرير
                             </UncontrolledTooltip>
@@ -467,6 +472,7 @@ class Rtl extends React.Component {
                             <UncontrolledTooltip
                               delay={0}
                               target="tooltip554497871"
+                              placement="right"
                             >
                               مهمة تحرير
                             </UncontrolledTooltip>
