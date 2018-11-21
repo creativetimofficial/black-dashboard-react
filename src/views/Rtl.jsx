@@ -39,28 +39,6 @@ class Rtl extends React.Component {
       bigChartData: "data1"
     };
   }
-  componentDidMount() {
-    // on this page, we need on the body tag the classes .rtl and .menu-on-right
-    document.body.classList.add("rtl", "menu-on-right");
-    // we also need the rtl bootstrap
-    // so we add it dynamically to the head
-    let head = document.head;
-    let link = document.createElement("link");
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.id = "rtl-id";
-    link.href =
-      "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css";
-    head.appendChild(link);
-  }
-  componentWillUnmount() {
-    // when we exit this page, we need to delete the classes .rtl and .menu-on-right
-    // from the body tag
-    document.body.classList.remove("rtl", "menu-on-right");
-    // we also need to delete the rtl bootstrap, so it does not break the other pages
-    // that do not make use of rtl
-    document.getElementById("rtl-id").remove();
-  }
   setBgChartData = name => {
     this.setState({
       bigChartData: name

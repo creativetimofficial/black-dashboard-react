@@ -3,7 +3,7 @@ import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Switch } from "react-router-dom";
 
-import AdminNavbar from "components/Navbars/AdminNavbar.jsx";
+import RTLNavbar from "components/Navbars/RTLNavbar.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
@@ -27,6 +27,18 @@ class Admin extends React.Component {
       document.documentElement.classList.remove("perfect-scrollbar-off");
       ps = new PerfectScrollbar(this.refs.mainPanel);
     }
+    // on this page, we need on the body tag the classes .rtl and .menu-on-right
+    document.body.classList.add("rtl", "menu-on-right");
+    // we also need the rtl bootstrap
+    // so we add it dynamically to the head
+    let head = document.head;
+    let link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.id = "rtl-id";
+    link.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css";
+    head.appendChild(link);
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -34,6 +46,12 @@ class Admin extends React.Component {
       document.documentElement.className += " perfect-scrollbar-off";
       document.documentElement.classList.remove("perfect-scrollbar-on");
     }
+    // when we exit this page, we need to delete the classes .rtl and .menu-on-right
+    // from the body tag
+    document.body.classList.remove("rtl", "menu-on-right");
+    // we also need to delete the rtl bootstrap, so it does not break the other pages
+    // that do not make use of rtl
+    document.getElementById("rtl-id").remove();
   }
   componentDidUpdate(e) {
     if (e.history.action === "PUSH") {
@@ -44,7 +62,7 @@ class Admin extends React.Component {
   }
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/rtl") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -67,9 +85,10 @@ class Admin extends React.Component {
           {...this.props}
           routes={routes}
           bgColor={this.state.backgroundColor}
+          rtlActive
           logo={{
-            innerLink: "https://www.creative-tim.com/",
-            text: "Creative Tim",
+            outterLink: "https://www.creative-tim.com/",
+            text: "الإبداعية تيم",
             imgSrc: logo
           }}
         />
@@ -78,7 +97,7 @@ class Admin extends React.Component {
           ref="mainPanel"
           data={this.state.backgroundColor}
         >
-          <AdminNavbar {...this.props} handleMiniClick={this.handleMiniClick} />
+          <RTLNavbar {...this.props} handleMiniClick={this.handleMiniClick} />
           <Switch>{this.getRoutes(routes)}</Switch>
           {// we don't want the Footer to be rendered on map page
           this.props.location.pathname.indexOf("maps") !== -1 ? null : (
