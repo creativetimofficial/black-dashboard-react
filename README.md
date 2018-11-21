@@ -68,82 +68,67 @@ The documentation for the Black Dashboard React is hosted at our [website](https
 Within the download you'll find the following directories and files:
 
 ```
+black-dashboard-react
+.
+├── package.json
 ├── CHANGELOG.md
 ├── ISSUE_TEMPLATE.md
 ├── LICENSE.md
 ├── README.md
-├── package.json
+├── Documentation
+│   └── documentation.html
+├── github-assets
+│   └── react.svg
 ├── public
-│   ├── favicon.ico
 │   ├── index.html
 │   └── manifest.json
 └── src
     ├── index.js
     ├── logo-white.svg
     ├── logo.svg
+    ├── routes.js
     ├── assets
+    │   ├── css
     │   ├── demo
     │   ├── fonts
-    │   ├── github
     │   ├── img
-    │   │   └── faces
     │   └── scss
     │       ├── black-dashboard
-    │       │   ├── cards
-    │       │   ├── mixins
-    │       │   └── plugins
+    │       │   ├── bootstrap
+    │       │   │   ├── mixins
+    │       │   │   └── utilities
+    │       │   ├── custom
+    │       │   │   ├── cards
+    │       │   │   ├── mixins
+    │       │   │   ├── utilities
+    │       │   │   └── vendor
     │       └── black-dashboard.scss
     ├── components
-    │   ├── CardElements
-    │   │   ├── CardAuthor.jsx
-    │   │   ├── CardCategory.jsx
-    │   │   └── CardSocials.jsx
-    │   ├── CustomButton
-    │   │   └── CustomButton.jsx
-    │   ├── CustomCheckbox
-    │   │   └── SimpleCheckbox.jsx
-    │   ├── CustomRadio
-    │   │   └── CustomRadio.jsx
     │   ├── FixedPlugin
     │   │   └── FixedPlugin.jsx
     │   ├── Footer
     │   │   └── Footer.jsx
-    │   ├── FormInputs
-    │   │   └── FormInputs.jsx
-    │   ├── Header
-    │   │   └── Header.jsx
-    │   ├── Sidebar
-    │   │   └── Sidebar.jsx
-    │   ├── Stats
-    │   │   └── Stats.jsx
-    │   ├── Tasks
-    │   │   └── Tasks.jsx
-    │   └── index.js
+    │   ├── Navbars
+    │   │   ├── AdminNavbar.jsx
+    │   │   └── RTLNavbar.jsx
+    │   └── Sidebar
+    │       └── Sidebar.jsx
     ├── layouts
-    │   └── Dashboard
-    │       └── Dashboard.jsx
-    ├── routes
-    │   ├── dashboard.jsx
-    │   └── index.jsx
+    │   ├── Admin
+    │   │   └── Admin.jsx
+    │   └── RTL
+    │       └── RTL.jsx
     ├── variables
-    │   ├── charts.jsx
-    │   ├── general.jsx
-    │   └── icons.jsx
+    │   └── charts.jsx
     └── views
-        ├── Dashboard
-        │   └── Dashboard.jsx
-        ├── Icons
-        │   └── Icons.jsx
-        ├── Maps
-        │   └── Maps.jsx
-        ├── Notifications
-        │   └── Notifications.jsx
-        ├── TableList
-        │   └── TableList.jsx
-        ├── Typography
-        │   └── Typography.jsx
-        └── UserPage
-            └── UserPage.jsx
+        ├── Dashboard.jsx
+        ├── Icons.jsx
+        ├── Map.jsx
+        ├── Notifications.jsx
+        ├── Rtl.jsx
+        ├── TableList.jsx
+        ├── Typography.jsx
+        └── UserProfile.jsx
 ```
 
 ## Browser Support
