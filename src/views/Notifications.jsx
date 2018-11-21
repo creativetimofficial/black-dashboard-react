@@ -59,7 +59,9 @@ class Notifications extends React.Component {
     return (
       <>
         <div className="content">
-          <NotificationAlert ref="notificationAlert" />
+          <div className="react-notification-alert-container">
+            <NotificationAlert ref="notificationAlert" />
+          </div>
           <Row>
             <Col md="6">
               <Card>
