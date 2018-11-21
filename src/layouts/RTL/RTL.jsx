@@ -62,6 +62,12 @@ class Admin extends React.Component {
   }
   componentDidUpdate(e) {
     if (e.history.action === "PUSH") {
+      if (navigator.platform.indexOf("Win") > -1) {
+        let tables = document.querySelectorAll(".table-responsive");
+        for (let i = 0; i < tables.length; i++) {
+          ps = new PerfectScrollbar(tables[i]);
+        }
+      }
       document.documentElement.scrollTop = 0;
       document.scrollingElement.scrollTop = 0;
       this.refs.mainPanel.scrollTop = 0;
