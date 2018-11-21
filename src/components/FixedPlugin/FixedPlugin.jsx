@@ -18,7 +18,6 @@ class FixedPlugin extends Component {
     }
   };
   activateMode = mode => {
-    console.log("hey");
     switch (mode) {
       case "light":
         document.body.classList.add("white-content");

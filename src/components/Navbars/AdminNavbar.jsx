@@ -25,22 +25,11 @@ class AdminNavbar extends React.Component {
     super(props);
     this.state = {
       collapseOpen: false,
-      modalSearch: false,
-      sidebarOpened:
-        document.documentElement.className.indexOf("nav-open") !== -1
+      modalSearch: false
     };
   }
   componentDidMount() {
     window.addEventListener("resize", this.updateColor);
-  }
-  componentDidUpdate(e) {
-    if (
-      window.outerWidth < 993 &&
-      e.history.location.pathname !== e.location.pathname &&
-      document.documentElement.className.indexOf("nav-open") !== -1
-    ) {
-      document.documentElement.classList.toggle("nav-open");
-    }
   }
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
   updateColor = () => {
@@ -54,14 +43,8 @@ class AdminNavbar extends React.Component {
       });
     }
   };
-  // this function opens and closes the sidebar on small devices
-  toggleSidebar = () => {
-    document.documentElement.classList.toggle("nav-open");
-    this.setState({ sidebarOpened: !this.state.sidebarOpened });
-  };
   // this function opens and closes the collapse on small devices
   toggleCollapse = () => {
-    console.log(this.state);
     this.setState({
       collapseOpen: !this.state.collapseOpen
     });
@@ -80,13 +63,13 @@ class AdminNavbar extends React.Component {
             <div className="navbar-wrapper">
               <div
                 className={classNames("navbar-toggle d-inline", {
-                  toggled: this.state.sidebarOpened
+                  toggled: this.props.sidebarOpened
                 })}
               >
                 <button
                   className="navbar-toggler"
                   type="button"
-                  onClick={this.toggleSidebar}
+                  onClick={this.props.toggleSidebar}
                 >
                   <span className="navbar-toggler-bar bar1" />
                   <span className="navbar-toggler-bar bar2" />

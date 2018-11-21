@@ -19,7 +19,9 @@ class Admin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: "blue"
+      backgroundColor: "blue",
+      sidebarOpened:
+        document.documentElement.className.indexOf("nav-open") !== -1
     };
   }
   componentDidMount() {
@@ -43,6 +45,11 @@ class Admin extends React.Component {
       this.refs.mainPanel.scrollTop = 0;
     }
   }
+  // this function opens and closes the sidebar on small devices
+  toggleSidebar = () => {
+    document.documentElement.classList.toggle("nav-open");
+    this.setState({ sidebarOpened: !this.state.sidebarOpened });
+  };
   getRoutes = routes => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
@@ -86,6 +93,7 @@ class Admin extends React.Component {
               text: "Creative Tim",
               imgSrc: logo
             }}
+            toggleSidebar={this.toggleSidebar}
           />
           <div
             className="main-panel"
@@ -96,6 +104,8 @@ class Admin extends React.Component {
               {...this.props}
               handleMiniClick={this.handleMiniClick}
               brandText={this.getBrandText(this.props.location.pathname)}
+              toggleSidebar={this.toggleSidebar}
+              sidebarOpened={this.state.sidebarOpened}
             />
             <Switch>{this.getRoutes(routes)}</Switch>
             {// we don't want the Footer to be rendered on map page

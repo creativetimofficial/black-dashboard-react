@@ -34,6 +34,9 @@ class Sidebar extends React.Component {
       ps.destroy();
     }
   }
+  linkOnClick = () => {
+    document.documentElement.classList.remove("nav-open");
+  }
   render() {
     const { bgColor, routes, rtlActive, logo } = this.props;
     let logoImg = null;
@@ -45,6 +48,7 @@ class Sidebar extends React.Component {
             href={logo.outterLink}
             className="simple-text logo-mini"
             target="_blank"
+            onClick={this.props.toggleSidebar}
           >
             <div className="logo-img">
               <img src={logo.imgSrc} alt="react-logo" />
@@ -56,20 +60,21 @@ class Sidebar extends React.Component {
             href={logo.outterLink}
             className="simple-text logo-normal"
             target="_blank"
+            onClick={this.props.toggleSidebar}
           >
             {logo.text}
           </a>
         );
       } else {
         logoImg = (
-          <Link to={logo.innerLink} className="simple-text logo-mini">
+          <Link to={logo.innerLink} className="simple-text logo-mini" onClick={this.props.toggleSidebar}>
             <div className="logo-img">
               <img src={logo.imgSrc} alt="react-logo" />
             </div>
           </Link>
         );
         logoText = (
-          <Link to={logo.innerLink} className="simple-text logo-normal">
+          <Link to={logo.innerLink} className="simple-text logo-normal" onClick={this.props.toggleSidebar}>
             {logo.text}
           </Link>
         );
@@ -99,6 +104,7 @@ class Sidebar extends React.Component {
                     to={prop.layout + prop.path}
                     className="nav-link"
                     activeClassName="active"
+                    onClick={this.props.toggleSidebar}
                   >
                     <i className={prop.icon} />
                     <p>{rtlActive ? prop.rtlName : prop.name}</p>
