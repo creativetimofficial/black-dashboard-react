@@ -169,7 +169,7 @@ class AdminNavbar extends React.Component {
                     <b className="caret d-none d-lg-block d-xl-block" />
                     <p className="d-lg-none">Log out</p>
                   </DropdownToggle>
-                  <DropdownMenu className="dropdown-navbar" tag="ul" >
+                  <DropdownMenu className="dropdown-navbar" tag="ul">
                     <NavLink tag="li">
                       <DropdownItem className="nav-item">Profile</DropdownItem>
                     </NavLink>
