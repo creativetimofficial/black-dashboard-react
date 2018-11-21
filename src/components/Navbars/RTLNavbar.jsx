@@ -131,7 +131,7 @@ class AdminNavbar extends React.Component {
                     <i className="tim-icons icon-sound-wave" />
                     <p className="d-lg-none">Notifications</p>
                   </DropdownToggle>
-                  <DropdownMenu className="dropdown-navbar" tag="ul">
+                  <DropdownMenu className="dropdown-navbar" tag="ul" right>
                     <NavLink tag="li">
                       <DropdownItem className="nav-item">
                         Mike John responded to your email
@@ -159,7 +159,7 @@ class AdminNavbar extends React.Component {
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
-                <UncontrolledDropdown nav>
+                <UncontrolledDropdown nav right>
                   <DropdownToggle
                     caret
                     color="default"
