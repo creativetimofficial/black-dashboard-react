@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from "react";
 import { PropTypes } from "prop-types";
 import { NavLink, Link } from "react-router-dom";
@@ -35,9 +36,8 @@ class Sidebar extends React.Component {
     const { bgColor, routes, rtlActive, logo } = this.props;
     let logoImg = null;
     let logoText = null;
-    if(logo !== undefined){
-      if(logo.outterLink !== undefined){
-        console.log("muie");
+    if (logo !== undefined) {
+      if (logo.outterLink !== undefined) {
         logoImg = (
           <a
             href={logo.outterLink}
@@ -60,20 +60,14 @@ class Sidebar extends React.Component {
         );
       } else {
         logoImg = (
-          <Link
-            to={logo.innerLink}
-            className="simple-text logo-mini"
-          >
+          <Link to={logo.innerLink} className="simple-text logo-mini">
             <div className="logo-img">
               <img src={logo.imgSrc} alt="react-logo" />
             </div>
           </Link>
         );
         logoText = (
-          <Link
-            to={logo.innerLink}
-            className="simple-text logo-normal"
-          >
+          <Link to={logo.innerLink} className="simple-text logo-normal">
             {logo.text}
           </Link>
         );
@@ -81,14 +75,12 @@ class Sidebar extends React.Component {
     }
     return (
       <div className="sidebar" data={bgColor}>
-        {
-          (logoImg !== null || logoText !== null) ? (
-            <div className="logo">
-              {logoImg}
-              {logoText}
-            </div>
-          ):null
-        }
+        {logoImg !== null || logoText !== null ? (
+          <div className="logo">
+            {logoImg}
+            {logoText}
+          </div>
+        ) : null}
         <div className="sidebar-wrapper" ref="sidebar">
           <Nav>
             {routes.map((prop, key) => {
@@ -107,7 +99,7 @@ class Sidebar extends React.Component {
                     activeClassName="active"
                   >
                     <i className={prop.icon} />
-                    <p>{rtlActive ? prop.rtlName:prop.name}</p>
+                    <p>{rtlActive ? prop.rtlName : prop.name}</p>
                   </NavLink>
                 </li>
               );
@@ -123,13 +115,13 @@ Sidebar.defaultProps = {
   rtlActive: false,
   bgColor: "primary",
   routes: [{}]
-}
+};
 
 Sidebar.propTypes = {
   // if true, then instead of the routes[i].name, routes[i].rtlName will be rendered
   // insde the links of this component
   rtlActive: PropTypes.bool,
-  bgColor: PropTypes.oneOf(["primary","blue","green"]),
+  bgColor: PropTypes.oneOf(["primary", "blue", "green"]),
   routes: PropTypes.arrayOf(PropTypes.object),
   logo: PropTypes.shape({
     // innerLink is for links that will direct the user within the app
@@ -143,6 +135,6 @@ Sidebar.propTypes = {
     // the image src of the logo
     imgSrc: PropTypes.string
   })
-}
+};
 
 export default Sidebar;

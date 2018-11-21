@@ -5,7 +5,6 @@ import Notifications from "views/Notifications.jsx";
 import Rtl from "views/Rtl.jsx";
 import TableList from "views/TableList.jsx";
 import Typography from "views/Typography.jsx";
-import Upgrade from "views/Upgrade.jsx";
 import UserProfile from "views/UserProfile.jsx";
 
 var routes = [
