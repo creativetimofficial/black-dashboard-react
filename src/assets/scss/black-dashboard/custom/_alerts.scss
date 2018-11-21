@@ -66,6 +66,7 @@
 }
 
 .alert-dismissible {
+    padding-right: 1.25rem;
     .close {
 
         &:hover,
@@ -92,5 +93,11 @@
                 color: rgba($white, .9);
             }
         }
+    }
+    &.animated {
+      z-index: 9999;
+      .close {
+        right: 10px;
+      }
     }
 }

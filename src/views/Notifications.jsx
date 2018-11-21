@@ -44,7 +44,7 @@ class Notifications extends React.Component {
       message: (
         <div>
           <div>
-            Welcome to <b>Paper Dashboard React</b> - a beautiful freebie for
+            Welcome to <b>Black Dashboard React</b> - a beautiful freebie for
             every web developer.
           </div>
         </div>
