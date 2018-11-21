@@ -126,6 +126,8 @@ Sidebar.defaultProps = {
 }
 
 Sidebar.propTypes = {
+  // if true, then instead of the routes[i].name, routes[i].rtlName will be rendered
+  // insde the links of this component
   rtlActive: PropTypes.bool,
   bgColor: PropTypes.oneOf(["primary","blue","green"]),
   routes: PropTypes.arrayOf(PropTypes.object),
