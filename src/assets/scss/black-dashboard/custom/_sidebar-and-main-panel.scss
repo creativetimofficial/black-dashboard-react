@@ -279,8 +279,12 @@
             float: left;
             width: 34px;
             text-align: center;
-            margin-left: 10px;
+            margin-left: 12px;
             margin-right: 12px;
+            img {
+              border-radius: 50%;
+              width: 30px;
+            }
         }
 
         a.logo-normal{
