@@ -9,7 +9,7 @@ import Documentation from "layouts/Documentation/Documentation.jsx";
 
 import "layouts/Documentation/assets-for-demo/docs.scss";
 import "layouts/Documentation/assets-for-demo/react-docs.scss";
-import "assets/scss/black-dashboard.scss";
+import "assets/scss/black-dashboard-react.scss";
 import "assets/demo/demo.css";
 import "assets/css/nucleo-icons.css";
 
