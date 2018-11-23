@@ -99,9 +99,9 @@ class FixedPlugin extends Component {
                 block
                 className="btn-round"
                 outline
-                href="https://demos.creative-tim.com/paper-dashboard-react/#/documentation/tutorial"
+                href="https://demos.creative-tim.com/black-dashboard-react/#/documentation/tutorial"
               >
-                <i className="nc-icon nc-paper" /> Documentation
+                Documentation
               </Button>
             </li>
             <li className="header-title">Want more components?</li>
