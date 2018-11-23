@@ -1,13 +1,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import {
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  Button
-} from "reactstrap";
+import { Modal, ModalBody, ModalFooter, ModalHeader, Button } from "reactstrap";
 
 const codeExampleModalDemoDep = `constructor(props) {
     super(props);

@@ -1,10 +1,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import {
-  Button,
-  Table
-} from "reactstrap";
+import { Button, Table } from "reactstrap";
 
 const codeSimpleExample = `<Table responsive>
     <thead>
