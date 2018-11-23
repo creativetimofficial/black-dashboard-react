@@ -12,3 +12,11 @@ body.bd-docs{
 .bd-docs .bd-example .btn-group + .btn-group{
   margin-left: 5px;
 }
+
+.bd-docs .bd-sidebar,.bd-docs .bd-navbar{
+  position: sticky;
+}
+
+.bd-docs .bd-navbar .navbar-brand{
+  position: unset;
+}
