@@ -88,7 +88,7 @@ class Navbar extends React.Component {
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}
           from closed to open on small devices. It also has a dynamic brand and
-          a prop called <code>sidebarOpened</code> to let it know when the{" "}
+          a prop called <code class="highlighter-rouge">sidebarOpened</code> to let it know when the{" "}
           <Link to="/documentation/sidebar">
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}
@@ -124,7 +124,7 @@ class Navbar extends React.Component {
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}
           from closed to open on small devices. It also has a dynamic brand and
-          a prop called <code>sidebarOpened</code> to let it know when the{" "}
+          a prop called <code class="highlighter-rouge">sidebarOpened</code> to let it know when the{" "}
           <Link to="/documentation/sidebar">
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}

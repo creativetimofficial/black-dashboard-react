@@ -598,7 +598,7 @@ class Navigation extends React.Component {
         </SyntaxHighlighter>
         <p>
           You may also utilize dropdowns in your navbar nav. You will have to
-          specify the <code>{`tag='nav'`}</code> prop.
+          specify the <code class="highlighter-rouge">{`tag='nav'`}</code> prop.
         </p>
         <div className="bd-example" data-example-id="">
           <Navbar expand="lg" color="primary">
@@ -649,7 +649,7 @@ class Navigation extends React.Component {
         <h3>Forms</h3>
         <p>
           Place various form controls and components within a navbar with{" "}
-          <code>inline</code> prop.
+          <code class="highlighter-rouge">inline</code> prop.
         </p>
         <div className="bd-example" data-example-id="">
           <Navbar expand="lg" color="primary">
@@ -811,7 +811,7 @@ class Navigation extends React.Component {
         </SyntaxHighlighter>
         <h2>Placement</h2>
         <p>
-          Use our <code>position utilities</code> to place navbars in non-static
+          Use our <code class="highlighter-rouge">position utilities</code> to place navbars in non-static
           positions. Choose from fixed to the top, fixed to the bottom, or
           stickied to the top (scrolls with the page until it reaches the top,
           then stays there). Fixed navbars use{" "}

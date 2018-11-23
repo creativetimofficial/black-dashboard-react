@@ -70,7 +70,7 @@ class Sidebar extends React.Component {
             primary
           </code>,<code className="highlighter-rouge">info</code>,<code className="highlighter-rouge">
             success
-          </code>,<code className="highlighter-rouge">warning</code>,<code>
+          </code>,<code className="highlighter-rouge">warning</code>,<code class="highlighter-rouge">
             danger
           </code>).
         </p>
