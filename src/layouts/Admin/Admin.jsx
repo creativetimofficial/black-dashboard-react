@@ -112,7 +112,6 @@ class Admin extends React.Component {
           >
             <AdminNavbar
               {...this.props}
-              handleMiniClick={this.handleMiniClick}
               brandText={this.getBrandText(this.props.location.pathname)}
               toggleSidebar={this.toggleSidebar}
               sidebarOpened={this.state.sidebarOpened}
