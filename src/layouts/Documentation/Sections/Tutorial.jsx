@@ -29,7 +29,7 @@ const fileStructure = `black-dashboard-react
     │   ├── fonts
     │   ├── img
     │   └── scss
-    │       ├── black-dashboard
+    │       ├── black-dashboard-react
     │       │   ├── bootstrap
     │       │   │   ├── mixins
     │       │   │   └── utilities
@@ -38,7 +38,7 @@ const fileStructure = `black-dashboard-react
     │       │   │   ├── mixins
     │       │   │   ├── utilities
     │       │   │   └── vendor
-    │       └── black-dashboard.scss
+    │       └── black-dashboard-react.scss
     ├── components
     │   ├── FixedPlugin
     │   │   └── FixedPlugin.jsx
@@ -152,7 +152,7 @@ class Tutorial extends React.Component {
         <p>
           Read more about licenses here:{" "}
           <a
-            href="https://www.creative-tim.com/license/?ref=paper-dashboard-react"
+            href="https://www.creative-tim.com/license/?ref=black-dashboard-react"
             target="_blank"
           >
             creative-tim license
@@ -178,7 +178,7 @@ class Tutorial extends React.Component {
           We provide all the necessary CSS resources. So, to immediately change
           or get started with our design, include the{" "}
           <code className="highlighter-rouge">
-            src/assets/scss/paper-dashboard.css
+            src/assets/scss/black-dashboard-react.css
           </code>{" "}
           in your template. Your project will get the new look.
         </p>
@@ -395,7 +395,7 @@ class Tutorial extends React.Component {
           our styles inside your app like so:
         </p>
         <SyntaxHighlighter language="javascript" style={prism}>
-          {`import "assets/scss/black-dashboard.scss";
+          {`import "assets/scss/black-dashboard-react.scss";
 import "assets/css/nucleo-icons.css";`}
         </SyntaxHighlighter>
         <br />

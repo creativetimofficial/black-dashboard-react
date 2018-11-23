@@ -19,7 +19,7 @@ class Colors extends React.Component {
           <li>
             You can find the colors in{" "}
             <code class="highlighter-rouge">
-              src/assets/scss/black-dashboard/_variables.scss
+              src/assets/scss/black-dashboard-react/_variables.scss
             </code>.
           </li>
           <li>

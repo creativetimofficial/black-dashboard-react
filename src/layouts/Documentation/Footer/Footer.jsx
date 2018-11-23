@@ -18,7 +18,7 @@ class Footer extends React.Component {
                 <a href="https://blog.creative-tim.com">Blog</a>
               </li>
               <li>
-                <a href="https://github.com/creativetimofficial/now-ui-dashboard-pro-react/blob/master/LICENSE.md">
+                <a href="https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md">
                   MIT License
                 </a>
               </li>

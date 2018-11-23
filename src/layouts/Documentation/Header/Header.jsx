@@ -12,7 +12,7 @@ class Header extends React.Component {
         tag="header"
       >
         <Link to="/" className="navbar-brand mr-0 mr-md-2 navbar-absolute-logo">
-          Paper Dashboard PRO - React
+          Black Dashboard - React
         </Link>
         <Nav className="flex-row d-none d-md-flex" navbar>
           <NavItem>
@@ -22,7 +22,7 @@ class Header extends React.Component {
           </NavItem>
           <NavItem>
             <NavLink
-              href="https://github.com/creativetimofficial/ct-paper-dashboard-pro-react"
+              href="https://github.com/creativetimofficial/black-dashboard-react"
               className="p-2"
             >
               <i className="fab fa-github" />
@@ -42,12 +42,12 @@ class Header extends React.Component {
               </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues">
+              <NavLink href="https://github.com/creativetimofficial/black-dashboard-react/issues">
                 <i className="tim-icons icon-scissors" /> Report a bug
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/creativetimofficial/ct-paper-dashboard-pro-react">
+              <NavLink href="https://github.com/creativetimofficial/black-dashboard-react">
                 <i className="tim-icons icon-shape-star" /> Help with a star
               </NavLink>
             </NavItem>
@@ -60,7 +60,7 @@ class Header extends React.Component {
           </Nav>
         </div>
         <a
-          href="https://github.com/creativetimofficial/black-dashboard"
+          href="https://github.com/creativetimofficial/black-dashboard-react"
           className="github-corner"
           aria-label="View source on Github"
         >
