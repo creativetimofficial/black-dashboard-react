@@ -73,10 +73,11 @@ class Badges extends React.Component {
         </SyntaxHighlighter>
         <h2>Pill badges</h2>
         <p>
-          Use the <code class="highlighter-rouge">pill</code> modifier prop to make badges more rounded
-          (with a larger <code class="highlighter-rouge">border-radius</code> and additional horizontal{" "}
-          <code class="highlighter-rouge">padding</code>). Useful if you miss the badges from bootstrap
-          v3.
+          Use the <code class="highlighter-rouge">pill</code> modifier prop to
+          make badges more rounded (with a larger{" "}
+          <code class="highlighter-rouge">border-radius</code> and additional
+          horizontal <code class="highlighter-rouge">padding</code>). Useful if
+          you miss the badges from bootstrap v3.
         </p>
         <div className="bd-example">
           <Badge color="primary" pill>
@@ -103,8 +104,9 @@ class Badges extends React.Component {
         </SyntaxHighlighter>
         <h2>Links</h2>
         <p>
-          Adding the <code class="highlighter-rouge">href</code> prop (without specifying a{" "}
-          <code class="highlighter-rouge">tag</code> prop) will default the badge to a link.
+          Adding the <code class="highlighter-rouge">href</code> prop (without
+          specifying a <code class="highlighter-rouge">tag</code> prop) will
+          default the badge to a link.
         </p>
         <div className="bd-example">
           <Badge href="#" color="primary" onClick={e => e.preventDefault()}>

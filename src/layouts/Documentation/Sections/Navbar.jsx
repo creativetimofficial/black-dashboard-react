@@ -88,7 +88,8 @@ class Navbar extends React.Component {
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}
           from closed to open on small devices. It also has a dynamic brand and
-          a prop called <code class="highlighter-rouge">sidebarOpened</code> to let it know when the{" "}
+          a prop called <code class="highlighter-rouge">sidebarOpened</code> to
+          let it know when the{" "}
           <Link to="/documentation/sidebar">
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}
@@ -118,13 +119,14 @@ class Navbar extends React.Component {
         </h2>
         <p>
           It is used to create the navbar / header that appears on the{" "}
-          <code className="highlighter-rouge">src/layouts/RTl/RTl.jsx</code>{" "}
-          and it has a very nice feature, it has a button that toggles the{" "}
+          <code className="highlighter-rouge">src/layouts/RTl/RTl.jsx</code> and
+          it has a very nice feature, it has a button that toggles the{" "}
           <Link to="/documentation/sidebar">
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}
           from closed to open on small devices. It also has a dynamic brand and
-          a prop called <code class="highlighter-rouge">sidebarOpened</code> to let it know when the{" "}
+          a prop called <code class="highlighter-rouge">sidebarOpened</code> to
+          let it know when the{" "}
           <Link to="/documentation/sidebar">
             src/components/Sidebar/Sidebar.jsx
           </Link>{" "}

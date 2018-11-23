@@ -811,10 +811,10 @@ class Navigation extends React.Component {
         </SyntaxHighlighter>
         <h2>Placement</h2>
         <p>
-          Use our <code class="highlighter-rouge">position utilities</code> to place navbars in non-static
-          positions. Choose from fixed to the top, fixed to the bottom, or
-          stickied to the top (scrolls with the page until it reaches the top,
-          then stays there). Fixed navbars use{" "}
+          Use our <code class="highlighter-rouge">position utilities</code> to
+          place navbars in non-static positions. Choose from fixed to the top,
+          fixed to the bottom, or stickied to the top (scrolls with the page
+          until it reaches the top, then stays there). Fixed navbars use{" "}
           <code className="highlighter-rouge">position: fixed</code>, meaning
           they’re pulled from the normal flow of the DOM and may require custom
           CSS (e.g., <code className="highlighter-rouge">padding-top</code> on
