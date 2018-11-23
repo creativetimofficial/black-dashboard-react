@@ -84,7 +84,8 @@ class FixedPlugin extends React.Component {
         </p>
         <p>
           For a better understaing please, take a look inside{" "}
-          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>{" "},<code className="highlighter-rouge">src/layouts/RTL/RTL.jsx</code>{" "}
+          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>{" "}
+          ,<code className="highlighter-rouge">src/layouts/RTL/RTL.jsx</code>{" "}
           and{" "}
           <code className="highlighter-rouge">
             src/components/FixedPlugin/FixedPlugin.jsx

@@ -24,7 +24,13 @@ class YourClass extends React.Component {
         {...this.props}
         routes={routes}
         bgColor={this.state.backgroundColor}
-        activeColor={this.state.activeColor}
+        logo={{
+          innerLink: "https://www.creative-tim.com/",
+          text: "Creative Tim",
+          imgSrc: logo
+        }}
+        // this is necessary so we can close the menu, when a users goes to another page
+        toggleSidebar={this.toggleSidebar}
       />
       ... other code
     );
@@ -33,6 +39,33 @@ class YourClass extends React.Component {
 
 export default YourClass;
 `;
+
+const exampleProps = `Sidebar.defaultProps = {
+  rtlActive: false,
+  bgColor: "primary",
+  routes: [{}]
+};
+
+Sidebar.propTypes = {
+  // if true, then instead of the routes[i].name, routes[i].rtlName will be rendered
+  // insde the links of this component
+  rtlActive: PropTypes.bool,
+  bgColor: PropTypes.oneOf(["primary", "blue", "green"]),
+  routes: PropTypes.arrayOf(PropTypes.object),
+  toggleSidebar: PropTypes.func,
+  logo: PropTypes.shape({
+    // innerLink is for links that will direct the user within the app
+    // it will be rendered as <Link to="...">...</Link> tag
+    innerLink: PropTypes.string,
+    // outterLink is for links that will direct the user outside the app
+    // it will be rendered as simple <a href="...">...</a> tag
+    outterLink: PropTypes.string,
+    // the text of the logo
+    text: PropTypes.node,
+    // the image src of the logo
+    imgSrc: PropTypes.string
+  })
+};`;
 
 class Sidebar extends React.Component {
   render() {
@@ -49,12 +82,12 @@ class Sidebar extends React.Component {
         </p>
         <p>
           This is the left menu which is present on the{" "}
-          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>.
+          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>{" "}
+          and <code className="highlighter-rouge">src/layouts/RTL/RTL.jsx</code>.
         </p>
         <p>
-          It contains the company title, a photo of the logged in user with
-          options inside a dropdown, and a list of all the pages. Every element
-          in the list of pages can have a sublist of pages.
+          It contains the company logo and title and the links to your whole
+          app.
         </p>
         <p>To use it, you need to import it:</p>
         <SyntaxHighlighter
@@ -62,36 +95,23 @@ class Sidebar extends React.Component {
           style={prism}
         >{`import { Sidebar } from 'components';`}</SyntaxHighlighter>
         <p>
-          It comes in 3 different colors (<code className="highlighter-rouge">
-            black
-          </code>, <code className="highlighter-rouge">brown</code>,{" "}
-          <code className="highlighter-rouge">white</code>) and 5 different
-          colors for the active link (<code className="highlighter-rouge">
-            primary
-          </code>,<code className="highlighter-rouge">info</code>,<code className="highlighter-rouge">
-            success
-          </code>,<code className="highlighter-rouge">warning</code>,<code class="highlighter-rouge">
-            danger
-          </code>).
-        </p>
-        <p>
-          The logo image (react-logo) and logo text (Creative Tim), and the User
-          Collapse (Chet Faker) with its inner links, are static componnets so
-          you will need to manually change these if you want, feel free to
-          change them as you wish. The only dynamic things in this component are
-          the active link color, the background color and the links unders the
-          User Collapse. These links are contained in an array which has been
-          showed to you at the{" "}
-          <Link to="/documentation/routing-system">Routing System</Link> of this
-          documentation. Since these links are dynamic, you will have to pass to
-          this component where you render it the routes of your app.
-        </p>
-        <p>
           This is how it should look like in your render function of your
           class/function:
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
           {exampleCode}
+        </SyntaxHighlighter>
+        <p>
+          To understand better how to use it, please take a look inside{" "}
+          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>,{" "}
+          <code className="highlighter-rouge">src/layouts/RTL/RTL.jsx</code> and{" "}
+          <code className="highlighter-rouge">
+            src/components/Sidebar/Sidebar.jsx
+          </code>.
+        </p>
+        <h2>Props</h2>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {exampleProps}
         </SyntaxHighlighter>
       </div>
     );
