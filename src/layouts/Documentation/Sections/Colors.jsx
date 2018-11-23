@@ -1,24 +1,36 @@
 import React from "react";
 
-const Colors = () => {
-  return (
-    <>
-      <h1 class="bd-title" id="content">
-        Colors
-      </h1>
-      <p class="bd-lead">
-        You can change the default colors via variables from SCSS
-      </p>
-      <p>
-        You can find the colors in{" "}
-        <code class="highlighter-rouge">
-          assets/scss/paper-dashboard/_variables.scss
-        </code>{" "}
-        starting with line 51 where is the primary color set:{" "}
-        <code class="highlighter-rouge">$primary-color: #51cbce !default</code>.
-      </p>
-    </>
-  );
-};
+class Colors extends React.Component {
+  render() {
+    return (
+      <>
+        <h1 className="bd-title">Colors</h1>
+        <p className="bd-lead">
+          You can change the default colors via variables from SCSS
+        </p>
+        <ol>
+          <li>Download the project’s zip</li>
+          <li>Make sure you have node.js (https://nodejs.org/en/) installed</li>
+          <li>
+            Type <code class="highlighter-rouge">npm install</code> in
+            terminal/console in the source folder where{" "}
+            <code class="highlighter-rouge">package.json</code> is located
+          </li>
+          <li>
+            You can find the colors in{" "}
+            <code class="highlighter-rouge">
+              src/assets/scss/black-dashboard/_variables.scss
+            </code>.
+          </li>
+          <li>
+            Run in terminal{" "}
+            <code class="highlighter-rouge">npm run compile-sass</code> to
+            compile all the <code class="highlighter-rouge">scss</code> files.
+          </li>
+        </ol>
+      </>
+    );
+  }
+}
 
 export default Colors;

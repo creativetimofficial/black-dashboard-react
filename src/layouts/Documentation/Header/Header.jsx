@@ -12,7 +12,7 @@ class Header extends React.Component {
         tag="header"
       >
         <Link to="/" className="navbar-brand mr-0 mr-md-2 navbar-absolute-logo">
-          Paper Dashboard - React
+          Paper Dashboard PRO - React
         </Link>
         <Nav className="flex-row d-none d-md-flex" navbar>
           <NavItem>
@@ -22,37 +22,28 @@ class Header extends React.Component {
           </NavItem>
           <NavItem>
             <NavLink
-              href="https://github.com/creativetimofficial/paper-dashboard-react"
+              href="https://github.com/creativetimofficial/ct-paper-dashboard-pro-react"
               className="p-2"
-              target="_blank"
             >
-              <i className="fab fa-github" />
+              <i className="fa fa-github" />
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="https://twitter.com/CreativeTim" className="p-2">
-              <i className="fab fa-twitter" />
+              <i className="fa fa-twitter" />
             </NavLink>
           </NavItem>
         </Nav>
         <div className="navbar-nav-scroll ml-md-auto">
           <Nav className="bd-navbar-nav flex-row" navbar>
             <NavItem>
-              <Link to="/documentation" className="nav-link">
-                <i className="nc-icon nc-paper" /> Documentation
-              </Link>
-            </NavItem>
-            <NavItem>
               <Link to="/" className="nav-link">
-                <i className="nc-icon nc-tv-2" /> Live Preview
+                <i className="nc-icon nc-tv-2" /> Back to Dashboard
               </Link>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="https://github.com/creativetimofficial/paper-dashboard-react/issues"
-                target="_blank"
-              >
-                <i className="nc-icon nc-delivery-fast" /> Report issue
+              <NavLink href="https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues">
+                <i className="nc-icon nc-ambulance" /> Report a bug
               </NavLink>
             </NavItem>
           </Nav>

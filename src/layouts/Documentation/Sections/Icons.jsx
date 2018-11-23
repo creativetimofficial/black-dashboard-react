@@ -1,10 +1,21 @@
+/*eslint-disable*/
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
+import { Row, Col, Card, CardBody } from "reactstrap";
+import { Link } from "react-router-dom";
 
-const codeImport = `import icons from 'variables/icons';`;
-
-const codeExample = `<i className="nc-icon nc-single-02"></i>`;
+const codeExample = `<Col lg={3} md={4} sm={5} xs={7} className="font-icon-list">
+  <Card>
+    <CardBody className="all-icons">
+      <Row>
+        <Col className="font-icon-list">
+            <i className="tim-icons icon-single-02" />
+        </Col>
+      </Row>
+    </CardBody>
+  </Card>
+</Col>`;
 
 class Icons extends React.Component {
   render() {
@@ -21,15 +32,22 @@ class Icons extends React.Component {
           </a>.
         </p>
         <p>
-          You will find all these icons in <code>src/variables/icons.jsx</code>.
+          You will find all these icons in{" "}
+          <Link to="/admin/icons">the icons example page</Link>.
         </p>
-        <p>You can import all of them like so:</p>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeImport}
-        </SyntaxHighlighter>
         <h3>Examples</h3>
         <div className="bd-example">
-          <i className="nc-icon nc-single-02"></i>
+          <Col lg={3} md={4} sm={5} xs={7} className="font-icon-list">
+            <Card>
+              <CardBody className="all-icons">
+                <Row>
+                  <Col className="font-icon-list">
+                    <i className="tim-icons icon-single-02" />
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
+          </Col>
         </div>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExample}

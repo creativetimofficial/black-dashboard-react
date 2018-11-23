@@ -1,10 +1,8 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import { Alert, Row, Col } from "reactstrap";
+import { Alert, Row, Col, Button } from "reactstrap";
 import Notify from "react-notification-alert";
-
-import Button from "components/CustomButton/CustomButton.jsx";
 
 const codeExampleImport = `import { Alert } from 'reactstrap';`;
 const codeExampleConstruct = `constructor(props) {
@@ -36,7 +34,7 @@ const codeExampleStyles = `<Alert color="info"><span>This is a plain notificatio
     isOpen={this.state.visible}
     toggle={this.onDismiss}
 >
-    <span data-notify="icon" className="now-ui-icons ui-1_bell-53"></span>
+    <span data-notify="icon" className="tim-icons icon-bell-55"></span>
     <span data-notify="message">This is a notification with close button and icon.</span>
 </Alert>
 
@@ -46,7 +44,7 @@ const codeExampleStyles = `<Alert color="info"><span>This is a plain notificatio
     isOpen={this.state.visible}
     toggle={this.onDismiss}
 >
-    <span data-notify="icon" className="now-ui-icons ui-1_bell-53"></span>
+    <span data-notify="icon" className="tim-icons icon-bell-55"></span>
     <span data-notify="message">
         This is a notification with close button and icon and have many lines.
         You can see that the icon and the close button are always vertically aligned.
@@ -62,7 +60,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Primary - </b> This is a regular notification made with
-        <code>color="primary"</code>
+        <code className="highlighter-rouge">color="primary"</code>
     </span>
 </Alert>
 <Alert
@@ -73,7 +71,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Secondary - </b> This is a regular notification made with
-        <code>color="secondary"</code>
+        <code className="highlighter-rouge">color="secondary"</code>
     </span>
 </Alert>
 <Alert
@@ -84,7 +82,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Success - </b> This is a regular notification made with
-        <code>color="success"</code>
+        <code className="highlighter-rouge">color="success"</code>
     </span>
 </Alert>
 <Alert
@@ -95,7 +93,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Danger - </b> This is a regular notification made with
-        <code>color="danger"</code>
+        <code className="highlighter-rouge">color="danger"</code>
     </span>
 </Alert>
 <Alert
@@ -106,7 +104,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Warning - </b> This is a regular notification made with
-         <code>color="warning"</code>
+         <code className="highlighter-rouge">color="warning"</code>
     </span>
 </Alert>
 <Alert
@@ -117,7 +115,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Info - </b> This is a regular notification made with
-        <code>color="info"</code>
+        <code className="highlighter-rouge">color="info"</code>
     </span>
 </Alert>
 <Alert
@@ -128,7 +126,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Light - </b> This is a regular notification made with
-        <code>color="light"</code>
+        <code className="highlighter-rouge">color="light"</code>
     </span>
 </Alert>
 <Alert
@@ -139,7 +137,7 @@ const codeExampleStates = `<Alert
 >
     <span>
         <b> Dark - </b> This is a regular notification made with
-        <code>color="dark"</code>
+        <code className="highlighter-rouge">color="dark"</code>
     </span>
 </Alert>`;
 
@@ -222,14 +220,14 @@ class Notifications extends React.Component {
       message: (
         <div>
           <div>
-            Welcome to <b>Paper Dashboard React</b> - a beautiful freebie for
+            Welcome to <b>Black Dashboard React</b> - a beautiful freebie for
             every web developer.
           </div>
         </div>
       ),
       type: type,
       autoDismiss: 7,
-      icon: "now-ui-icons ui-1_bell-53"
+      icon: "tim-icons icon-bell-55"
     };
     this.refs.notify.notificationAlert(options);
   }
@@ -240,10 +238,12 @@ class Notifications extends React.Component {
         <h1 className="bd-title" id="content">
           React Notification Alert v0.0.8
         </h1>
-        <p className="bd-lead">
+        <br />
+        <p>
           We are very proud to present you our new{" "}
-          <code>notification system</code>. It was coded by us from scratch, so
-          you won't have to install any third libraries.
+          <code className="highlighter-rouge">notification system</code>. It was
+          coded by us from scratch, so you won't have to install any third
+          libraries.
         </p>
         <h2>Styles</h2>
         <div className="bd-example">
@@ -263,7 +263,7 @@ class Notifications extends React.Component {
             isOpen={this.state.visible}
             toggle={this.onDismiss}
           >
-            <span data-notify="icon" className="now-ui-icons ui-1_bell-53" />
+            <span data-notify="icon" className="tim-icons icon-bell-55" />
             <span data-notify="message">
               This is a notification with close button and icon.
             </span>
@@ -274,7 +274,7 @@ class Notifications extends React.Component {
             isOpen={this.state.visible}
             toggle={this.onDismiss}
           >
-            <span data-notify="icon" className="now-ui-icons ui-1_bell-53" />
+            <span data-notify="icon" className="tim-icons icon-bell-55" />
             <span data-notify="message">
               This is a notification with close button and icon and have many
               lines. You can see that the icon and the close button are always
@@ -301,7 +301,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Primary - </b> This is a regular notification made with{" "}
-              <code>color="primary"</code>
+              <code className="highlighter-rouge">color="primary"</code>
             </span>
           </Alert>
           <Alert
@@ -311,7 +311,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Secondary - </b> This is a regular notification made with{" "}
-              <code>color="secondary"</code>
+              <code className="highlighter-rouge">color="secondary"</code>
             </span>
           </Alert>
           <Alert
@@ -321,7 +321,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Success - </b> This is a regular notification made with{" "}
-              <code>color="success"</code>
+              <code className="highlighter-rouge">color="success"</code>
             </span>
           </Alert>
           <Alert
@@ -331,7 +331,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Danger - </b> This is a regular notification made with{" "}
-              <code>color="danger"</code>
+              <code className="highlighter-rouge">color="danger"</code>
             </span>
           </Alert>
           <Alert
@@ -341,7 +341,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Warning - </b> This is a regular notification made with{" "}
-              <code>color="warning"</code>
+              <code className="highlighter-rouge">color="warning"</code>
             </span>
           </Alert>
           <Alert
@@ -351,7 +351,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Info - </b> This is a regular notification made with{" "}
-              <code>color="info"</code>
+              <code className="highlighter-rouge">color="info"</code>
             </span>
           </Alert>
           <Alert
@@ -361,7 +361,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Light - </b> This is a regular notification made with{" "}
-              <code>color="light"</code>
+              <code className="highlighter-rouge">color="light"</code>
             </span>
           </Alert>
           <Alert
@@ -371,7 +371,7 @@ class Notifications extends React.Component {
           >
             <span>
               <b> Dark - </b> This is a regular notification made with{" "}
-              <code>color="dark"</code>
+              <code className="highlighter-rouge">color="dark"</code>
             </span>
           </Alert>
         </div>
@@ -409,19 +409,21 @@ class Notifications extends React.Component {
           {`<Notify ref="notify"/>`}
         </SyntaxHighlighter>
         <p>
-          We've chose to get this component by using <code>refs</code> as you
-          can see.
+          We've chose to get this component by using{" "}
+          <code className="highlighter-rouge">refs</code> as you can see.
         </p>
         <p>
           After that, you have to call the{" "}
-          <code>notificationAlert function</code> from this component with some{" "}
-          <code>options</code>:
+          <code className="highlighter-rouge">notificationAlert function</code>{" "}
+          from this component with some{" "}
+          <code className="highlighter-rouge">options</code>:
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExamplePlacesOptions}
         </SyntaxHighlighter>
         <h2>
-          Props passed in <code>notificationAlert function</code>
+          Props passed in{" "}
+          <code className="highlighter-rouge">notificationAlert function</code>
         </h2>
         <p>
           Please refer to{" "}
@@ -433,6 +435,8 @@ class Notifications extends React.Component {
             react-notification-alert documentation
           </a>.
         </p>
+        <br />
+        <br />
         <h2>Props for Alerts</h2>
         <p>
           Please refer to{" "}
@@ -444,6 +448,8 @@ class Notifications extends React.Component {
             reactstrap alerts documentation
           </a>.
         </p>
+        <br />
+        <br />
       </div>
     );
   }

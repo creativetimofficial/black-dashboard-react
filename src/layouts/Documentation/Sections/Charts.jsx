@@ -1,5 +1,5 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
 import { Line } from "react-chartjs-2";
 
@@ -189,9 +189,9 @@ class Charts extends React.Component {
     return (
       <div>
         <h1 className="bd-title" id="content">
-          React wrapper (v2.7.4) for Chart.js (v2.7.2)
+          React wrapper (v2.7.4) for Chart.js (v2.7.3)
         </h1>
-        <p className="bd-lead">
+        <p>
           Simple yet flexible React charting for designers & developers. Made by{" "}
           <a
             href="https://github.com/jerairrest"

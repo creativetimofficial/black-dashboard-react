@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button } from "reactstrap";
@@ -94,15 +95,11 @@ class FixedPlugin extends Component {
               >
                 Download Now
               </Button>
-              <Button
-                color="default"
-                block
-                className="btn-round"
-                outline
-                href="https://demos.creative-tim.com/paper-dashboard-react/#/documentation/tutorial"
-              >
-                <i className="nc-icon nc-paper" /> Documentation
-              </Button>
+              <Link to="/documentation/tutorial">
+                <Button color="default" block className="btn-round" outline>
+                  <i className="nc-icon nc-paper" /> Documentation
+                </Button>
+              </Link>
             </li>
             <li className="header-title">Want more components?</li>
             <li className="button-container">

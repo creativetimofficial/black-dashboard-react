@@ -1,96 +1,107 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import { UncontrolledAlert, Alert } from "reactstrap";
 
-const codeExamplesImport = `import { Alert } from 'reactstrap';`;
-const codeExamples = `<Alert color="primary">
-    This is a primary alert—check it out!
-</Alert>
-<Alert color="success">
-    This is a primary alert—check it out!
-</Alert>
-<Alert color="danger">
-    This is a primary alert—check it out!
-</Alert>
-<Alert color="warning">
-    This is a primary alert—check it out!
-</Alert>
-<Alert color="info">
-    This is a primary alert—check it out!
-</Alert>`;
+import { Alert, UncontrolledAlert } from "reactstrap";
 
-const codeLinkImport = `import { Alert } from 'reactstrap';`;
-const codeLink = `<Alert color="primary">
-  This is a primary alert with{" "}
-  <a
-    href="#/"
-    className="alert-link"
-    onClick={e => e.preventDefault()}
-  >
-    an example link
-  </a>. Give it a click if you like.
-</Alert>
-<Alert color="success">
-  This is a success alert with{" "}
-  <a
-    href="#/"
-    className="alert-link"
-    onClick={e => e.preventDefault()}
-  >
-    an example link
-  </a>. Give it a click if you like.
-</Alert>
-<Alert color="danger">
-  This is a danger alert with{" "}
-  <a
-    href="#/"
-    className="alert-link"
-    onClick={e => e.preventDefault()}
-  >
-    an example link
-  </a>. Give it a click if you like.
-</Alert>
-<Alert color="warning">
-  This is a warning alert with{" "}
-  <a
-    href="#/"
-    className="alert-link"
-    onClick={e => e.preventDefault()}
-  >
-    an example link
-  </a>. Give it a click if you like.
-</Alert>
-<Alert color="info">
-  This is a info alert with{" "}
-  <a
-    href="#/"
-    className="alert-link"
-    onClick={e => e.preventDefault()}
-  >
-    an example link
-  </a>. Give it a click if you like.
-</Alert>`;
+const codeExamples = `import React from "react";
 
-const codeDismissing1Import = `import { Alert } from 'reactstrap';`;
-const codeDismissing1Constructor = `constructor(props) {
-    super(props);
-    this.state = {
-        visible: true
-    };
-    this.onDismiss = this.onDismiss.bind(this);
+// reacstrap components
+import { Alert } from "reactstrap";
+
+class Alerts extends React.Component {
+  render() {
+    return (
+      <>
+        <Alert color="primary">This is a primary alert—check it out!</Alert>
+        <Alert color="info">This is a info alert—check it out!</Alert>
+        <Alert color="success">This is a success alert—check it out!</Alert>
+        <Alert color="danger">This is a danger alert—check it out!</Alert>
+        <Alert color="warning">This is a warning alert—check it out!</Alert>
+        <Alert color="default">This is a default alert—check it out!</Alert>
+      </>
+    );
+  }
 }
-onDismiss(){
-    this.setState({visible: !this.state.visible});
-}`;
-const codeDismissing1 = `<Alert color="info" isOpen={this.state.visible} toggle={this.onDismiss}>
-    <b>Holy guacamole!</b> You should check in on some of those fields below.
-</Alert>`;
 
-const codeDismissing2Import = `import { UncontrolledAlert } from 'reactstrap';`;
-const codeDismissing2 = `<UncontrolledAlert color="info">
-    <b>Holy guacamole!</b> You should check in on some of those fields below.
-</UncontrolledAlert>`;
+export default Alerts;`;
+
+const codeLinkColor = `import React from "react";
+
+// reacstrap components
+import { Alert } from "reactstrap";
+
+class Alerts extends React.Component {
+  render() {
+    return (
+      <>
+        <Alert color="primary">
+          This is a primary alert with{" "}
+          <a href="#pablo" className="alert-link">
+            an example link
+          </a>. Give it a click if you like.
+        </Alert>
+        <Alert color="info">
+          This is a info alert with{" "}
+          <a
+            href="#pablo"
+            className="alert-link"
+            onClick={e => e.preventDefault()}
+          >
+            an example link
+          </a>. Give it a click if you like.
+        </Alert>
+        <Alert color="success">
+          This is a success alert with{" "}
+          <a
+            href="#pablo"
+            className="alert-link"
+            onClick={e => e.preventDefault()}
+          >
+            an example link
+          </a>. Give it a click if you like.
+        </Alert>
+        <Alert color="danger">
+          This is a danger alert with{" "}
+          <a
+            href="#pablo"
+            className="alert-link"
+            onClick={e => e.preventDefault()}
+          >
+            an example link
+          </a>. Give it a click if you like.
+        </Alert>
+        <Alert color="warning">
+          This is a warning alert with{" "}
+          <a
+            href="#pablo"
+            className="alert-link"
+            onClick={e => e.preventDefault()}
+          >
+            an example link
+          </a>. Give it a click if you like.
+        </Alert>
+        <Alert color="default">
+          This is a default alert with{" "}
+          <a
+            href="#pablo"
+            className="alert-link"
+            onClick={e => e.preventDefault()}
+          >
+            an example link
+          </a>. Give it a click if you like.
+        </Alert>
+      </>
+    );
+  }
+}
+
+export default Alerts;`;
+
+const codeDismissingToggle = `import React from "react";
+
+// reactstrap components
+import { Alert } from "reactstrap";
 
 class Alerts extends React.Component {
   constructor(props) {
@@ -98,50 +109,101 @@ class Alerts extends React.Component {
     this.state = {
       visible: true
     };
-    this.onDismiss = this.onDismiss.bind(this);
   }
-  onDismiss() {
-    this.setState({ visible: !this.state.visible });
-  }
+  onDismiss = () => {
+    this.setState({ visible: false });
+  };
   render() {
     return (
-      <div>
-        <h1 className="bd-title" id="content">
-          Alerts
-        </h1>
-        <p className="bd-lead">
+      <>
+        <Alert
+          color="info"
+          isOpen={this.state.visible}
+          toggle={this.onDismiss}
+        >
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        </Alert>
+      </>
+    );
+  }
+}
+
+export default Alerts;
+`;
+
+const codeDismissingUncontrolledAlert = `import React from "react";
+
+// reactstrap components
+import { UncontrolledAlert } from "reactstrap";
+
+class Alerts extends React.Component {
+  render() {
+    return (
+      <>
+        <UncontrolledAlert color="info">
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        </UncontrolledAlert>
+      </>
+    );
+  }
+}
+
+export default Alerts;
+`;
+
+class Alerts extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: true
+    };
+  }
+  onDismiss = () => {
+    this.setState({ visible: false });
+  };
+  render() {
+    return (
+      <>
+        <h1 className="bd-title">Alerts</h1>
+        <p>
           Provide contextual feedback messages for typical user actions with the
           handful of available and flexible alert messages.
         </p>
         <h2>Examples</h2>
         <p>
           Alerts are available for any length of text, as well as an optional
-          dismiss button. For proper styling, use one of the eight contextual
-          color (e.g., <code>color="info"</code>).
+          dismiss button. For proper styling, use one of the eight required
+          contextual classes (e.g., .alert-success). For inline dismissal, you
+          can either use them with <code>toggle</code> function, or use the{" "}
+          <code>UncontrolledAlert</code> instead (see examples down bellow);
         </p>
         <div className="bd-example">
           <Alert color="primary">This is a primary alert—check it out!</Alert>
-          <Alert color="success">This is a primary alert—check it out!</Alert>
-          <Alert color="danger">This is a primary alert—check it out!</Alert>
-          <Alert color="warning">This is a primary alert—check it out!</Alert>
-          <Alert color="info">This is a primary alert—check it out!</Alert>
+          <Alert color="info">This is a info alert—check it out!</Alert>
+          <Alert color="success">This is a success alert—check it out!</Alert>
+          <Alert color="danger">This is a danger alert—check it out!</Alert>
+          <Alert color="warning">This is a warning alert—check it out!</Alert>
+          <Alert color="default">This is a default alert—check it out!</Alert>
         </div>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExamplesImport}
-        </SyntaxHighlighter>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExamples}
         </SyntaxHighlighter>
         <h2>Link color</h2>
         <p>
-          Use the <code>.alert-link</code> utility class to quickly provide
-          matching colored links within any alert.
+          Use the <code className="highlighter-rouge">.alert-link</code> utility
+          class to quickly provide matching colored links within any alert.
         </p>
         <div className="bd-example">
           <Alert color="primary">
             This is a primary alert with{" "}
+            <a href="#pablo" className="alert-link">
+              an example link
+            </a>. Give it a click if you like.
+          </Alert>
+          <Alert color="info">
+            This is a info alert with{" "}
             <a
-              href="#/"
+              href="#pablo"
               className="alert-link"
               onClick={e => e.preventDefault()}
             >
@@ -151,7 +213,7 @@ class Alerts extends React.Component {
           <Alert color="success">
             This is a success alert with{" "}
             <a
-              href="#/"
+              href="#pablo"
               className="alert-link"
               onClick={e => e.preventDefault()}
             >
@@ -161,7 +223,7 @@ class Alerts extends React.Component {
           <Alert color="danger">
             This is a danger alert with{" "}
             <a
-              href="#/"
+              href="#pablo"
               className="alert-link"
               onClick={e => e.preventDefault()}
             >
@@ -171,17 +233,17 @@ class Alerts extends React.Component {
           <Alert color="warning">
             This is a warning alert with{" "}
             <a
-              href="#/"
+              href="#pablo"
               className="alert-link"
               onClick={e => e.preventDefault()}
             >
               an example link
             </a>. Give it a click if you like.
           </Alert>
-          <Alert color="info">
-            This is a info alert with{" "}
+          <Alert color="default">
+            This is a default alert with{" "}
             <a
-              href="#/"
+              href="#pablo"
               className="alert-link"
               onClick={e => e.preventDefault()}
             >
@@ -190,53 +252,36 @@ class Alerts extends React.Component {
           </Alert>
         </div>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeLinkImport}
+          {codeLinkColor}
         </SyntaxHighlighter>
+        <h2>
+          Dismissing with <code>toggle</code> function
+        </h2>
+        <div className="bd-example">
+          <Alert
+            color="info"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <strong>Holy guacamole!</strong> You should check in on some of
+            those fields below.
+          </Alert>
+        </div>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeLink}
+          {codeDismissingToggle}
         </SyntaxHighlighter>
-        <h2>Dismissing</h2>
-        <p>There are two ways of dismissing reactstrap's alerts:</p>
-        <ol>
-          <li>
-            First one is to add to the <code>Alert</code> tag a{" "}
-            <code>toggle</code> function like so:
-            <div className="bd-example">
-              <Alert
-                color="info"
-                isOpen={this.state.visible}
-                toggle={this.onDismiss}
-              >
-                <b>Holy guacamole!</b> You should check in on some of those
-                fields below.
-              </Alert>
-            </div>
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {codeDismissing1Import}
-            </SyntaxHighlighter>
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {codeDismissing1Constructor}
-            </SyntaxHighlighter>
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {codeDismissing1}
-            </SyntaxHighlighter>
-          </li>
-          <li>
-            Second way is to use <code>UncontrolledAlert</code> like so
-            <div className="bd-example">
-              <UncontrolledAlert color="info">
-                <b>Holy guacamole!</b> You should check in on some of those
-                fields below.
-              </UncontrolledAlert>
-            </div>
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {codeDismissing2Import}
-            </SyntaxHighlighter>
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {codeDismissing2}
-            </SyntaxHighlighter>
-          </li>
-        </ol>
+        <h2>
+          Dismissing with <code>UncontrolledAlert</code> component
+        </h2>
+        <div className="bd-example">
+          <UncontrolledAlert color="info">
+            <strong>Holy guacamole!</strong> You should check in on some of
+            those fields below.
+          </UncontrolledAlert>
+        </div>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeDismissingUncontrolledAlert}
+        </SyntaxHighlighter>
         <h2>Props</h2>
         <p>
           Please refer to{" "}
@@ -248,7 +293,10 @@ class Alerts extends React.Component {
             reactstrap alerts documentation
           </a>.
         </p>
-      </div>
+        <br />
+        <br />
+        <br />
+      </>
     );
   }
 }

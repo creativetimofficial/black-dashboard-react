@@ -1,5 +1,5 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 
@@ -33,8 +33,8 @@ class Breadcrumbs extends React.Component {
           Separators are automatically added in CSS through
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">
             <code className="highlighter-rouge">::before</code>
-          </a>
-          and
+          </a>{" "}
+          and{" "}
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">
             <code className="highlighter-rouge">content</code>
           </a>.

@@ -1,5 +1,5 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
 
 const codeHeadings = `<h1>h1. Bootstrap heading</h1>
@@ -70,7 +70,7 @@ class TypographySection extends React.Component {
             <tbody>
               <tr>
                 <td>
-                  <code>{`<h1></h1>`}</code>
+                  <code className="highlighter-rouge">{`<h1></h1>`}</code>
                 </td>
                 <td>
                   <h1>h1. Bootstrap heading</h1>
@@ -78,7 +78,7 @@ class TypographySection extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <code>{`<h2></h2>`}</code>
+                  <code className="highlighter-rouge">{`<h2></h2>`}</code>
                 </td>
                 <td>
                   <h2>h2. Bootstrap heading</h2>
@@ -86,7 +86,7 @@ class TypographySection extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <code>{`<h3></h3>`}</code>
+                  <code className="highlighter-rouge">{`<h3></h3>`}</code>
                 </td>
                 <td>
                   <h3>h3. Bootstrap heading</h3>
@@ -94,7 +94,7 @@ class TypographySection extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <code>{`<h4></h4>`}</code>
+                  <code className="highlighter-rouge">{`<h4></h4>`}</code>
                 </td>
                 <td>
                   <h4>h4. Bootstrap heading</h4>
@@ -102,7 +102,7 @@ class TypographySection extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <code>{`<h5></h5>`}</code>
+                  <code className="highlighter-rouge">{`<h5></h5>`}</code>
                 </td>
                 <td>
                   <h5>h5. Bootstrap heading</h5>
@@ -110,7 +110,7 @@ class TypographySection extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <code>{`<h6></h6>`}</code>
+                  <code className="highlighter-rouge">{`<h6></h6>`}</code>
                 </td>
                 <td>
                   <h6>h6. Bootstrap heading</h6>

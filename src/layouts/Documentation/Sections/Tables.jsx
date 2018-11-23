@@ -1,123 +1,78 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import { Table } from "reactstrap";
+import {
+  Button,
+  Table
+} from "reactstrap";
 
 const codeSimpleExample = `<Table responsive>
-  <thead className=" text-primary">
-    <th>
-      Name
-    </th>
-    <th>
-      Country
-    </th>
-    <th>
-      City
-    </th>
-    <th className="text-right">
-      Salary
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Dakota Rice
-      </td>
-      <td>
-        Niger
-      </td>
-      <td>
-        Oud-Turnhout
-      </td>
-      <td className="text-right">
-        $36,738
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Minerva Hooper
-      </td>
-      <td>
-        Curaçao
-      </td>
-      <td>
-        Sinaai-Waas
-      </td>
-      <td className="text-right">
-        $23,789
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Sage Rodriguez
-      </td>
-      <td>
-        Netherlands
-      </td>
-      <td>
-        Baileux
-      </td>
-      <td className="text-right">
-        $56,142
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Philip Chaney
-      </td>
-      <td>
-        Korea, South
-      </td>
-      <td>
-        Overland Park
-      </td>
-      <td className="text-right">
-        $38,735
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Doris Greene
-      </td>
-      <td>
-        Malawi
-      </td>
-      <td>
-        Feldkirchen in Kärnten
-      </td>
-      <td className="text-right">
-        $63,542
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Mason Porter
-      </td>
-      <td>
-        Chile
-      </td>
-      <td>
-        Gloucester
-      </td>
-      <td className="text-right">
-        $78,615
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Jon Porter
-      </td>
-      <td>
-        Portugal
-      </td>
-      <td>
-        Gloucester
-      </td>
-      <td className="text-right">
-        $98,615
-      </td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th className="text-center">#</th>
+            <th>Name</th>
+            <th>Job Position</th>
+            <th className="text-center">Since</th>
+            <th className="text-right">Salary</th>
+            <th className="text-right">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="text-center">1</td>
+            <td>Andrew Mike</td>
+            <td>Develop</td>
+            <td className="text-center">2013</td>
+            <td className="text-right">€ 99,225</td>
+            <td className="text-right">
+                <Button className="btn-icon" color="info" size="sm">
+                    <i className="fa fa-user"></i>
+                </Button>{\` \`}
+                <Button className="btn-icon" color="success" size="sm">
+                    <i className="fa fa-edit"></i>
+                </Button>{\` \`}
+                <Button className="btn-icon" color="danger" size="sm">
+                    <i className="fa fa-times" />
+                </Button>
+            </td>
+        </tr>
+        <tr>
+            <td className="text-center">2</td>
+            <td>Manuel Rico</td>
+            <td>Manager</td>
+            <td className="text-center">2012</td>
+            <td className="text-right">€ 99,201</td>
+            <td className="text-right">
+                <Button className="btn-icon btn-round" color="info" size="sm">
+                    <i className="fa fa-user"></i>
+                </Button>{\` \`}
+                <Button className="btn-icon btn-round" color="success" size="sm">
+                    <i className="fa fa-edit"></i>
+                </Button>{\` \`}
+                <Button className="btn-icon btn-round" color="danger" size="sm">
+                    <i className="fa fa-times" />
+                </Button>{\` \`}
+            </td>
+        </tr>
+        <tr>
+            <td className="text-center">3</td>
+            <td>Alex Mike</td>
+            <td>Designer</td>
+            <td className="text-center">2012</td>
+            <td className="text-right">€ 99,201</td>
+            <td className="text-right">
+                <Button className="btn-icon btn-simple" color="info" size="sm">
+                    <i className="fa fa-user"></i>
+                </Button>{\` \`}
+                <Button className="btn-icon btn-simple" color="success" size="sm">
+                    <i className="fa fa-edit"></i>
+                </Button>{\` \`}
+                <Button className="btn-icon btn-simple" color="danger" size="sm">
+                    <i className="fa fa-times" />
+                </Button>{\` \`}
+            </td>
+        </tr>
+    </tbody>
 </Table>`;
 
 class Tables extends React.Component {
@@ -131,57 +86,101 @@ class Tables extends React.Component {
           All Boostrap classes for tables are supported and improved.
         </p>
         <h2>Examples</h2>
-        <h3>Simple Table</h3>
+        <h3>Simple Table with Actions</h3>
         <div className="bd-example" data-example-id="">
           <Table responsive>
-            <thead className=" text-primary">
-              <th>Name</th>
-              <th>Country</th>
-              <th>City</th>
-              <th className="text-right">Salary</th>
+            <thead>
+              <tr>
+                <th className="text-center">#</th>
+                <th>Name</th>
+                <th>Job Position</th>
+                <th className="text-center">Since</th>
+                <th className="text-right">Salary</th>
+                <th className="text-right">Actions</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Dakota Rice</td>
-                <td>Niger</td>
-                <td>Oud-Turnhout</td>
-                <td className="text-right">$36,738</td>
+                <td className="text-center">1</td>
+                <td>Andrew Mike</td>
+                <td>Develop</td>
+                <td className="text-center">2013</td>
+                <td className="text-right">€ 99,225</td>
+                <td className="text-right">
+                  <Button className="btn-icon" color="info" size="sm">
+                    <i className="fa fa-user" />
+                  </Button>
+                  {` `}
+                  <Button className="btn-icon" color="success" size="sm">
+                    <i className="fa fa-edit" />
+                  </Button>
+                  {` `}
+                  <Button className="btn-icon" color="danger" size="sm">
+                    <i className="fa fa-times" />
+                  </Button>
+                </td>
               </tr>
               <tr>
-                <td>Minerva Hooper</td>
-                <td>Curaçao</td>
-                <td>Sinaai-Waas</td>
-                <td className="text-right">$23,789</td>
+                <td className="text-center">6</td>
+                <td>Manuel Rico</td>
+                <td>Manager</td>
+                <td className="text-center">2012</td>
+                <td className="text-right">€ 99,201</td>
+                <td className="text-right">
+                  <Button className="btn-icon btn-round" color="info" size="sm">
+                    <i className="fa fa-user" />
+                  </Button>
+                  {` `}
+                  <Button
+                    className="btn-icon btn-round"
+                    color="success"
+                    size="sm"
+                  >
+                    <i className="fa fa-edit" />
+                  </Button>
+                  {` `}
+                  <Button
+                    className="btn-icon btn-round"
+                    color="danger"
+                    size="sm"
+                  >
+                    <i className="fa fa-times" />
+                  </Button>
+                  {` `}
+                </td>
               </tr>
               <tr>
-                <td>Sage Rodriguez</td>
-                <td>Netherlands</td>
-                <td>Baileux</td>
-                <td className="text-right">$56,142</td>
-              </tr>
-              <tr>
-                <td>Philip Chaney</td>
-                <td>Korea, South</td>
-                <td>Overland Park</td>
-                <td className="text-right">$38,735</td>
-              </tr>
-              <tr>
-                <td>Doris Greene</td>
-                <td>Malawi</td>
-                <td>Feldkirchen in Kärnten</td>
-                <td className="text-right">$63,542</td>
-              </tr>
-              <tr>
-                <td>Mason Porter</td>
-                <td>Chile</td>
-                <td>Gloucester</td>
-                <td className="text-right">$78,615</td>
-              </tr>
-              <tr>
-                <td>Jon Porter</td>
-                <td>Portugal</td>
-                <td>Gloucester</td>
-                <td className="text-right">$98,615</td>
+                <td className="text-center">3</td>
+                <td>Alex Mike</td>
+                <td>Designer</td>
+                <td className="text-center">2012</td>
+                <td className="text-right">€ 99,201</td>
+                <td className="text-right">
+                  <Button
+                    className="btn-icon btn-simple"
+                    color="info"
+                    size="sm"
+                  >
+                    <i className="fa fa-user" />
+                  </Button>
+                  {` `}
+                  <Button
+                    className="btn-icon btn-simple"
+                    color="success"
+                    size="sm"
+                  >
+                    <i className="fa fa-edit" />
+                  </Button>
+                  {` `}
+                  <Button
+                    className="btn-icon btn-simple"
+                    color="danger"
+                    size="sm"
+                  >
+                    <i className="fa fa-times" />
+                  </Button>
+                  {` `}
+                </td>
               </tr>
             </tbody>
           </Table>
@@ -201,6 +200,7 @@ class Tables extends React.Component {
             here
           </a>.
         </p>
+        <p>Beside these tables, there are normal tables as well.</p>
       </div>
     );
   }

@@ -1,0 +1,14 @@
+body.bd-docs{
+  background: white;
+}
+.bd-docs .bd-example .btn + .btn{
+  margin-left: 5px;
+}
+
+.bd-docs .bd-example .btn-group .btn + .btn{
+  margin: 4px 0;
+}
+
+.bd-docs .bd-example .btn-group + .btn-group{
+  margin-left: 5px;
+}

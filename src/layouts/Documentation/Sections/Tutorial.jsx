@@ -1,100 +1,96 @@
+/*eslint-disable*/
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
+import { applescript } from "react-syntax-highlighter/styles/hljs";
 
-const fileStructure = `paper-dashboard-react
+const fileStructure = `black-dashboard-react
+.
+├── package.json
 ├── CHANGELOG.md
 ├── ISSUE_TEMPLATE.md
 ├── LICENSE.md
 ├── README.md
-├── package.json
+├── Documentation
+│   └── documentation.html
+├── github-assets
+│   └── react.svg
 ├── public
-│   ├── favicon.ico
 │   ├── index.html
 │   └── manifest.json
 └── src
     ├── index.js
     ├── logo-white.svg
     ├── logo.svg
+    ├── routes.js
     ├── assets
+    │   ├── css
     │   ├── demo
     │   ├── fonts
-    │   ├── github
     │   ├── img
-    │   │   └── faces
     │   └── scss
-    │       ├── paper-dashboard
-    │       │   ├── cards
-    │       │   ├── mixins
-    │       │   └── plugins
-    │       └── paper-dashboard.scss
+    │       ├── black-dashboard
+    │       │   ├── bootstrap
+    │       │   │   ├── mixins
+    │       │   │   └── utilities
+    │       │   ├── custom
+    │       │   │   ├── cards
+    │       │   │   ├── mixins
+    │       │   │   ├── utilities
+    │       │   │   └── vendor
+    │       └── black-dashboard.scss
     ├── components
-    │   ├── CardElements
-    │   │   ├── CardAuthor.jsx
-    │   │   ├── CardCategory.jsx
-    │   │   └── CardSocials.jsx
-    │   ├── CustomButton
-    │   │   └── CustomButton.jsx
-    │   ├── CustomCheckbox
-    │   │   └── SimpleCheckbox.jsx
-    │   ├── CustomRadio
-    │   │   └── CustomRadio.jsx
     │   ├── FixedPlugin
     │   │   └── FixedPlugin.jsx
     │   ├── Footer
     │   │   └── Footer.jsx
-    │   ├── FormInputs
-    │   │   └── FormInputs.jsx
-    │   ├── Header
-    │   │   └── Header.jsx
-    │   ├── Sidebar
-    │   │   └── Sidebar.jsx
-    │   ├── Stats
-    │   │   └── Stats.jsx
-    │   ├── Tasks
-    │   │   └── Tasks.jsx
-    │   └── index.js
+    │   ├── Navbars
+    │   │   ├── AdminNavbar.jsx
+    │   │   └── RTLNavbar.jsx
+    │   └── Sidebar
+    │       └── Sidebar.jsx
     ├── layouts
-    │   └── Dashboard
-    │       └── Dashboard.jsx
-    ├── routes
-    │   ├── dashboard.jsx
-    │   └── index.jsx
+    │   ├── Admin
+    │   │   └── Admin.jsx
+    │   └── RTL
+    │       └── RTL.jsx
     ├── variables
-    │   ├── charts.jsx
-    │   ├── general.jsx
-    │   └── icons.jsx
+    │   └── charts.jsx
     └── views
-        ├── Dashboard
-        │   └── Dashboard.jsx
-        ├── Icons
-        │   └── Icons.jsx
-        ├── Maps
-        │   └── Maps.jsx
-        ├── Notifications
-        │   └── Notifications.jsx
-        ├── TableList
-        │   └── TableList.jsx
-        ├── Typography
-        │   └── Typography.jsx
-        └── UserPage
-            └── UserPage.jsx`;
+        ├── Dashboard.jsx
+        ├── Icons.jsx
+        ├── Map.jsx
+        ├── Notifications.jsx
+        ├── Rtl.jsx
+        ├── TableList.jsx
+        ├── Typography.jsx
+        └── UserProfile.jsx`;
 
 class Tutorial extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <h1 className="bd-title" id="content">
-          Short Description and Usage
+          Tutorial
         </h1>
-        <p className="bd-lead">
-          Paper Dashboard React is a beautiful{" "}
+        <br />
+        <br />
+        <h2>Short Description and Usage</h2>
+        <p>
+          <b>Black Dashboard React</b> is a beautiful resource built over{" "}
           <a
-            href="https://reactstrap.github.io/"
+            href="https://getbootstrap.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            reactstrap - Bootstrap 4
+            Bootstrap 4
+          </a>,{" "}
+          <a
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
           </a>{" "}
           (<a
             href="https://github.com/facebook/create-react-app"
@@ -102,8 +98,27 @@ class Tutorial extends React.Component {
             rel="noopener noreferrer"
           >
             create-react-app
-          </a>) Admin Template.
+          </a>) and{" "}
+          <a
+            href="https://reactstrap.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            reactstrap
+          </a>{" "}
+          to allow you to create powerful and beautiful dashboards. We have
+          redesigned all the usual components in Bootstrap to make it look flat,
+          minimalist and easy to use.
         </p>
+        <p>
+          Using the dashboard is very simple, but it does require you to
+          understand basic JavaScript functions, react and reactstrap. To get
+          the desired effect you will need to integrate react components and JS
+          plugins that take a little bit more effort. Down below we list all the
+          files you need to include inside the application to get going.
+        </p>
+        <br />
+        <br />
         <h2>License</h2>
         <p>
           <b>MIT LICENSE</b>
@@ -143,9 +158,11 @@ class Tutorial extends React.Component {
             creative-tim license
           </a>.
         </p>
+        <br />
+        <br />
         <h2>Getting Started</h2>
         <p>
-          The Paper Dashboard React is built on top of{" "}
+          The Black Dashboard React is built on top of{" "}
           <a
             href="https://reactstrap.github.io/"
             target="_blank"
@@ -154,16 +171,20 @@ class Tutorial extends React.Component {
             reactstrap
           </a>{" "}
           (Bootstrap 4), so you can safely use it on your existing or new
-          Reactstrap project. No line of code from Bootstrap 4 or reactstrap was
-          changed, so you don't have to worry about undesired effects in your
-          work.
+          Reactstrap project. No line of code from Bootstrap 4 was changed, so
+          you don't have to worry about undesired effects in your work.
         </p>
         <p>
           We provide all the necessary CSS resources. So, to immediately change
           or get started with our design, include the{" "}
-          <code>src/assets/scss/paper-dashboard.css</code> in your template.
-          Your project will get the new look.
+          <code className="highlighter-rouge">
+            src/assets/scss/paper-dashboard.css
+          </code>{" "}
+          in your template. Your project will get the new look.
         </p>
+        <br />
+        <br />
+        <h2>Local Development</h2>
         <ul>
           <li>
             Install NodeJs from{" "}
@@ -183,19 +204,18 @@ class Tutorial extends React.Component {
             and login into your account
           </li>
           <li>
-            Go to{" "}
+            Go to the{" "}
             <a
-              href="https://www.creative-tim.com/paper-dashboard-react"
+              href="https://www.creative-tim.com/product/black-dashboard-react"
               target="_blank"
             >
-              Paper dashboard react
+              product page
             </a>{" "}
-            page on creative tim website (be sure to be logged into your
-            account)
+            (be sure to be logged into your account)
           </li>
           <li>
-            Press the <b>FREE DOWNLOAD</b> button (this will download onto your
-            computer a zip file)
+            Press the download button near <b>Black Dashboard React</b> product
+            (this will download onto your computer a zip file)
           </li>
           <li>Unzip the downloaded file to a folder in your computer</li>
           <li>Open Terminal</li>
@@ -215,67 +235,57 @@ class Tutorial extends React.Component {
             >{`npm start`}</SyntaxHighlighter>
           </li>
           <li>
-            Alternatively you can run{" "}
+            Or you can simply run{" "}
             <SyntaxHighlighter
               language="jsx"
               style={prism}
             >{`npm run install:clean`}</SyntaxHighlighter>{" "}
-            which will delete <code>node_modules</code>,{" "}
-            <code>package-lock.json</code>, automatically run{" "}
-            <code>install</code> script and <code>start</code> script
+            which will install{" "}
+            <code className="highlighter-rouge">node_modules</code> and also
+            will start your project.
           </li>
           <li>
-            <div>
-              If you have an error something containing
-              <SyntaxHighlighter
-                language="jsx"
-                style={prism}
-              >{`Module not found`}</SyntaxHighlighter>
-              You should check if in your root project folder you have a file
-              named <code>.env</code>.
-              <br />
-              If you do not have it, then create it and add this line in it:{" "}
-              <code>NODE_PATH=./src</code>
-              <br />
-              If that does not work, you need to do the following
-              <SyntaxHighlighter
-                language="jsx"
-                style={prism}
-              >{`npm install --g cross-env`}</SyntaxHighlighter>
-              then change the <code>script</code> inside{" "}
-              <code>package.json</code> by adding <code>NODE_PATH=./src</code>{" "}
-              inside it. For example, the start script would be changed from
-              <SyntaxHighlighter
-                language="jsx"
-                style={prism}
-              >{`"start": "react-scripts start",`}</SyntaxHighlighter>
-              to
-              <SyntaxHighlighter
-                language="jsx"
-                style={prism}
-              >{`"start": "NODE_PATH=./src react-scripts start",`}</SyntaxHighlighter>
-            </div>
+            If you have an error something containing
+            <SyntaxHighlighter
+              language="jsx"
+              style={prism}
+            >{`Module not found`}</SyntaxHighlighter>
+            you need to do the following
+            <SyntaxHighlighter
+              language="jsx"
+              style={prism}
+            >{`npm install --g cross-env`}</SyntaxHighlighter>
+            then change the script, for example the start script from
+            <SyntaxHighlighter
+              language="jsx"
+              style={prism}
+            >{`"start": "react-scripts start",`}</SyntaxHighlighter>
+            to
+            <SyntaxHighlighter
+              language="jsx"
+              style={prism}
+            >{`"start": "NODE_PATH=./src react-scripts start",`}</SyntaxHighlighter>
+            <b>
+              The same should be done with any other script that has the above
+              error.
+            </b>
           </li>
           <li>
-            <div>
-              <p>
-                If you have an error about{" "}
-                <code>props.history is undefined</code>, than you're probably
-                not sending inside the <code>Header</code> component the props
-                that come from the routes (everywhere <code>Header</code> is
-                rendered - we pass the <code>{`{...rest}`}</code> to it).
-              </p>
-              <p>
-                You can also read more about{" "}
-                <a
-                  href="https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/70"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  this issue here
-                </a>.
-              </p>
-            </div>
+            If you have an error containing{" "}
+            <SyntaxHighlighter
+              language="jsx"
+              style={prism}
+            >{`props.history of undefined`}</SyntaxHighlighter>{" "}
+            (this can happen when you integrate our project with another one)
+            then you need to make the changes found{" "}
+            <a
+              href="https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/70"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              here
+            </a>
           </li>
           <li>
             (Optional) You can create a new react application like this
@@ -296,7 +306,8 @@ class Tutorial extends React.Component {
                 >{`create-react-app your-app-name`}</SyntaxHighlighter>
               </li>
               <li>
-                Navigate to <code>your-app-name</code>
+                Navigate to{" "}
+                <code className="highlighter-rouge">your-app-name</code>
               </li>
               <li>
                 Run in terminal{" "}
@@ -304,6 +315,12 @@ class Tutorial extends React.Component {
                   language="jsx"
                   style={prism}
                 >{`npm start`}</SyntaxHighlighter>
+              </li>
+              <li>
+                And after this, you can copy and paste anything that you want
+                from our product (the most important is the{" "}
+                <code className="highlighter-rouge">src/assets</code> which has
+                all of our style, fonts and images).
               </li>
               <li>
                 More information →{" "}
@@ -338,11 +355,70 @@ class Tutorial extends React.Component {
             </a>
           </li>
         </ul>
+        <br />
+        <br />
+        <h2>Live Production</h2>
+        <ul>
+          <li>
+            <a
+              href="https://blog.heroku.com/deploying-react-with-zero-configuration"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tutorial for deploying on heroku
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://medium.freecodecamp.org/surge-vs-github-pages-deploying-a-create-react-app-project-c0ecbf317089"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tutorial for deploying on github pages and surge
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tutorial for deploying on S3 and CloudFront
+            </a>
+          </li>
+        </ul>
+        <br />
+        <br />
+        <h2>CSS</h2>
+        <p>
+          To get our look, if you've started a new app, you will need to import
+          our styles inside your app like so:
+        </p>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`import "assets/scss/black-dashboard.scss";
+import "assets/css/nucleo-icons.css";`}
+        </SyntaxHighlighter>
+        <br />
+        <br />
+        <h2>Fonts and Icons</h2>
+        <p>
+          If you've started a new project and are copying our product there, be
+          sure to add the following lines of code inside your{" "}
+          <code className="highlighter-rouge">.html</code> file:
+        </p>
+        <SyntaxHighlighter
+          language="html"
+          style={applescript}
+        >{`<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />`}</SyntaxHighlighter>
+        <br />
+        <br />
         <h2>File structure</h2>
         <SyntaxHighlighter language="bash" style={prism}>
           {fileStructure}
         </SyntaxHighlighter>
-      </div>
+      </>
     );
   }
 }

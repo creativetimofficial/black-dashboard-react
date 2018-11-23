@@ -5,7 +5,10 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 import AdminLayout from "layouts/Admin/Admin.jsx";
 import RTLLayout from "layouts/RTL/RTL.jsx";
+import Documentation from "layouts/Documentation/Documentation.jsx";
 
+import "layouts/Documentation/assets-for-demo/docs.scss";
+import "layouts/Documentation/assets-for-demo/react-docs.scss";
 import "assets/scss/black-dashboard.scss";
 import "assets/demo/demo.css";
 import "assets/css/nucleo-icons.css";
@@ -17,6 +20,10 @@ ReactDOM.render(
     <Switch>
       <Route path="/admin" render={props => <AdminLayout {...props} />} />
       <Route path="/rtl" render={props => <RTLLayout {...props} />} />
+      <Route
+        path="/documentation"
+        render={props => <Documentation {...props} />}
+      />
       <Redirect from="/" to="/admin/dashboard" />
     </Switch>
   </Router>,

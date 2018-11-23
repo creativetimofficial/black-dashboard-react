@@ -5,22 +5,26 @@ import { Container, Row, Col } from "reactstrap";
 import Sidebar from "./Sidebar/Sidebar.jsx";
 import Header from "./Header/Header.jsx";
 
-import "./assets-for-demo/demo.css";
-import "./assets-for-demo/docs.css";
-
-import docRoutes from "routes/documentation.jsx";
+import docRoutes from "documentation.js";
 
 class Documentation extends React.Component {
+  componentDidMount() {
+    document.body.classList.toggle("bd-docs");
+    document.documentElement.classList.toggle("bd-react-docs");
+  }
+  componentWillUnmount() {
+    document.body.classList.toggle("bd-docs");
+    document.documentElement.classList.toggle("bd-react-docs");
+  }
   render() {
     return (
-      <div>
+      <>
         <Header {...this.props} />
         <Container fluid>
           <Row className="flex-xl-nowrap">
             <Col xs={12} md={3} xl={2} className="bd-sidebar">
-              <Sidebar {...this.props} />
+              <Sidebar />
             </Col>
-            <Col xs={12} xl={2} className="d-none d-xl-block bd-toc" />
             <Col
               xs={12}
               md={9}
@@ -42,9 +46,10 @@ class Documentation extends React.Component {
                 })}
               </Switch>
             </Col>
+            <Col xl={2} className="d-none d-xl-block bd-toc" />
           </Row>
         </Container>
-      </div>
+      </>
     );
   }
 }

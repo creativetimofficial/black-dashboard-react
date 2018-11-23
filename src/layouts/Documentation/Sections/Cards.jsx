@@ -1,5 +1,5 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
 import {
   Card,
@@ -12,13 +12,9 @@ import {
   CardLink,
   ListGroup,
   ListGroupItem,
-  Nav,
-  NavItem,
-  NavLink,
-  CardImgOverlay
+  CardImgOverlay,
+  Button
 } from "reactstrap";
-
-import Button from "components/CustomButton/CustomButton.jsx";
 
 const codeExample = `<Card style={{width: '20rem'}}>
     <CardImg top src="img-src" alt="..."/>
@@ -91,52 +87,6 @@ const codeExampleText = `<Card style={{width: '20rem'}}>
     </CardBody>
 </Card>`;
 
-const codeExampleNavigation = `<Card className="text-center">
-    <CardHeader>
-        <Nav tabs>
-            <NavItem>
-                <NavLink href="#" active>Active</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#">Link</NavLink>
-            </NavItem>
-            <NavItem>
-            </NavItem>
-            <NavItem>
-                <NavLink disabled href="#">Disabled</NavLink>
-            </NavItem>
-        </Nav>
-    </CardHeader>
-    <CardBody>
-        <CardTitle>Special title treatment</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button href="/#" color="primary">Go somewhere</Button>
-    </CardBody>
-</Card>`;
-
-const codeExampleNavigation2 = `<Card className="text-center">
-    <CardHeader>
-        <Nav pills>
-            <NavItem>
-                <NavLink href="#" active>Active</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#">Link</NavLink>
-            </NavItem>
-            <NavItem>
-            </NavItem>
-            <NavItem>
-                <NavLink disabled href="#">Disabled</NavLink>
-            </NavItem>
-        </Nav>
-    </CardHeader>
-    <CardBody>
-        <CardTitle>Special title treatment</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button href="/#" color="primary">Go somewhere</Button>
-    </CardBody>
-</Card>`;
-
 const codeExampleImgCaps = `<Card>
     <CardImg top src="..." alt="..."></CardImg>
     <CardBody>
@@ -168,7 +118,7 @@ class Cards extends React.Component {
     return (
       <div>
         <h1 className="bd-title" id="content">
-          Cards
+          Short Description and Usage
         </h1>
         <p className="bd-lead">
           Bootstrap's cards provide a flexible and extensible content container
@@ -201,7 +151,7 @@ class Cards extends React.Component {
         <SyntaxHighlighter
           language="jsx"
           style={prism}
-        >{`import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';\nimport Button from "components/CustomButton/CustomButton.jsx";`}</SyntaxHighlighter>
+        >{`import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';`}</SyntaxHighlighter>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExample}
         </SyntaxHighlighter>
@@ -308,7 +258,7 @@ class Cards extends React.Component {
         <SyntaxHighlighter
           language="jsx"
           style={prism}
-        >{`import { Card, CardHeader, CardBody, CardTitle, CardText } from 'reactstrap';\nimport Button from "components/CustomButton/CustomButton.jsx";`}</SyntaxHighlighter>
+        >{`import { Card, CardHeader, CardBody, CardTitle, CardText, Button } from 'reactstrap';`}</SyntaxHighlighter>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExampleHeader}
         </SyntaxHighlighter>
@@ -358,98 +308,9 @@ class Cards extends React.Component {
         <SyntaxHighlighter
           language="jsx"
           style={prism}
-        >{`import { Card, CardBody, CardTitle, CardText } from 'reactstrap';\nimport Button from "components/CustomButton/CustomButton.jsx";`}</SyntaxHighlighter>
+        >{`import { Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';`}</SyntaxHighlighter>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExampleText}
-        </SyntaxHighlighter>
-        <h2>Navigation</h2>
-        <p>
-          Add some navigation to a card’s header (or block) with{" "}
-          <a
-            href="https://reactstrap.github.io/components/navs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            reactstrap's nav components
-          </a>.
-        </p>
-        <div className="bd-example">
-          <Card className="text-center">
-            <CardHeader>
-              <Nav tabs>
-                <NavItem>
-                  <NavLink href="#" active>
-                    Active
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">Link</NavLink>
-                </NavItem>
-                <NavItem />
-                <NavItem>
-                  <NavLink disabled href="#">
-                    Disabled
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </CardHeader>
-            <CardBody>
-              <CardTitle>Special title treatment</CardTitle>
-              <CardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </CardText>
-              <Button href="/#" color="primary">
-                Go somewhere
-              </Button>
-            </CardBody>
-          </Card>
-        </div>
-        <SyntaxHighlighter
-          language="jsx"
-          style={prism}
-        >{`import { Card, CardHeader, CardBody, CardTitle, CardText, Nav, NavItem, NavLink } from 'reactstrap';\nimport Button from "components/CustomButton/CustomButton.jsx";`}</SyntaxHighlighter>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExampleNavigation}
-        </SyntaxHighlighter>
-        <div className="bd-example">
-          <Card className="text-center">
-            <CardHeader>
-              <Nav pills>
-                <NavItem>
-                  <NavLink href="#" active>
-                    Active
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">Link</NavLink>
-                </NavItem>
-                <NavItem />
-                <NavItem>
-                  <NavLink disabled href="#">
-                    Disabled
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </CardHeader>
-            <CardBody>
-              <CardTitle>Special title treatment</CardTitle>
-              <CardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </CardText>
-              <Button href="/#" color="primary">
-                Go somewhere
-              </Button>
-            </CardBody>
-          </Card>
-        </div>
-        <SyntaxHighlighter
-          language="jsx"
-          style={prism}
-        >{`import { Card, CardHeader, CardBody, CardTitle, CardText, Nav, NavItem, NavLink } from 'reactstrap';\nimport Button from "components/CustomButton/CustomButton.jsx";`}</SyntaxHighlighter>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExampleNavigation2}
         </SyntaxHighlighter>
         <h2>Images</h2>
         <p>

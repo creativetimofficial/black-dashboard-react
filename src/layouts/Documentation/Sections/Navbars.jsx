@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import prism from "react-syntax-highlighter/styles/prism";
 import {
   Container,
   Collapse,
@@ -16,10 +16,9 @@ import {
   NavLink,
   Form,
   FormGroup,
-  Input
+  Input,
+  Button
 } from "reactstrap";
-
-import Button from "components/CustomButton/CustomButton.jsx";
 
 const colors = [
   "dark",
@@ -156,7 +155,7 @@ class Example extends React.Component{
 }`;
 
 const codeNavForm = `import React from 'react';
-import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input } from 'reactstrap';
+import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input, Button } from 'reactstrap';
 
 class Example extends React.Component{
     constructor(props) {
@@ -200,7 +199,7 @@ class Example extends React.Component{
                             <FormGroup className="no-border">
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="link" className="btn-icon btn-round">
                                 <i className="nc-icon nc-zoom-split"></i>
                             </Button>
                         </Form>
@@ -327,7 +326,7 @@ const codeStickyTop = `<Navbar expand="lg" color={'primary'} light className="st
 </Navbar>`;
 
 const codeHidden = `import React from 'react';
-import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input } from 'reactstrap';
+import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input, Button } from 'reactstrap';
 
 class Example extends React.Component{
     constructor(props) {
@@ -369,7 +368,7 @@ class Example extends React.Component{
                             <FormGroup className={"no-border"}>
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="link" className="btn-icon btn-round">
                                 <i className="nc-icon nc-zoom-split"></i>
                             </Button>
                         </Form>
@@ -381,7 +380,7 @@ class Example extends React.Component{
 }`;
 
 const codeBrand = `import React from 'react';
-import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input } from 'reactstrap';
+import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input, Button } from 'reactstrap';
 
 class Example extends React.Component{
     constructor(props) {
@@ -423,7 +422,7 @@ class Example extends React.Component{
                             <FormGroup className={"no-border"}>
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="link" className="btn-icon btn-round">
                                 <i className="nc-icon nc-zoom-split"></i>
                             </Button>
                         </Form>
@@ -435,7 +434,7 @@ class Example extends React.Component{
 }`;
 
 const codeBrandRight = `import React from 'react';
-import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input } from 'reactstrap';
+import { Navbar, Conatiner, NavbarBrand, NavbarToggler, Collapse, Nav, NavItme, NavLink, Form, FormGroup, Input, Button } from 'reactstrap';
 
 class Example extends React.Component{
     constructor(props) {
@@ -477,7 +476,7 @@ class Example extends React.Component{
                             <FormGroup className={"no-border"}>
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="link" className="btn-icon btn-round">
                                 <i className="nc-icon nc-zoom-split"></i>
                             </Button>
                         </Form>
@@ -676,8 +675,8 @@ class Navigation extends React.Component {
                   <FormGroup className="no-border">
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
-                    <i className="nc-icon nc-zoom-split" />
+                  <Button color="link" className="btn-icon btn-round">
+                    <i className="tim-icons icon-zoom-split" />
                   </Button>
                 </Form>
               </Collapse>
@@ -776,8 +775,11 @@ class Navigation extends React.Component {
                       >
                         <Input type="text" placeholder="Search" />
                       </FormGroup>
-                      <Button color="neutral" icon round>
-                        <i className="nc-icon nc-zoom-split" />
+                      <Button
+                        color={prop === "white" ? "info" : "link"}
+                        className="btn-icon btn-round"
+                      >
+                        <i className="tim-icons icon-zoom-split" />
                       </Button>
                     </Form>
                   </Collapse>
@@ -916,8 +918,8 @@ class Navigation extends React.Component {
                   <FormGroup className={"no-border"}>
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
-                    <i className="nc-icon nc-zoom-split" />
+                  <Button color="link" className="btn-icon btn-round">
+                    <i className="tim-icons icon-zoom-split" />
                   </Button>
                 </Form>
               </Collapse>
@@ -950,8 +952,8 @@ class Navigation extends React.Component {
                   <FormGroup className={"no-border"}>
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
-                    <i className="nc-icon nc-zoom-split" />
+                  <Button color="link" className="btn-icon btn-round">
+                    <i className="tim-icons icon-zoom-split" />
                   </Button>
                 </Form>
               </Collapse>
@@ -984,8 +986,8 @@ class Navigation extends React.Component {
                   <FormGroup className={"no-border"}>
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
-                    <i className="nc-icon nc-zoom-split" />
+                  <Button color="link" className="btn-icon btn-round">
+                    <i className="tim-icons icon-zoom-split" />
                   </Button>
                 </Form>
               </Collapse>

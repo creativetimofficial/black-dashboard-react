@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
 import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  UncontrolledButtonDropdown
+  UncontrolledButtonDropdown,
+  Button,
+  Col,
+  Row
 } from "reactstrap";
 
-import Button from "components/CustomButton/CustomButton.jsx";
-
 const codeExamples = `<UncontrolledDropdown>
-    <DropdownToggle caret>
+    <DropdownToggle caret data-toggle="dropdown">
         Dropdown button
     </DropdownToggle>
     <DropdownMenu>
@@ -24,7 +25,7 @@ const codeExamples = `<UncontrolledDropdown>
 </UncontrolledDropdown>`;
 
 const codeExamplesColor = `<UncontrolledDropdown group>
-    <DropdownToggle caret color="danger">
+    <DropdownToggle caret color="danger" data-toggle="dropdown">
         Danger
     </DropdownToggle>
     <DropdownMenu>
@@ -35,8 +36,8 @@ const codeExamplesColor = `<UncontrolledDropdown group>
 </UncontrolledDropdown>`;
 
 const codeExamplesSplit = `<UncontrolledButtonDropdown>
-    <Button id="caret" color="primary">Ceva</Button>
-    <DropdownToggle caret className="dropdown-toggle-split" color="primary" />
+    <Button id="caret" color="primary">Primary</Button>
+    <DropdownToggle caret className="dropdown-toggle-split" color="primary" data-toggle="dropdown"/>
     <DropdownMenu>
         <DropdownItem header>Header</DropdownItem>
         <DropdownItem disabled>Action</DropdownItem>
@@ -46,7 +47,7 @@ const codeExamplesSplit = `<UncontrolledButtonDropdown>
     </DropdownMenu>
 </UncontrolledButtonDropdown>`;
 
-const codeExamplesVariation = `<UncontrolledDropdown group>
+const codeExamplesVariation = `<UncontrolledDropdown group direction="up">
     <DropdownToggle caret>
         Dropdown
     </DropdownToggle>
@@ -56,7 +57,7 @@ const codeExamplesVariation = `<UncontrolledDropdown group>
         <DropdownItem>Something else here</DropdownItem>
     </DropdownMenu>
 </UncontrolledDropdown>
-<UncontrolledButtonDropdown dropup>
+<UncontrolledButtonDropdown direction="up">
     <Button id="caret">Split dropup</Button>
     <DropdownToggle caret className="dropdown-toggle-split"/>
     <DropdownMenu>
@@ -68,7 +69,33 @@ const codeExamplesVariation = `<UncontrolledDropdown group>
     </DropdownMenu>
 </UncontrolledButtonDropdown>`;
 
-class Dropdown extends React.Component {
+const codeExamplesColors = `<Col xs={6} className="ml-auto">
+    <UncontrolledDropdown>
+      <DropdownToggle caret data-toggle="dropdown">
+        Dropdown button
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>Action</DropdownItem>
+        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem>Something else here</DropdownItem>
+      </DropdownMenu>
+    </UncontrolledDropdown>
+  </Col>
+  <Col xs={6} className="mr-auto">
+    <UncontrolledDropdown>
+      <DropdownToggle caret data-toggle="dropdown">
+        Dropdown button
+      </DropdownToggle>
+      <DropdownMenu className="dropdown-black">
+        <DropdownItem>Action</DropdownItem>
+        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem>Something else here</DropdownItem>
+      </DropdownMenu>
+    </UncontrolledDropdown>
+  </Col>
+</Row>`;
+
+class Dropdowns extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -91,12 +118,15 @@ class Dropdown extends React.Component {
         </p>
         <h2>Examples</h2>
         <p>
-          The <code>Dropdown</code> component is used to pass the{" "}
-          <code>isOpen</code> &amp; <code>toggle</code> props via context to the
-          following components: <code>DropdownToggle</code>,{" "}
-          <code>DropdownMenu</code>. The <code>DropdownToggle</code> uses the{" "}
-          <code>Button</code> component internally, meaning it also accepts all
-          the props the{" "}
+          The <code className="highlighter-rouge">Dropdown</code> component is
+          used to pass the <code className="highlighter-rouge">isOpen</code>{" "}
+          &amp; <code className="highlighter-rouge">toggle</code> props via
+          context to the following components:{" "}
+          <code className="highlighter-rouge">DropdownToggle</code>,{" "}
+          <code className="highlighter-rouge">DropdownMenu</code>. The{" "}
+          <code className="highlighter-rouge">DropdownToggle</code> uses the{" "}
+          <code className="highlighter-rouge">Button</code> component
+          internally, meaning it also accepts all the props the{" "}
           <Link to="/documentation/buttons/">Button component</Link> accepts.
         </p>
         <p>
@@ -106,7 +136,9 @@ class Dropdown extends React.Component {
         <h3>Single button dropdowns</h3>
         <div className="bd-example">
           <UncontrolledDropdown>
-            <DropdownToggle caret>Dropdown button</DropdownToggle>
+            <DropdownToggle caret data-toggle="dropdown">
+              Dropdown button
+            </DropdownToggle>
             <DropdownMenu>
               <DropdownItem>Action</DropdownItem>
               <DropdownItem>Another Action</DropdownItem>
@@ -124,10 +156,7 @@ class Dropdown extends React.Component {
         <p>The best part is you can do this with any button variant, too:</p>
         <div className="bd-example">
           <UncontrolledDropdown group>
-            <DropdownToggle
-              caret
-              color="primary"
-            >
+            <DropdownToggle caret color="primary" data-toggle="dropdown">
               Primary
             </DropdownToggle>
             <DropdownMenu>
@@ -137,10 +166,7 @@ class Dropdown extends React.Component {
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown group>
-            <DropdownToggle
-              caret
-              color="secondary"
-            >
+            <DropdownToggle caret color="secondary" data-toggle="dropdown">
               Secondary
             </DropdownToggle>
             <DropdownMenu>
@@ -150,10 +176,7 @@ class Dropdown extends React.Component {
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown group>
-            <DropdownToggle
-              caret
-              color="success"
-            >
+            <DropdownToggle caret color="success" data-toggle="dropdown">
               Success
             </DropdownToggle>
             <DropdownMenu>
@@ -163,10 +186,7 @@ class Dropdown extends React.Component {
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown group>
-            <DropdownToggle
-              caret
-              color="info"
-            >
+            <DropdownToggle caret color="info" data-toggle="dropdown">
               Info
             </DropdownToggle>
             <DropdownMenu>
@@ -176,10 +196,7 @@ class Dropdown extends React.Component {
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown group>
-            <DropdownToggle
-              caret
-              color="warning"
-            >
+            <DropdownToggle caret color="warning" data-toggle="dropdown">
               Warning
             </DropdownToggle>
             <DropdownMenu>
@@ -189,10 +206,7 @@ class Dropdown extends React.Component {
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown group>
-            <DropdownToggle
-              caret
-              color="danger"
-            >
+            <DropdownToggle caret color="danger" data-toggle="dropdown">
               Danger
             </DropdownToggle>
             <DropdownMenu>
@@ -218,6 +232,7 @@ class Dropdown extends React.Component {
             <DropdownToggle
               caret
               className="dropdown-toggle-split"
+              data-toggle="dropdown"
               color="primary"
             />
             <DropdownMenu>
@@ -235,6 +250,7 @@ class Dropdown extends React.Component {
             <DropdownToggle
               caret
               className="dropdown-toggle-split"
+              data-toggle="dropdown"
               color="secondary"
             />
             <DropdownMenu>
@@ -252,6 +268,7 @@ class Dropdown extends React.Component {
             <DropdownToggle
               caret
               className="dropdown-toggle-split"
+              data-toggle="dropdown"
               color="success"
             />
             <DropdownMenu>
@@ -269,6 +286,7 @@ class Dropdown extends React.Component {
             <DropdownToggle
               caret
               className="dropdown-toggle-split"
+              data-toggle="dropdown"
               color="info"
             />
             <DropdownMenu>
@@ -286,6 +304,7 @@ class Dropdown extends React.Component {
             <DropdownToggle
               caret
               className="dropdown-toggle-split"
+              data-toggle="dropdown"
               color="warning"
             />
             <DropdownMenu>
@@ -303,6 +322,7 @@ class Dropdown extends React.Component {
             <DropdownToggle
               caret
               className="dropdown-toggle-split"
+              data-toggle="dropdown"
               color="danger"
             />
             <DropdownMenu>
@@ -323,7 +343,7 @@ class Dropdown extends React.Component {
         </SyntaxHighlighter>
         <h2>Dropup variation</h2>
         <div className="bd-example">
-          <UncontrolledDropdown group>
+          <UncontrolledDropdown group direction="up">
             <DropdownToggle caret>Dropdown</DropdownToggle>
             <DropdownMenu>
               <DropdownItem>Action</DropdownItem>
@@ -331,7 +351,7 @@ class Dropdown extends React.Component {
               <DropdownItem>Something else here</DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
-          <UncontrolledButtonDropdown dropup>
+          <UncontrolledButtonDropdown direction="up">
             <Button id="caret">Split dropup</Button>
             <DropdownToggle caret className="dropdown-toggle-split" />
             <DropdownMenu>
@@ -350,6 +370,43 @@ class Dropdown extends React.Component {
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExamplesVariation}
         </SyntaxHighlighter>
+        <h2>Colors</h2>
+        <p>
+          Set for the DropdownMenu{" "}
+          <code className="highlighter-rouge">.dropdown-black</code> className
+          to change the drodown background’s color.
+        </p>
+        <div className="bd-example">
+          <Row>
+            <Col xs={6} className="ml-auto">
+              <UncontrolledDropdown>
+                <DropdownToggle caret data-toggle="dropdown">
+                  Dropdown button
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>Action</DropdownItem>
+                  <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem>Something else here</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Col>
+            <Col xs={6} className="mr-auto">
+              <UncontrolledDropdown>
+                <DropdownToggle caret data-toggle="dropdown">
+                  Dropdown button
+                </DropdownToggle>
+                <DropdownMenu className="dropdown-black">
+                  <DropdownItem>Action</DropdownItem>
+                  <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem>Something else here</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Col>
+          </Row>
+        </div>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExamplesColors}
+        </SyntaxHighlighter>
         <h2>Props</h2>
         <p>
           Please refer to{" "}
@@ -366,4 +423,4 @@ class Dropdown extends React.Component {
   }
 }
 
-export default Dropdown;
+export default Dropdowns;
