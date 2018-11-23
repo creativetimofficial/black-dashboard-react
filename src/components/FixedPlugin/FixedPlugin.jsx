@@ -97,7 +97,7 @@ class FixedPlugin extends Component {
               </Button>
               <Link to="/documentation/tutorial">
                 <Button color="default" block className="btn-round" outline>
-                  <i className="nc-icon nc-paper" /> Documentation
+                  Documentation
                 </Button>
               </Link>
             </li>
