@@ -1,10 +1,10 @@
 {
   "main.css": "/black-dashboard-react/static/css/main.81929e0c.chunk.css",
-  "main.js": "/black-dashboard-react/static/js/main.5bf35fc6.chunk.js",
-  "main.js.map": "/black-dashboard-react/static/js/main.5bf35fc6.chunk.js.map",
+  "main.js": "/black-dashboard-react/static/js/main.b2dc7d16.chunk.js",
+  "main.js.map": "/black-dashboard-react/static/js/main.b2dc7d16.chunk.js.map",
   "static/css/1.832dd7e6.chunk.css": "/black-dashboard-react/static/css/1.832dd7e6.chunk.css",
-  "static/js/1.8c30a7a9.chunk.js": "/black-dashboard-react/static/js/1.8c30a7a9.chunk.js",
-  "static/js/1.8c30a7a9.chunk.js.map": "/black-dashboard-react/static/js/1.8c30a7a9.chunk.js.map",
+  "static/js/1.5a72b180.chunk.js": "/black-dashboard-react/static/js/1.5a72b180.chunk.js",
+  "static/js/1.5a72b180.chunk.js.map": "/black-dashboard-react/static/js/1.5a72b180.chunk.js.map",
   "runtime~main.js": "/black-dashboard-react/static/js/runtime~main.b46a1e60.js",
   "runtime~main.js.map": "/black-dashboard-react/static/js/runtime~main.b46a1e60.js.map",
   "static/media/react-logo.png": "/black-dashboard-react/static/media/react-logo.eb6be414.png",
@@ -14,6 +14,6 @@
   "static/css/main.81929e0c.chunk.css.map": "/black-dashboard-react/static/css/main.81929e0c.chunk.css.map",
   "static/css/1.832dd7e6.chunk.css.map": "/black-dashboard-react/static/css/1.832dd7e6.chunk.css.map",
   "index.html": "/black-dashboard-react/index.html",
-  "precache-manifest.0acdbad42f5ae0ec9b739e0f7ebb32ff.js": "/black-dashboard-react/precache-manifest.0acdbad42f5ae0ec9b739e0f7ebb32ff.js",
+  "precache-manifest.9d8c1d0c140891682edc268f085ad3ac.js": "/black-dashboard-react/precache-manifest.9d8c1d0c140891682edc268f085ad3ac.js",
   "service-worker.js": "/black-dashboard-react/service-worker.js"
 }
