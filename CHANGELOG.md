@@ -1,4 +1,4 @@
-## [1.0.0] 20xx-xx-xx
+## [1.0.0] 2018-11-29
 ### Original Release
 - Added Reactstrap as base framework
 - Added design from PRODUCT NAME by Creative Tim
