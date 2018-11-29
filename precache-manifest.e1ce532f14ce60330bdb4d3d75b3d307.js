@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/anime3.bd6820f1.png"
   },
   {
-    "revision": "aa19f130415d40492434",
-    "url": "/black-dashboard-react/static/css/main.f52009cd.chunk.css"
+    "revision": "39f325b8c34ea60cb3ec",
+    "url": "/black-dashboard-react/static/css/main.5a6d25e9.chunk.css"
   },
   {
     "revision": "b17a118e13e53558658b681a0ebdad82",
@@ -24,20 +24,20 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/react-logo.eb6be414.png"
   },
   {
-    "revision": "aa19f130415d40492434",
-    "url": "/black-dashboard-react/static/js/main.aa19f130.chunk.js"
+    "revision": "39f325b8c34ea60cb3ec",
+    "url": "/black-dashboard-react/static/js/main.39f325b8.chunk.js"
   },
   {
     "revision": "9fcf69e5359987c9b1545aae1c2c5faa",
     "url": "/black-dashboard-react/static/media/emilyz.9fcf69e5.jpg"
   },
   {
-    "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
-    "url": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff"
-  },
-  {
     "revision": "5987dd12fea78ce5f97ae601b08ec03c",
     "url": "/black-dashboard-react/static/media/nucleo.5987dd12.woff2"
+  },
+  {
+    "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
+    "url": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff"
   },
   {
     "revision": "03ef1918e505c3e3471f9369ef7a638f",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/css/1.832dd7e6.chunk.css"
   },
   {
-    "revision": "ed92c423989b15ef522f23c42d36631a",
+    "revision": "30bbd84e3275883f0097ad148a5287bb",
     "url": "/black-dashboard-react/index.html"
   }
 ];

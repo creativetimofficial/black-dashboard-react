@@ -1,7 +1,7 @@
 {
-  "main.css": "/black-dashboard-react/static/css/main.f52009cd.chunk.css",
-  "main.js": "/black-dashboard-react/static/js/main.aa19f130.chunk.js",
-  "main.js.map": "/black-dashboard-react/static/js/main.aa19f130.chunk.js.map",
+  "main.css": "/black-dashboard-react/static/css/main.5a6d25e9.chunk.css",
+  "main.js": "/black-dashboard-react/static/js/main.39f325b8.chunk.js",
+  "main.js.map": "/black-dashboard-react/static/js/main.39f325b8.chunk.js.map",
   "static/css/1.832dd7e6.chunk.css": "/black-dashboard-react/static/css/1.832dd7e6.chunk.css",
   "static/js/1.ecaf5f54.chunk.js": "/black-dashboard-react/static/js/1.ecaf5f54.chunk.js",
   "static/js/1.ecaf5f54.chunk.js.map": "/black-dashboard-react/static/js/1.ecaf5f54.chunk.js.map",
@@ -11,9 +11,9 @@
   "static/media/emilyz.jpg": "/black-dashboard-react/static/media/emilyz.9fcf69e5.jpg",
   "static/media/nucleo-icons.css": "/black-dashboard-react/static/media/nucleo.b17a118e.ttf",
   "static/media/anime3.png": "/black-dashboard-react/static/media/anime3.bd6820f1.png",
+  "static/css/main.5a6d25e9.chunk.css.map": "/black-dashboard-react/static/css/main.5a6d25e9.chunk.css.map",
   "static/css/1.832dd7e6.chunk.css.map": "/black-dashboard-react/static/css/1.832dd7e6.chunk.css.map",
-  "static/css/main.f52009cd.chunk.css.map": "/black-dashboard-react/static/css/main.f52009cd.chunk.css.map",
   "index.html": "/black-dashboard-react/index.html",
-  "precache-manifest.704886bebadfd51910d7b0cd60b46133.js": "/black-dashboard-react/precache-manifest.704886bebadfd51910d7b0cd60b46133.js",
+  "precache-manifest.e1ce532f14ce60330bdb4d3d75b3d307.js": "/black-dashboard-react/precache-manifest.e1ce532f14ce60330bdb4d3d75b3d307.js",
   "service-worker.js": "/black-dashboard-react/service-worker.js"
 }
