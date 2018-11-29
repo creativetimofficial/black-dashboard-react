@@ -47,6 +47,7 @@
   bottom: 0;
   color: #fff;
   z-index: 1;
+  padding-left: 0;
 }
 
 @media all and (min-width: 992px) {
@@ -61,3 +62,61 @@
   max-width: 530px;
   margin: 0 auto;
 }
+
+.offline-doc .page-header {
+  min-height: 100vh;
+  max-height: 999px;
+  padding: 0;
+  color: #ffffff;
+  position: relative; }
+  .offline-doc .page-header .page-header-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .offline-doc .page-header .content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 880px; }
+  .offline-doc .page-header footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+  .offline-doc .page-header .container {
+    height: 100%;
+    z-index: 1; }
+  .offline-doc .page-header .category,
+  .offline-doc .page-header .description {
+    color: rgba(255, 255, 255, 0.8); }
+  .offline-doc .page-header.page-header-small {
+    min-height: 60vh;
+    max-height: 440px; }
+  .offline-doc .page-header.page-header-mini {
+    min-height: 40vh;
+    max-height: 340px; }
+  .offline-doc .page-header .title {
+    margin-bottom: 15px; }
+  .offline-doc .page-header .title + h4 {
+    margin-top: 10px; }
+  .offline-doc .page-header:after, .offline-doc .page-header:before {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: ""; }
+  .offline-doc .page-header:before {
+    background-color: rgba(0, 0, 0, 0.8); }

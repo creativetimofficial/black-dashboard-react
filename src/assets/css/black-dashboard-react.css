@@ -8404,7 +8404,7 @@ fieldset[disabled]
         box-shadow: none; }
   .dropdown-menu .dropdown-divider {
     background-color: rgba(222, 222, 222, 0.5); }
-  .dropdown-menu .dropdown-header:not([href]):not([tabindex]) {
+  .dropdown-menu .dropdown-header:not([href]) {
     color: rgba(182, 182, 182, 0.6);
     font-size: 0.62475rem;
     text-transform: uppercase;
