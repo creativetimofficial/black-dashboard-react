@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/anime3.bd6820f1.png"
   },
   {
-    "revision": "6e7ea8192621a45e17f6",
+    "revision": "1186f1023e44e74c96d5",
     "url": "/black-dashboard-react/static/css/main.717aa147.chunk.css"
   },
   {
-    "revision": "03ef1918e505c3e3471f9369ef7a638f",
-    "url": "/black-dashboard-react/static/media/nucleo.03ef1918.eot"
+    "revision": "b17a118e13e53558658b681a0ebdad82",
+    "url": "/black-dashboard-react/static/media/nucleo.b17a118e.ttf"
   },
   {
     "revision": "f1913036c31297287dd1",
@@ -24,31 +24,31 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/react-logo.eb6be414.png"
   },
   {
-    "revision": "6e7ea8192621a45e17f6",
-    "url": "/black-dashboard-react/static/js/main.6e7ea819.chunk.js"
+    "revision": "1186f1023e44e74c96d5",
+    "url": "/black-dashboard-react/static/js/main.1186f102.chunk.js"
   },
   {
     "revision": "9fcf69e5359987c9b1545aae1c2c5faa",
     "url": "/black-dashboard-react/static/media/emilyz.9fcf69e5.jpg"
   },
   {
-    "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
-    "url": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff"
-  },
-  {
     "revision": "5987dd12fea78ce5f97ae601b08ec03c",
     "url": "/black-dashboard-react/static/media/nucleo.5987dd12.woff2"
   },
   {
-    "revision": "b17a118e13e53558658b681a0ebdad82",
-    "url": "/black-dashboard-react/static/media/nucleo.b17a118e.ttf"
+    "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
+    "url": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff"
+  },
+  {
+    "revision": "03ef1918e505c3e3471f9369ef7a638f",
+    "url": "/black-dashboard-react/static/media/nucleo.03ef1918.eot"
   },
   {
     "revision": "f1913036c31297287dd1",
     "url": "/black-dashboard-react/static/css/1.60530448.chunk.css"
   },
   {
-    "revision": "97d5df46a6ba7ce3fb8e8c1e3fd10eaf",
+    "revision": "bf6e7946a225dc1e6afcd78eb323cfa4",
     "url": "/black-dashboard-react/index.html"
   }
 ];
