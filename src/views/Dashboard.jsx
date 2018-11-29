@@ -68,7 +68,7 @@ class Dashboard extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data1"
                           })}
-                          color="primary"
+                          color="info"
                           id="0"
                           size="sm"
                           onClick={() => this.setBgChartData("data1")}
@@ -87,7 +87,7 @@ class Dashboard extends React.Component {
                           </span>
                         </Button>
                         <Button
-                          color="primary"
+                          color="info"
                           id="1"
                           size="sm"
                           tag="label"
@@ -109,7 +109,7 @@ class Dashboard extends React.Component {
                           </span>
                         </Button>
                         <Button
-                          color="primary"
+                          color="info"
                           id="2"
                           size="sm"
                           tag="label"
@@ -151,7 +151,7 @@ class Dashboard extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">Total Shipments</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-bell-55 text-primary" />{" "}
+                    <i className="tim-icons icon-bell-55 text-info" />{" "}
                     763,215
                   </CardTitle>
                 </CardHeader>
@@ -170,7 +170,7 @@ class Dashboard extends React.Component {
                 <CardHeader>
                   <h5 className="card-category">Daily Sales</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-delivery-fast text-info" />{" "}
+                    <i className="tim-icons icon-delivery-fast text-primary" />{" "}
                     3,500€
                   </CardTitle>
                 </CardHeader>
