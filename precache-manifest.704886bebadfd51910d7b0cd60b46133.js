@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/emilyz.9fcf69e5.jpg"
   },
   {
-    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
-    "url": "/black-dashboard-react/static/media/nucleo.5987dd12.woff2"
-  },
-  {
     "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
     "url": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff"
+  },
+  {
+    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
+    "url": "/black-dashboard-react/static/media/nucleo.5987dd12.woff2"
   },
   {
     "revision": "03ef1918e505c3e3471f9369ef7a638f",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/css/1.832dd7e6.chunk.css"
   },
   {
-    "revision": "078cb677a1070439aa6a4a4a2fa7215a",
+    "revision": "ed92c423989b15ef522f23c42d36631a",
     "url": "/black-dashboard-react/index.html"
   }
 ];
