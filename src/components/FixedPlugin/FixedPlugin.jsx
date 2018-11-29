@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 // reactstrap components
 import { Button } from "reactstrap";
 
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon
+} from "react-share";
+import GitHubButton from "react-github-button";
+
 class FixedPlugin extends Component {
   constructor(props) {
     super(props);
@@ -112,6 +120,36 @@ class FixedPlugin extends Component {
               >
                 Get pro version
               </Button>
+            </li>
+            <li className="header-title" id="sharrreTitle">
+              Thank you for sharing!
+            </li>
+            <li className="button-container text-center">
+              <FacebookShareButton url="https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard">
+                <FacebookIcon size={32} round={true} />
+              </FacebookShareButton>
+              <TwitterShareButton
+                url="https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard"
+                title="Black Dashboard React by Creative Tim | Free React Admin Template"
+                hashtags={[
+                  "react",
+                  "creativetim",
+                  "dark",
+                  "dashboard",
+                  "bootstrap",
+                  "reactstrap",
+                  "reactjs"
+                ]}
+                via="creativetim"
+              >
+                <TwitterIcon size={32} round={true} />
+              </TwitterShareButton>
+              <br />
+              <GitHubButton
+                type="stargazers"
+                namespace="creativetimofficial"
+                repo="black-dashboard-react"
+              />
             </li>
           </ul>
         </div>
