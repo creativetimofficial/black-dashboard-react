@@ -186,7 +186,7 @@
         background-color: $opacity-gray-5;
     }
 
-    .dropdown-header:not([href]):not([tabindex]) {
+    .dropdown-header:not([href]) {
         color: $default-opacity;
         font-size: $font-size-xs;
         text-transform: uppercase;
