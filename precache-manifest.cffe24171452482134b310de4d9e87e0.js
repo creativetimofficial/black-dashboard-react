@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/anime3.bd6820f1.png"
   },
   {
-    "revision": "1186f1023e44e74c96d5",
+    "revision": "d230af7b1b991d202c2f",
     "url": "/black-dashboard-react/static/css/main.717aa147.chunk.css"
   },
   {
-    "revision": "b17a118e13e53558658b681a0ebdad82",
-    "url": "/black-dashboard-react/static/media/nucleo.b17a118e.ttf"
+    "revision": "03ef1918e505c3e3471f9369ef7a638f",
+    "url": "/black-dashboard-react/static/media/nucleo.03ef1918.eot"
   },
   {
     "revision": "f1913036c31297287dd1",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/react-logo.eb6be414.png"
   },
   {
-    "revision": "1186f1023e44e74c96d5",
-    "url": "/black-dashboard-react/static/js/main.1186f102.chunk.js"
+    "revision": "d230af7b1b991d202c2f",
+    "url": "/black-dashboard-react/static/js/main.d230af7b.chunk.js"
   },
   {
     "revision": "9fcf69e5359987c9b1545aae1c2c5faa",
@@ -40,15 +40,15 @@ self.__precacheManifest = [
     "url": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff"
   },
   {
-    "revision": "03ef1918e505c3e3471f9369ef7a638f",
-    "url": "/black-dashboard-react/static/media/nucleo.03ef1918.eot"
+    "revision": "b17a118e13e53558658b681a0ebdad82",
+    "url": "/black-dashboard-react/static/media/nucleo.b17a118e.ttf"
   },
   {
     "revision": "f1913036c31297287dd1",
     "url": "/black-dashboard-react/static/css/1.60530448.chunk.css"
   },
   {
-    "revision": "bf6e7946a225dc1e6afcd78eb323cfa4",
+    "revision": "5b1773c74b5c6fa6d7b1efdd522de1e4",
     "url": "/black-dashboard-react/index.html"
   }
 ];

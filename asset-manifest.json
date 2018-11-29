@@ -1,7 +1,7 @@
 {
   "main.css": "/black-dashboard-react/static/css/main.717aa147.chunk.css",
-  "main.js": "/black-dashboard-react/static/js/main.1186f102.chunk.js",
-  "main.js.map": "/black-dashboard-react/static/js/main.1186f102.chunk.js.map",
+  "main.js": "/black-dashboard-react/static/js/main.d230af7b.chunk.js",
+  "main.js.map": "/black-dashboard-react/static/js/main.d230af7b.chunk.js.map",
   "static/css/1.60530448.chunk.css": "/black-dashboard-react/static/css/1.60530448.chunk.css",
   "static/js/1.f1913036.chunk.js": "/black-dashboard-react/static/js/1.f1913036.chunk.js",
   "static/js/1.f1913036.chunk.js.map": "/black-dashboard-react/static/js/1.f1913036.chunk.js.map",
@@ -9,11 +9,11 @@
   "runtime~main.js.map": "/black-dashboard-react/static/js/runtime~main.b46a1e60.js.map",
   "static/media/react-logo.png": "/black-dashboard-react/static/media/react-logo.eb6be414.png",
   "static/media/emilyz.jpg": "/black-dashboard-react/static/media/emilyz.9fcf69e5.jpg",
-  "static/media/nucleo-icons.css": "/black-dashboard-react/static/media/nucleo.b17a118e.ttf",
+  "static/media/nucleo-icons.css": "/black-dashboard-react/static/media/nucleo.03ef1918.eot",
   "static/media/anime3.png": "/black-dashboard-react/static/media/anime3.bd6820f1.png",
   "static/css/main.717aa147.chunk.css.map": "/black-dashboard-react/static/css/main.717aa147.chunk.css.map",
   "static/css/1.60530448.chunk.css.map": "/black-dashboard-react/static/css/1.60530448.chunk.css.map",
   "index.html": "/black-dashboard-react/index.html",
-  "precache-manifest.842b559fad48ee4e3f046f6f78056362.js": "/black-dashboard-react/precache-manifest.842b559fad48ee4e3f046f6f78056362.js",
+  "precache-manifest.cffe24171452482134b310de4d9e87e0.js": "/black-dashboard-react/precache-manifest.cffe24171452482134b310de4d9e87e0.js",
   "service-worker.js": "/black-dashboard-react/service-worker.js"
 }
