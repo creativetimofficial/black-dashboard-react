@@ -66,6 +66,9 @@ class AdminNavbar extends React.Component {
   toggleModalSearch = () => {
     this.setState({
       modalSearch: !this.state.modalSearch
+    },()=>{
+      let inlineFormInputGroup = document.getElementById('inlineFormInputGroup');
+      inlineFormInputGroup && inlineFormInputGroup.focus();
     });
   };
   render() {
