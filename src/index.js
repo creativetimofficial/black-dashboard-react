@@ -19,6 +19,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createHashHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
+import ReactPixel from "react-facebook-pixel";
 
 import AdminLayout from "layouts/Admin/Admin.jsx";
 import RTLLayout from "layouts/RTL/RTL.jsx";
@@ -29,6 +30,10 @@ import "layouts/Documentation/assets-for-demo/react-docs.scss";
 import "assets/scss/black-dashboard-react.scss";
 import "assets/demo/demo.css";
 import "assets/css/nucleo-icons.css";
+
+ReactPixel.init("111649226022273");
+ReactPixel.pageView();
+ReactPixel.fbq("track", "PageView");
 
 const hist = createHashHistory();
 
