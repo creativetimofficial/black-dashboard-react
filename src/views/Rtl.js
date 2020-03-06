@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.0.0
+* Black Dashboard React v1.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -48,9 +48,9 @@ import {
   chartExample2,
   chartExample3,
   chartExample4
-} from "variables/charts.jsx";
+} from "variables/charts.js";
 
-class Dashboard extends React.Component {
+class Rtl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,13 +71,13 @@ class Dashboard extends React.Component {
               <Card className="card-chart">
                 <CardHeader>
                   <Row>
-                    <Col className="text-left" sm="6">
-                      <h5 className="card-category">Total Shipments</h5>
-                      <CardTitle tag="h2">Performance</CardTitle>
+                    <Col className="text-right" sm="6">
+                      <h5 className="card-category">مجموع الشحنات</h5>
+                      <CardTitle tag="h2">أداء</CardTitle>
                     </Col>
                     <Col sm="6">
                       <ButtonGroup
-                        className="btn-group-toggle float-right"
+                        className="btn-group-toggle float-left"
                         data-toggle="buttons"
                       >
                         <Button
@@ -85,7 +85,7 @@ class Dashboard extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data1"
                           })}
-                          color="info"
+                          color="primary"
                           id="0"
                           size="sm"
                           onClick={() => this.setBgChartData("data1")}
@@ -97,14 +97,14 @@ class Dashboard extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Accounts
+                            حسابات
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-single-02" />
                           </span>
                         </Button>
                         <Button
-                          color="info"
+                          color="primary"
                           id="1"
                           size="sm"
                           tag="label"
@@ -119,14 +119,14 @@ class Dashboard extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Purchases
+                            المشتريات
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-gift-2" />
                           </span>
                         </Button>
                         <Button
-                          color="info"
+                          color="primary"
                           id="2"
                           size="sm"
                           tag="label"
@@ -141,7 +141,7 @@ class Dashboard extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Sessions
+                            جلسات
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-tap-02" />
@@ -163,12 +163,12 @@ class Dashboard extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col lg="4">
+            <Col className="text-right" lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Total Shipments</h5>
+                  <h5 className="card-category">شحنات كاملة</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-bell-55 text-info" />{" "}
+                    <i className="tim-icons icon-bell-55 text-primary" />{" "}
                     763,215
                   </CardTitle>
                 </CardHeader>
@@ -182,12 +182,12 @@ class Dashboard extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="4">
+            <Col className="text-right" lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Daily Sales</h5>
+                  <h5 className="card-category">المبيعات اليومية</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-delivery-fast text-primary" />{" "}
+                    <i className="tim-icons icon-delivery-fast text-info" />{" "}
                     3,500€
                   </CardTitle>
                 </CardHeader>
@@ -201,10 +201,10 @@ class Dashboard extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="4">
+            <Col className="text-right" lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Completed Tasks</h5>
+                  <h5 className="card-category">المهام المكتملة</h5>
                   <CardTitle tag="h3">
                     <i className="tim-icons icon-send text-success" /> 12,100K
                   </CardTitle>
@@ -221,39 +221,40 @@ class Dashboard extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col lg="6" md="12">
-              <Card className="card-tasks">
-                <CardHeader>
-                  <h6 className="title d-inline">Tasks(5)</h6>
-                  <p className="card-category d-inline"> today</p>
-                  <UncontrolledDropdown>
+            <Col className="text-center" lg="6" sm="6">
+              <Card className="card-tasks text-left">
+                <CardHeader className="text-right">
+                  <h6 className="title d-inline">تتبع</h6>{" "}
+                  <p className="card-category d-inline">اليوم</p>
+                  <UncontrolledDropdown className="float-left">
                     <DropdownToggle
+                      aria-expanded={false}
+                      aria-haspopup={true}
                       caret
-                      className="btn-icon"
                       color="link"
                       data-toggle="dropdown"
-                      type="button"
+                      id="dropdownMenuLink"
                     >
                       <i className="tim-icons icon-settings-gear-63" />
                     </DropdownToggle>
-                    <DropdownMenu aria-labelledby="dropdownMenuLink" right>
+                    <DropdownMenu aria-labelledby="dropdownMenuLink">
                       <DropdownItem
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        Action
+                        عمل
                       </DropdownItem>
                       <DropdownItem
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        Another action
+                        عمل آخر
                       </DropdownItem>
                       <DropdownItem
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        Something else
+                        شيء آخر هنا
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -263,42 +264,7 @@ class Dashboard extends React.Component {
                     <Table>
                       <tbody>
                         <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Update the Documentation</p>
-                            <p className="text-muted">
-                              Dwuamish Head, Seattle, WA 8:47 AM
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip636901683"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip636901683"
-                              placement="right"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
+                          <td className="text-center">
                             <FormGroup check>
                               <Label check>
                                 <Input
@@ -312,35 +278,30 @@ class Dashboard extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td>
-                            <p className="title">GDPR Compliance</p>
-                            <p className="text-muted">
-                              The GDPR is a regulation that requires businesses
-                              to protect the personal data and privacy of Europe
-                              citizens for transactions that occur within EU
-                              member states.
-                            </p>
+                          <td className="text-right">
+                            <p className="title">مركز معالجة موقع محور</p>
+                            <p className="text-muted">نص آخر هناالوثائق</p>
                           </td>
-                          <td className="td-actions text-right">
+                          <td className="td-actions">
                             <Button
                               color="link"
-                              id="tooltip457194718"
+                              id="tooltip591536518"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-pencil" />
+                              <i className="tim-icons icon-settings" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip457194718"
+                              target="tooltip591536518"
                               placement="right"
                             >
-                              Edit Task
+                              مهمة تحرير
                             </UncontrolledTooltip>
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <td className="text-center">
                             <FormGroup check>
                               <Label check>
                                 <Input defaultValue="" type="checkbox" />
@@ -350,33 +311,35 @@ class Dashboard extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td>
-                            <p className="title">Solve the issues</p>
+                          <td className="text-right">
+                            <p className="title">لامتثال GDPR</p>
                             <p className="text-muted">
-                              Fifty percent of all respondents said they would
-                              be more likely to shop at a company
+                              الناتج المحلي الإجمالي هو نظام يتطلب من الشركات
+                              حماية البيانات الشخصية والخصوصية لمواطني أوروبا
+                              بالنسبة للمعاملات التي تتم داخل الدول الأعضاء في
+                              الاتحاد الأوروبي.
                             </p>
                           </td>
-                          <td className="td-actions text-right">
+                          <td className="td-actions">
                             <Button
                               color="link"
-                              id="tooltip362404923"
+                              id="tooltip36890049"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-pencil" />
+                              <i className="tim-icons icon-settings" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip362404923"
+                              target="tooltip36890049"
                               placement="right"
                             >
-                              Edit Task
+                              مهمة تحرير
                             </UncontrolledTooltip>
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <td className="text-center">
                             <FormGroup check>
                               <Label check>
                                 <Input defaultValue="" type="checkbox" />
@@ -386,32 +349,117 @@ class Dashboard extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td>
-                            <p className="title">Release v2.0.0</p>
+                          <td className="text-right">
+                            <p className="title">القضاياالقضايا</p>
                             <p className="text-muted">
-                              Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM
+                              سيكونونقال 50٪ من جميع المستجيبين أنهم سيكونون
+                              أكثر عرضة للتسوق في شركة
                             </p>
                           </td>
-                          <td className="td-actions text-right">
+                          <td className="td-actions">
                             <Button
                               color="link"
-                              id="tooltip818217463"
+                              id="tooltip5456779"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-pencil" />
+                              <i className="tim-icons icon-settings" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip818217463"
+                              target="tooltip5456779"
                               placement="right"
                             >
-                              Edit Task
+                              مهمة تحرير
                             </UncontrolledTooltip>
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input
+                                  defaultChecked
+                                  defaultValue=""
+                                  type="checkbox"
+                                />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">
+                              تصدير الملفات التي تمت معالجتها
+                            </p>
+                            <p className="text-muted">
+                              كما يبين التقرير أن المستهلكين لن يغفروا شركة
+                              بسهولة بمجرد حدوث خرق يعرض بياناتهم الشخصية.
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip989428493"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip989428493"
+                              placement="right"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
+                            <FormGroup check>
+                              <Label check>
+                                <Input
+                                  defaultChecked
+                                  defaultValue=""
+                                  type="checkbox"
+                                />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-right">
+                            <p className="title">الوصول إلى عملية التصدير</p>
+                            <p className="text-muted">
+                              سياسة السيء إنطلاق في قبل, مساعدة والمانيا أخذ قد.
+                              بل أما أمام ماشاء الشتاء،, تكاليف الإقتصادي بـ
+                              حين. ٣٠ يتعلّق للإتحاد ولم, وتم هناك مدينة بتحدّي
+                              إذ, كان بل عمل
+                            </p>
+                          </td>
+                          <td className="td-actions">
+                            <Button
+                              color="link"
+                              id="tooltip169784793"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-settings" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip169784793"
+                              placement="right"
+                            >
+                              مهمة تحرير
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-center">
                             <FormGroup check>
                               <Label check>
                                 <Input defaultValue="" type="checkbox" />
@@ -421,64 +469,30 @@ class Dashboard extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td>
-                            <p className="title">Export the processed files</p>
+                          <td className="text-right">
+                            <p className="title">الافراج عن v2.0.0</p>
                             <p className="text-muted">
-                              The report also shows that consumers will not
-                              easily forgive a company once a breach exposing
-                              their personal data occurs.
+                              عن رئيس طوكيو البولندي لمّ, مايو مرجع وباءت قبل
+                              هو, تسمّى الطريق الإقتصادي ذات أن. لغات الإطلاق
+                              الفرنسية دار ان, بين بتخصيص الساحة اقتصادية أم. و
+                              الآخ
                             </p>
                           </td>
-                          <td className="td-actions text-right">
+                          <td className="td-actions">
                             <Button
                               color="link"
-                              id="tooltip831835125"
+                              id="tooltip554497871"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-pencil" />
+                              <i className="tim-icons icon-settings" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip831835125"
+                              target="tooltip554497871"
                               placement="right"
                             >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Arival at export process</p>
-                            <p className="text-muted">
-                              Capitol Hill, Seattle, WA 12:34 AM
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip217595172"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip217595172"
-                              placement="right"
-                            >
-                              Edit Task
+                              مهمة تحرير
                             </UncontrolledTooltip>
                           </td>
                         </tr>
@@ -488,62 +502,62 @@ class Dashboard extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="6" md="12">
+            <Col lg="6" sm="6">
               <Card>
-                <CardHeader>
-                  <CardTitle tag="h4">Simple Table</CardTitle>
+                <CardHeader className="text-right">
+                  <CardTitle tag="h4">جدول بسيط</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th>City</th>
-                        <th className="text-center">Salary</th>
+                        <th>اسم</th>
+                        <th>بلد</th>
+                        <th>مدينة</th>
+                        <th className="text-center">راتب</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Dakota Rice</td>
-                        <td>Niger</td>
-                        <td>Oud-Turnhout</td>
+                        <td>رايس داكوتا</td>
+                        <td>النيجر</td>
+                        <td>العود-تورنهاوت</td>
                         <td className="text-center">$36,738</td>
                       </tr>
                       <tr>
-                        <td>Minerva Hooper</td>
-                        <td>Curaçao</td>
-                        <td>Sinaai-Waas</td>
+                        <td>مينيرفا هوبر</td>
+                        <td>كوراساو</td>
+                        <td>Sinaai-واس</td>
                         <td className="text-center">$23,789</td>
                       </tr>
                       <tr>
-                        <td>Sage Rodriguez</td>
-                        <td>Netherlands</td>
-                        <td>Baileux</td>
+                        <td>سيج رودريجيز</td>
+                        <td>هولندا</td>
+                        <td>بايلي</td>
                         <td className="text-center">$56,142</td>
                       </tr>
                       <tr>
-                        <td>Philip Chaney</td>
-                        <td>Korea, South</td>
-                        <td>Overland Park</td>
+                        <td>فيليب شانيه</td>
+                        <td>كوريا، جنوب</td>
+                        <td>اوفرلاند بارك</td>
                         <td className="text-center">$38,735</td>
                       </tr>
                       <tr>
-                        <td>Doris Greene</td>
-                        <td>Malawi</td>
-                        <td>Feldkirchen in Kärnten</td>
+                        <td>دوريس غرين</td>
+                        <td>مالاوي</td>
+                        <td>المنع</td>
                         <td className="text-center">$63,542</td>
                       </tr>
                       <tr>
-                        <td>Mason Porter</td>
-                        <td>Chile</td>
-                        <td>Gloucester</td>
+                        <td>ميسون بورتر</td>
+                        <td>تشيلي</td>
+                        <td>غلوستر</td>
                         <td className="text-center">$78,615</td>
                       </tr>
                       <tr>
-                        <td>Jon Porter</td>
-                        <td>Portugal</td>
-                        <td>Gloucester</td>
+                        <td>جون بورتر</td>
+                        <td>البرتغال</td>
+                        <td>غلوستر</td>
                         <td className="text-center">$98,615</td>
                       </tr>
                     </tbody>
@@ -558,4 +572,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default Rtl;
