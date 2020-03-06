@@ -16,6 +16,9 @@
   + @types/markerclustererplus@2.1.33
   + @types/googlemaps@3.39.3
   + typescript@3.8.3
+- For Creative Tim copyrights
+  + gulp@4.0.2
+  + gulp-append-prepend@1.0.8
 ### Updated dependencies
 ```
 @types/react               16.4.16   →   16.9.23
