@@ -9,11 +9,16 @@
 ### Deleted components
 ### Added components
 ### Deleted dependencies
+- bootstrap (styles are already added inside the scss folder)
 ### Added dependencies
+- To stop consolde warnings on installation:
+  + eslint-plugin-flowtype@3.13.0
+  + @types/markerclustererplus@2.1.33
+  + @types/googlemaps@3.39.3
+  + typescript@3.8.3
 ### Updated dependencies
 ```
 @types/react               16.4.16   →   16.9.23
-bootstrap                    4.1.3   →     4.4.1
 chart.js                    ^2.7.2   →     2.9.3
 history                      4.7.2   →    4.10.1
 node-sass                    4.9.3   →    4.13.1
@@ -28,7 +33,12 @@ react-scripts                2.0.4   →     3.4.0
 reactstrap                   6.5.0   →     8.4.1
 ```
 ### Warning
-** If needed **
+**The following warnings on installation could not be solved, due to some of our dependencies, however, they do not affect the functionality or the UI of the product:**
+```
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+npm WARN deprecated popper.js@1.16.1: Popper changed home, find its new releases at @popperjs/core
+```
 
 
 ## [1.0.0] 2018-11-29
