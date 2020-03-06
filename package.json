@@ -44,5 +44,9 @@
     "@types/markerclustererplus": "2.1.33",
     "eslint-plugin-flowtype": "3.13.0",
     "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8"
   }
 }
