@@ -27,7 +27,7 @@ class Footer extends React.Component {
         <p>
           Can be found inside{" "}
           <code className="highlighter-rouge">
-            src/components/Footer/Footer.jsx
+            src/components/Footer/Footer.js
           </code>.
         </p>
         <p>This is the demo bottom navigation.</p>

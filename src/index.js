@@ -21,9 +21,9 @@ import { createHashHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
 
-import AdminLayout from "layouts/Admin/Admin.jsx";
-import RTLLayout from "layouts/RTL/RTL.jsx";
-import Documentation from "layouts/Documentation/Documentation.jsx";
+import AdminLayout from "layouts/Admin/Admin.js";
+import RTLLayout from "layouts/RTL/RTL.js";
+import Documentation from "layouts/Documentation/Documentation.js";
 
 import "layouts/Documentation/assets-for-demo/docs.scss";
 import "layouts/Documentation/assets-for-demo/react-docs.scss";

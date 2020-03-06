@@ -203,10 +203,10 @@ class GoogleMaps extends React.Component {
         </ol>
         <p>
           After these steps navigate in your project to{" "}
-          <code className="highlighter-rouge">views/Maps/GoogleMaps.jsx</code>{" "}
+          <code className="highlighter-rouge">views/Maps/GoogleMaps.js</code>{" "}
           and{" "}
           <code className="highlighter-rouge">
-            views/Maps/FullScreenMap.jsx
+            views/Maps/FullScreenMap.js
           </code>{" "}
           and replace the{" "}
           <code className="highlighter-rouge">YOUR_KEY_HERE</code> with the

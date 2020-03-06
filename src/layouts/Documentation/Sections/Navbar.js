@@ -23,7 +23,7 @@ import style from "react-syntax-highlighter/styles/prism";
 
 const codeAdminNavbar = `... other code
 
-import AdminNavbar from "components/Navbars/AdminNavbar.jsx";
+import AdminNavbar from "components/Navbars/AdminNavbar.js";
 
 ... other code
 
@@ -52,7 +52,7 @@ export default YourClass;
 
 const codeRTLNavbar = `... other code
 
-import RTLNavbar from "components/Navbars/RTLNavbar.jsx";
+import RTLNavbar from "components/Navbars/RTLNavbar.js";
 
 ... other code
 
@@ -85,30 +85,30 @@ class Navbar extends React.Component {
         <p>
           In our template product, we have two navbars that can be found inside{" "}
           <code className="highlighter-rouge">
-            src/components/Navbars/AdminNavbar.jsx
+            src/components/Navbars/AdminNavbar.js
           </code>{" "}
           and{" "}
           <code className="highlighter-rouge">
-            src/components/Navbars/RTLNavbar.jsx
+            src/components/Navbars/RTLNavbar.js
           </code>
         </p>
         <h2>
           <code className="highlighter-rouge">
-            src/components/Navbars/AdminNavbar.jsx
+            src/components/Navbars/AdminNavbar.js
           </code>
         </h2>
         <p>
           It is used to create the navbar / header that appears on the{" "}
-          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>{" "}
+          <code className="highlighter-rouge">src/layouts/Admin/Admin.js</code>{" "}
           and it has a very nice feature, it has a button that toggles the{" "}
           <Link to="/documentation/sidebar">
-            src/components/Sidebar/Sidebar.jsx
+            src/components/Sidebar/Sidebar.js
           </Link>{" "}
           from closed to open on small devices. It also has a dynamic brand and
           a prop called <code class="highlighter-rouge">sidebarOpened</code> to
           let it know when the{" "}
           <Link to="/documentation/sidebar">
-            src/components/Sidebar/Sidebar.jsx
+            src/components/Sidebar/Sidebar.js
           </Link>{" "}
           is opened or not.
         </p>
@@ -131,21 +131,21 @@ class Navbar extends React.Component {
         </p>
         <h2>
           <code className="highlighter-rouge">
-            src/components/Navbars/RTLNavbar.jsx
+            src/components/Navbars/RTLNavbar.js
           </code>
         </h2>
         <p>
           It is used to create the navbar / header that appears on the{" "}
-          <code className="highlighter-rouge">src/layouts/RTl/RTl.jsx</code> and
+          <code className="highlighter-rouge">src/layouts/RTl/RTl.js</code> and
           it has a very nice feature, it has a button that toggles the{" "}
           <Link to="/documentation/sidebar">
-            src/components/Sidebar/Sidebar.jsx
+            src/components/Sidebar/Sidebar.js
           </Link>{" "}
           from closed to open on small devices. It also has a dynamic brand and
           a prop called <code class="highlighter-rouge">sidebarOpened</code> to
           let it know when the{" "}
           <Link to="/documentation/sidebar">
-            src/components/Sidebar/Sidebar.jsx
+            src/components/Sidebar/Sidebar.js
           </Link>{" "}
           is opened or not.
         </p>

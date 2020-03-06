@@ -21,7 +21,7 @@ import { prism } from "react-syntax-highlighter/styles/prism";
 
 const exampleCode = `... other code
 
-import Sidebar from "components/Sidebar/Sidebar.jsx";
+import Sidebar from "components/Sidebar/Sidebar.js";
 
 ... other code
 
@@ -93,13 +93,13 @@ class Sidebar extends React.Component {
         <p>
           Can be found in{" "}
           <code className="highlighter-rouge">
-            src/components/Sidebar/Sidebar.jsx
+            src/components/Sidebar/Sidebar.js
           </code>.
         </p>
         <p>
           This is the left menu which is present on the{" "}
-          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>{" "}
-          and <code className="highlighter-rouge">src/layouts/RTL/RTL.jsx</code>.
+          <code className="highlighter-rouge">src/layouts/Admin/Admin.js</code>{" "}
+          and <code className="highlighter-rouge">src/layouts/RTL/RTL.js</code>.
         </p>
         <p>
           It contains the company logo and title and the links to your whole
@@ -119,10 +119,10 @@ class Sidebar extends React.Component {
         </SyntaxHighlighter>
         <p>
           To understand better how to use it, please take a look inside{" "}
-          <code className="highlighter-rouge">src/layouts/Admin/Admin.jsx</code>,{" "}
-          <code className="highlighter-rouge">src/layouts/RTL/RTL.jsx</code> and{" "}
+          <code className="highlighter-rouge">src/layouts/Admin/Admin.js</code>,{" "}
+          <code className="highlighter-rouge">src/layouts/RTL/RTL.js</code> and{" "}
           <code className="highlighter-rouge">
-            src/components/Sidebar/Sidebar.jsx
+            src/components/Sidebar/Sidebar.js
           </code>.
         </p>
         <h2>Props</h2>

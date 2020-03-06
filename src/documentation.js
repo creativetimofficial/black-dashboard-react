@@ -16,34 +16,34 @@
 
 */
 // Getting started
-import Tutorial from "layouts/Documentation/Sections/Tutorial.jsx";
-import Colors from "layouts/Documentation/Sections/Colors.jsx";
-import RoutingSystem from "layouts/Documentation/Sections/RoutingSystem.jsx";
-import Variables from "layouts/Documentation/Sections/Variables.jsx";
+import Tutorial from "layouts/Documentation/Sections/Tutorial.js";
+import Colors from "layouts/Documentation/Sections/Colors.js";
+import RoutingSystem from "layouts/Documentation/Sections/RoutingSystem.js";
+import Variables from "layouts/Documentation/Sections/Variables.js";
 // Core components
-import FixedPlugin from "layouts/Documentation/Sections/FixedPlugin.jsx";
-import Footer from "layouts/Documentation/Sections/Footer.jsx";
-import Navbar from "layouts/Documentation/Sections/Navbar.jsx";
-import Sidebar from "layouts/Documentation/Sections/Sidebar.jsx";
+import FixedPlugin from "layouts/Documentation/Sections/FixedPlugin.js";
+import Footer from "layouts/Documentation/Sections/Footer.js";
+import Navbar from "layouts/Documentation/Sections/Navbar.js";
+import Sidebar from "layouts/Documentation/Sections/Sidebar.js";
 // Reasctrap components
-import Alerts from "layouts/Documentation/Sections/Alerts.jsx";
-import Badges from "layouts/Documentation/Sections/Badges.jsx";
-import Breadcrumbs from "layouts/Documentation/Sections/Breadcrumbs.jsx";
-import Buttons from "layouts/Documentation/Sections/Buttons.jsx";
-import Cards from "layouts/Documentation/Sections/Cards.jsx";
-import Dropdowns from "layouts/Documentation/Sections/Dropdowns.jsx";
-import Forms from "layouts/Documentation/Sections/Forms.jsx";
-import Modals from "layouts/Documentation/Sections/Modals.jsx";
-import Navs from "layouts/Documentation/Sections/Navs.jsx";
-import Navbars from "layouts/Documentation/Sections/Navbars.jsx";
-import Tables from "layouts/Documentation/Sections/Tables.jsx";
-import Typography from "layouts/Documentation/Sections/Typography.jsx";
+import Alerts from "layouts/Documentation/Sections/Alerts.js";
+import Badges from "layouts/Documentation/Sections/Badges.js";
+import Breadcrumbs from "layouts/Documentation/Sections/Breadcrumbs.js";
+import Buttons from "layouts/Documentation/Sections/Buttons.js";
+import Cards from "layouts/Documentation/Sections/Cards.js";
+import Dropdowns from "layouts/Documentation/Sections/Dropdowns.js";
+import Forms from "layouts/Documentation/Sections/Forms.js";
+import Modals from "layouts/Documentation/Sections/Modals.js";
+import Navs from "layouts/Documentation/Sections/Navs.js";
+import Navbars from "layouts/Documentation/Sections/Navbars.js";
+import Tables from "layouts/Documentation/Sections/Tables.js";
+import Typography from "layouts/Documentation/Sections/Typography.js";
 // Plugins
-import Charts from "layouts/Documentation/Sections/Charts.jsx";
-import GoogleMaps from "layouts/Documentation/Sections/GoogleMaps.jsx";
-import Icons from "layouts/Documentation/Sections/Icons.jsx";
-import Notifications from "layouts/Documentation/Sections/Notifications.jsx";
-import PerfectScrollbar from "layouts/Documentation/Sections/PerfectScrollbar.jsx";
+import Charts from "layouts/Documentation/Sections/Charts.js";
+import GoogleMaps from "layouts/Documentation/Sections/GoogleMaps.js";
+import Icons from "layouts/Documentation/Sections/Icons.js";
+import Notifications from "layouts/Documentation/Sections/Notifications.js";
+import PerfectScrollbar from "layouts/Documentation/Sections/PerfectScrollbar.js";
 
 var docsRoutes = [
   {
