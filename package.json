@@ -5,7 +5,6 @@
   "homepage": "https://creativetimofficial.github.io/black-dashboard-react/#/dashboard",
   "dependencies": {
     "@types/react": "16.9.23",
-    "bootstrap": "4.4.1",
     "chart.js": "2.9.3",
     "classnames": "2.2.6",
     "history": "4.10.1",
@@ -39,5 +38,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "optionalDependencies": {
+    "@types/googlemaps": "3.39.3",
+    "@types/markerclustererplus": "2.1.33",
+    "eslint-plugin-flowtype": "3.13.0",
+    "typescript": "3.8.3"
+  }
 }
