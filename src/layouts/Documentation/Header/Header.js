@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.0.0
+* Black Dashboard React v1.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
@@ -34,7 +34,7 @@ class Header extends React.Component {
         <Nav className="flex-row d-none d-md-flex" navbar>
           <NavItem>
             <NavLink href="#" className="p-2">
-              1.0.0
+              1.1.0
             </NavLink>
           </NavItem>
           <NavItem>
