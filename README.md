@@ -2,7 +2,7 @@
 
 
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+![version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](./github-assets/black-dashboard-react.gif)
 
@@ -111,30 +111,30 @@ black-dashboard-react
     │       └── black-dashboard.scss
     ├── components
     │   ├── FixedPlugin
-    │   │   └── FixedPlugin.jsx
+    │   │   └── FixedPlugin.js
     │   ├── Footer
-    │   │   └── Footer.jsx
+    │   │   └── Footer.js
     │   ├── Navbars
-    │   │   ├── AdminNavbar.jsx
-    │   │   └── RTLNavbar.jsx
+    │   │   ├── AdminNavbar.js
+    │   │   └── RTLNavbar.js
     │   └── Sidebar
-    │       └── Sidebar.jsx
+    │       └── Sidebar.js
     ├── layouts
     │   ├── Admin
-    │   │   └── Admin.jsx
+    │   │   └── Admin.js
     │   └── RTL
-    │       └── RTL.jsx
+    │       └── RTL.js
     ├── variables
-    │   └── charts.jsx
+    │   └── charts.js
     └── views
-        ├── Dashboard.jsx
-        ├── Icons.jsx
-        ├── Map.jsx
-        ├── Notifications.jsx
-        ├── Rtl.jsx
-        ├── TableList.jsx
-        ├── Typography.jsx
-        └── UserProfile.jsx
+        ├── Dashboard.js
+        ├── Icons.js
+        ├── Map.js
+        ├── Notifications.js
+        ├── Rtl.js
+        ├── TableList.js
+        ├── Typography.js
+        └── UserProfile.js
 ```
 
 ## Browser Support

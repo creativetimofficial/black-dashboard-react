@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.0.0
+* Black Dashboard React v1.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -16,15 +16,15 @@
 
 */
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
-import RTLNavbar from "components/Navbars/RTLNavbar.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import Sidebar from "components/Sidebar/Sidebar.jsx";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
+import AdminNavbar from "components/Navbars/AdminNavbar.js";
+import Footer from "components/Footer/Footer.js";
+import Sidebar from "components/Sidebar/Sidebar.js";
+import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
@@ -51,18 +51,6 @@ class Admin extends React.Component {
         ps = new PerfectScrollbar(tables[i]);
       }
     }
-    // on this page, we need on the body tag the classes .rtl and .menu-on-right
-    document.body.classList.add("rtl", "menu-on-right");
-    // we also need the rtl bootstrap
-    // so we add it dynamically to the head
-    let head = document.head;
-    let link = document.createElement("link");
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.id = "rtl-id";
-    link.href =
-      "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css";
-    head.appendChild(link);
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -70,12 +58,6 @@ class Admin extends React.Component {
       document.documentElement.className += " perfect-scrollbar-off";
       document.documentElement.classList.remove("perfect-scrollbar-on");
     }
-    // when we exit this page, we need to delete the classes .rtl and .menu-on-right
-    // from the body tag
-    document.body.classList.remove("rtl", "menu-on-right");
-    // we also need to delete the rtl bootstrap, so it does not break the other pages
-    // that do not make use of rtl
-    document.getElementById("rtl-id").remove();
   }
   componentDidUpdate(e) {
     if (e.history.action === "PUSH") {
@@ -97,7 +79,7 @@ class Admin extends React.Component {
   };
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/rtl") {
+      if (prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -120,7 +102,7 @@ class Admin extends React.Component {
           routes[i].layout + routes[i].path
         ) !== -1
       ) {
-        return routes[i].rtlName || routes[i].name;
+        return routes[i].name;
       }
     }
     return "Brand";
@@ -133,10 +115,9 @@ class Admin extends React.Component {
             {...this.props}
             routes={routes}
             bgColor={this.state.backgroundColor}
-            rtlActive
             logo={{
               outterLink: "https://www.creative-tim.com/",
-              text: "الإبداعية تيم",
+              text: "Creative Tim",
               imgSrc: logo
             }}
             toggleSidebar={this.toggleSidebar}
@@ -146,13 +127,16 @@ class Admin extends React.Component {
             ref="mainPanel"
             data={this.state.backgroundColor}
           >
-            <RTLNavbar
+            <AdminNavbar
               {...this.props}
               brandText={this.getBrandText(this.props.location.pathname)}
               toggleSidebar={this.toggleSidebar}
               sidebarOpened={this.state.sidebarOpened}
             />
-            <Switch>{this.getRoutes(routes)}</Switch>
+            <Switch>
+              {this.getRoutes(routes)}
+              <Redirect from="*" to="/admin/dashboard"/>
+            </Switch>
             {// we don't want the Footer to be rendered on map page
             this.props.location.pathname.indexOf("maps") !== -1 ? null : (
               <Footer fluid />
