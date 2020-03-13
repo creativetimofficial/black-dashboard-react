@@ -131,7 +131,6 @@ class FixedPlugin extends Component {
               <Button
                 href="https://www.creative-tim.com/product/black-dashboard-pro-react"
                 className="btn-round"
-                disabled
                 block
                 color="danger"
               >
