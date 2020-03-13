@@ -2,7 +2,7 @@
   "name": "black-dashboard-react",
   "version": "1.1.0",
   "private": true,
-  "homepage": "https://creativetimofficial.github.io/black-dashboard-react/#/dashboard",
+  "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
   "dependencies": {
     "@types/react": "16.9.23",
     "chart.js": "2.9.3",
