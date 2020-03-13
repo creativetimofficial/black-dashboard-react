@@ -129,7 +129,7 @@ class FixedPlugin extends Component {
             <li className="header-title">Want more components?</li>
             <li className="button-container">
               <Button
-                href="https://www.creative-tim.com/product/black-dashboard-pro-react"
+                href="https://www.creative-tim.com/product/black-dashboard-pro-react?ref=bdr-fixed-plugin"
                 className="btn-round"
                 block
                 color="danger"
