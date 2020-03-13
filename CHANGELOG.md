@@ -1,4 +1,4 @@
-## [1.1.0] date
+## [1.1.0] 2020-03-13
 ### Bug fixing
 - Github issues:
   - https://github.com/creativetimofficial/black-dashboard-react/issues/8
@@ -42,7 +42,7 @@ npm WARN deprecated request@2.88.2: request has been deprecated, see https://git
 npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
 npm WARN deprecated popper.js@1.16.1: Popper changed home, find its new releases at @popperjs/core
 ```
-**Also, the above, are onky present in development, and not in production.**
+**Also, the above, are only present in development, and not in production.**
 
 
 ## [1.0.0] 2018-11-29
