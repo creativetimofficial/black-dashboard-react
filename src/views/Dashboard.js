@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.0.0
+* Black Dashboard React v1.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -48,9 +48,9 @@ import {
   chartExample2,
   chartExample3,
   chartExample4
-} from "variables/charts.jsx";
+} from "variables/charts.js";
 
-class Rtl extends React.Component {
+class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,13 +71,13 @@ class Rtl extends React.Component {
               <Card className="card-chart">
                 <CardHeader>
                   <Row>
-                    <Col className="text-right" sm="6">
-                      <h5 className="card-category">مجموع الشحنات</h5>
-                      <CardTitle tag="h2">أداء</CardTitle>
+                    <Col className="text-left" sm="6">
+                      <h5 className="card-category">Total Shipments</h5>
+                      <CardTitle tag="h2">Performance</CardTitle>
                     </Col>
                     <Col sm="6">
                       <ButtonGroup
-                        className="btn-group-toggle float-left"
+                        className="btn-group-toggle float-right"
                         data-toggle="buttons"
                       >
                         <Button
@@ -85,7 +85,7 @@ class Rtl extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data1"
                           })}
-                          color="primary"
+                          color="info"
                           id="0"
                           size="sm"
                           onClick={() => this.setBgChartData("data1")}
@@ -97,14 +97,14 @@ class Rtl extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            حسابات
+                            Accounts
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-single-02" />
                           </span>
                         </Button>
                         <Button
-                          color="primary"
+                          color="info"
                           id="1"
                           size="sm"
                           tag="label"
@@ -119,14 +119,14 @@ class Rtl extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            المشتريات
+                            Purchases
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-gift-2" />
                           </span>
                         </Button>
                         <Button
-                          color="primary"
+                          color="info"
                           id="2"
                           size="sm"
                           tag="label"
@@ -141,7 +141,7 @@ class Rtl extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            جلسات
+                            Sessions
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-tap-02" />
@@ -163,12 +163,12 @@ class Rtl extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col className="text-right" lg="4">
+            <Col lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">شحنات كاملة</h5>
+                  <h5 className="card-category">Total Shipments</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-bell-55 text-primary" />{" "}
+                    <i className="tim-icons icon-bell-55 text-info" />{" "}
                     763,215
                   </CardTitle>
                 </CardHeader>
@@ -182,12 +182,12 @@ class Rtl extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col className="text-right" lg="4">
+            <Col lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">المبيعات اليومية</h5>
+                  <h5 className="card-category">Daily Sales</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-delivery-fast text-info" />{" "}
+                    <i className="tim-icons icon-delivery-fast text-primary" />{" "}
                     3,500€
                   </CardTitle>
                 </CardHeader>
@@ -201,10 +201,10 @@ class Rtl extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col className="text-right" lg="4">
+            <Col lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">المهام المكتملة</h5>
+                  <h5 className="card-category">Completed Tasks</h5>
                   <CardTitle tag="h3">
                     <i className="tim-icons icon-send text-success" /> 12,100K
                   </CardTitle>
@@ -221,40 +221,39 @@ class Rtl extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col className="text-center" lg="6" sm="6">
-              <Card className="card-tasks text-left">
-                <CardHeader className="text-right">
-                  <h6 className="title d-inline">تتبع</h6>{" "}
-                  <p className="card-category d-inline">اليوم</p>
-                  <UncontrolledDropdown className="float-left">
+            <Col lg="6" md="12">
+              <Card className="card-tasks">
+                <CardHeader>
+                  <h6 className="title d-inline">Tasks(5)</h6>
+                  <p className="card-category d-inline"> today</p>
+                  <UncontrolledDropdown>
                     <DropdownToggle
-                      aria-expanded={false}
-                      aria-haspopup={true}
                       caret
+                      className="btn-icon"
                       color="link"
                       data-toggle="dropdown"
-                      id="dropdownMenuLink"
+                      type="button"
                     >
                       <i className="tim-icons icon-settings-gear-63" />
                     </DropdownToggle>
-                    <DropdownMenu aria-labelledby="dropdownMenuLink">
+                    <DropdownMenu aria-labelledby="dropdownMenuLink" right>
                       <DropdownItem
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        عمل
+                        Action
                       </DropdownItem>
                       <DropdownItem
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        عمل آخر
+                        Another action
                       </DropdownItem>
                       <DropdownItem
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        شيء آخر هنا
+                        Something else
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -264,7 +263,42 @@ class Rtl extends React.Component {
                     <Table>
                       <tbody>
                         <tr>
-                          <td className="text-center">
+                          <td>
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultValue="" type="checkbox" />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td>
+                            <p className="title">Update the Documentation</p>
+                            <p className="text-muted">
+                              Dwuamish Head, Seattle, WA 8:47 AM
+                            </p>
+                          </td>
+                          <td className="td-actions text-right">
+                            <Button
+                              color="link"
+                              id="tooltip636901683"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-pencil" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip636901683"
+                              placement="right"
+                            >
+                              Edit Task
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
                             <FormGroup check>
                               <Label check>
                                 <Input
@@ -278,30 +312,35 @@ class Rtl extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td className="text-right">
-                            <p className="title">مركز معالجة موقع محور</p>
-                            <p className="text-muted">نص آخر هناالوثائق</p>
+                          <td>
+                            <p className="title">GDPR Compliance</p>
+                            <p className="text-muted">
+                              The GDPR is a regulation that requires businesses
+                              to protect the personal data and privacy of Europe
+                              citizens for transactions that occur within EU
+                              member states.
+                            </p>
                           </td>
-                          <td className="td-actions">
+                          <td className="td-actions text-right">
                             <Button
                               color="link"
-                              id="tooltip591536518"
+                              id="tooltip457194718"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-settings" />
+                              <i className="tim-icons icon-pencil" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip591536518"
+                              target="tooltip457194718"
                               placement="right"
                             >
-                              مهمة تحرير
+                              Edit Task
                             </UncontrolledTooltip>
                           </td>
                         </tr>
                         <tr>
-                          <td className="text-center">
+                          <td>
                             <FormGroup check>
                               <Label check>
                                 <Input defaultValue="" type="checkbox" />
@@ -311,35 +350,33 @@ class Rtl extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td className="text-right">
-                            <p className="title">لامتثال GDPR</p>
+                          <td>
+                            <p className="title">Solve the issues</p>
                             <p className="text-muted">
-                              الناتج المحلي الإجمالي هو نظام يتطلب من الشركات
-                              حماية البيانات الشخصية والخصوصية لمواطني أوروبا
-                              بالنسبة للمعاملات التي تتم داخل الدول الأعضاء في
-                              الاتحاد الأوروبي.
+                              Fifty percent of all respondents said they would
+                              be more likely to shop at a company
                             </p>
                           </td>
-                          <td className="td-actions">
+                          <td className="td-actions text-right">
                             <Button
                               color="link"
-                              id="tooltip36890049"
+                              id="tooltip362404923"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-settings" />
+                              <i className="tim-icons icon-pencil" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip36890049"
+                              target="tooltip362404923"
                               placement="right"
                             >
-                              مهمة تحرير
+                              Edit Task
                             </UncontrolledTooltip>
                           </td>
                         </tr>
                         <tr>
-                          <td className="text-center">
+                          <td>
                             <FormGroup check>
                               <Label check>
                                 <Input defaultValue="" type="checkbox" />
@@ -349,117 +386,32 @@ class Rtl extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td className="text-right">
-                            <p className="title">القضاياالقضايا</p>
+                          <td>
+                            <p className="title">Release v2.0.0</p>
                             <p className="text-muted">
-                              سيكونونقال 50٪ من جميع المستجيبين أنهم سيكونون
-                              أكثر عرضة للتسوق في شركة
+                              Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM
                             </p>
                           </td>
-                          <td className="td-actions">
+                          <td className="td-actions text-right">
                             <Button
                               color="link"
-                              id="tooltip5456779"
+                              id="tooltip818217463"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-settings" />
+                              <i className="tim-icons icon-pencil" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip5456779"
+                              target="tooltip818217463"
                               placement="right"
                             >
-                              مهمة تحرير
+                              Edit Task
                             </UncontrolledTooltip>
                           </td>
                         </tr>
                         <tr>
-                          <td className="text-center">
-                            <FormGroup check>
-                              <Label check>
-                                <Input
-                                  defaultChecked
-                                  defaultValue=""
-                                  type="checkbox"
-                                />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td className="text-right">
-                            <p className="title">
-                              تصدير الملفات التي تمت معالجتها
-                            </p>
-                            <p className="text-muted">
-                              كما يبين التقرير أن المستهلكين لن يغفروا شركة
-                              بسهولة بمجرد حدوث خرق يعرض بياناتهم الشخصية.
-                            </p>
-                          </td>
-                          <td className="td-actions">
-                            <Button
-                              color="link"
-                              id="tooltip989428493"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-settings" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip989428493"
-                              placement="right"
-                            >
-                              مهمة تحرير
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="text-center">
-                            <FormGroup check>
-                              <Label check>
-                                <Input
-                                  defaultChecked
-                                  defaultValue=""
-                                  type="checkbox"
-                                />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td className="text-right">
-                            <p className="title">الوصول إلى عملية التصدير</p>
-                            <p className="text-muted">
-                              سياسة السيء إنطلاق في قبل, مساعدة والمانيا أخذ قد.
-                              بل أما أمام ماشاء الشتاء،, تكاليف الإقتصادي بـ
-                              حين. ٣٠ يتعلّق للإتحاد ولم, وتم هناك مدينة بتحدّي
-                              إذ, كان بل عمل
-                            </p>
-                          </td>
-                          <td className="td-actions">
-                            <Button
-                              color="link"
-                              id="tooltip169784793"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-settings" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip169784793"
-                              placement="right"
-                            >
-                              مهمة تحرير
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="text-center">
+                          <td>
                             <FormGroup check>
                               <Label check>
                                 <Input defaultValue="" type="checkbox" />
@@ -469,30 +421,64 @@ class Rtl extends React.Component {
                               </Label>
                             </FormGroup>
                           </td>
-                          <td className="text-right">
-                            <p className="title">الافراج عن v2.0.0</p>
+                          <td>
+                            <p className="title">Export the processed files</p>
                             <p className="text-muted">
-                              عن رئيس طوكيو البولندي لمّ, مايو مرجع وباءت قبل
-                              هو, تسمّى الطريق الإقتصادي ذات أن. لغات الإطلاق
-                              الفرنسية دار ان, بين بتخصيص الساحة اقتصادية أم. و
-                              الآخ
+                              The report also shows that consumers will not
+                              easily forgive a company once a breach exposing
+                              their personal data occurs.
                             </p>
                           </td>
-                          <td className="td-actions">
+                          <td className="td-actions text-right">
                             <Button
                               color="link"
-                              id="tooltip554497871"
+                              id="tooltip831835125"
                               title=""
                               type="button"
                             >
-                              <i className="tim-icons icon-settings" />
+                              <i className="tim-icons icon-pencil" />
                             </Button>
                             <UncontrolledTooltip
                               delay={0}
-                              target="tooltip554497871"
+                              target="tooltip831835125"
                               placement="right"
                             >
-                              مهمة تحرير
+                              Edit Task
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultValue="" type="checkbox" />
+                                <span className="form-check-sign">
+                                  <span className="check" />
+                                </span>
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td>
+                            <p className="title">Arival at export process</p>
+                            <p className="text-muted">
+                              Capitol Hill, Seattle, WA 12:34 AM
+                            </p>
+                          </td>
+                          <td className="td-actions text-right">
+                            <Button
+                              color="link"
+                              id="tooltip217595172"
+                              title=""
+                              type="button"
+                            >
+                              <i className="tim-icons icon-pencil" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip217595172"
+                              placement="right"
+                            >
+                              Edit Task
                             </UncontrolledTooltip>
                           </td>
                         </tr>
@@ -502,62 +488,62 @@ class Rtl extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="6" sm="6">
+            <Col lg="6" md="12">
               <Card>
-                <CardHeader className="text-right">
-                  <CardTitle tag="h4">جدول بسيط</CardTitle>
+                <CardHeader>
+                  <CardTitle tag="h4">Simple Table</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>اسم</th>
-                        <th>بلد</th>
-                        <th>مدينة</th>
-                        <th className="text-center">راتب</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th className="text-center">Salary</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>رايس داكوتا</td>
-                        <td>النيجر</td>
-                        <td>العود-تورنهاوت</td>
+                        <td>Dakota Rice</td>
+                        <td>Niger</td>
+                        <td>Oud-Turnhout</td>
                         <td className="text-center">$36,738</td>
                       </tr>
                       <tr>
-                        <td>مينيرفا هوبر</td>
-                        <td>كوراساو</td>
-                        <td>Sinaai-واس</td>
+                        <td>Minerva Hooper</td>
+                        <td>Curaçao</td>
+                        <td>Sinaai-Waas</td>
                         <td className="text-center">$23,789</td>
                       </tr>
                       <tr>
-                        <td>سيج رودريجيز</td>
-                        <td>هولندا</td>
-                        <td>بايلي</td>
+                        <td>Sage Rodriguez</td>
+                        <td>Netherlands</td>
+                        <td>Baileux</td>
                         <td className="text-center">$56,142</td>
                       </tr>
                       <tr>
-                        <td>فيليب شانيه</td>
-                        <td>كوريا، جنوب</td>
-                        <td>اوفرلاند بارك</td>
+                        <td>Philip Chaney</td>
+                        <td>Korea, South</td>
+                        <td>Overland Park</td>
                         <td className="text-center">$38,735</td>
                       </tr>
                       <tr>
-                        <td>دوريس غرين</td>
-                        <td>مالاوي</td>
-                        <td>المنع</td>
+                        <td>Doris Greene</td>
+                        <td>Malawi</td>
+                        <td>Feldkirchen in Kärnten</td>
                         <td className="text-center">$63,542</td>
                       </tr>
                       <tr>
-                        <td>ميسون بورتر</td>
-                        <td>تشيلي</td>
-                        <td>غلوستر</td>
+                        <td>Mason Porter</td>
+                        <td>Chile</td>
+                        <td>Gloucester</td>
                         <td className="text-center">$78,615</td>
                       </tr>
                       <tr>
-                        <td>جون بورتر</td>
-                        <td>البرتغال</td>
-                        <td>غلوستر</td>
+                        <td>Jon Porter</td>
+                        <td>Portugal</td>
+                        <td>Gloucester</td>
                         <td className="text-center">$98,615</td>
                       </tr>
                     </tbody>
@@ -572,4 +558,4 @@ class Rtl extends React.Component {
   }
 }
 
-export default Rtl;
+export default Dashboard;

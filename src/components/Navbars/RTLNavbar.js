@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.0.0
+* Black Dashboard React v1.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -128,7 +128,7 @@ class AdminNavbar extends React.Component {
               <span className="navbar-toggler-bar navbar-kebab" />
             </button>
             <Collapse navbar isOpen={this.state.collapseOpen}>
-              <Nav className="ml-auto" navbar>
+              <Nav className="mr-auto" navbar>
                 <InputGroup className="search-bar">
                   <Button
                     color="link"
@@ -152,7 +152,7 @@ class AdminNavbar extends React.Component {
                     <i className="tim-icons icon-sound-wave" />
                     <p className="d-lg-none">Notifications</p>
                   </DropdownToggle>
-                  <DropdownMenu className="dropdown-navbar" right tag="ul">
+                  <DropdownMenu className="dropdown-navbar" tag="ul" right>
                     <NavLink tag="li">
                       <DropdownItem className="nav-item">
                         Mike John responded to your email
@@ -194,7 +194,7 @@ class AdminNavbar extends React.Component {
                     <b className="caret d-none d-lg-block d-xl-block" />
                     <p className="d-lg-none">Log out</p>
                   </DropdownToggle>
-                  <DropdownMenu className="dropdown-navbar" right tag="ul">
+                  <DropdownMenu className="dropdown-navbar" tag="ul">
                     <NavLink tag="li">
                       <DropdownItem className="nav-item">Profile</DropdownItem>
                     </NavLink>
