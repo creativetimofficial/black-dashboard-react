@@ -33,6 +33,7 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.activeRoute.bind(this);
+    this.sidebar = React.createRef();
   }
   // verifies if routeName is the one active (in browser input)
   activeRoute(routeName) {
@@ -40,7 +41,7 @@ class Sidebar extends React.Component {
   }
   componentDidMount() {
     if (navigator.platform.indexOf("Win") > -1) {
-      ps = new PerfectScrollbar(this.refs.sidebar, {
+      ps = new PerfectScrollbar(this.sidebar.current, {
         suppressScrollX: true,
         suppressScrollY: false
       });
@@ -107,7 +108,7 @@ class Sidebar extends React.Component {
     }
     return (
       <div className="sidebar" data={bgColor}>
-        <div className="sidebar-wrapper" ref="sidebar">
+        <div className="sidebar-wrapper" ref={this.sidebar}>
           {logoImg !== null || logoText !== null ? (
             <div className="logo">
               {logoImg}
