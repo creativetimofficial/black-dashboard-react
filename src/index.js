@@ -30,12 +30,20 @@ import "assets/css/nucleo-icons.css";
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      <Route path="/rtl" render={props => <RTLLayout {...props} />} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
+	<React.StrictMode>
+  	<Router history={hist}>
+			<Switch>
+				<Route
+					path="/admin"
+					render={(props) => <AdminLayout {...props} />}
+				/>
+				<Route
+					path="/rtl"
+					render={(props) => <RTLLayout {...props} />}
+				/>
+				<Redirect from="/" to="/admin/dashboard" />
+			</Switch>
+		</Router>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
