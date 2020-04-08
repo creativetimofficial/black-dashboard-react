@@ -31,7 +31,7 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
 	<React.StrictMode>
-  	<Router history={hist}>
+		<Router history={hist}>
 			<Switch>
 				<Route
 					path="/admin"
