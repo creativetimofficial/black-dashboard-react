@@ -33,6 +33,10 @@ import {
 } from "reactstrap";
 
 class Notifications extends React.Component {
+  constructor(props){
+    super(props)
+    this.notificationAlert = React.createRef();
+  }
   notify = place => {
     var color = Math.floor(Math.random() * 5 + 1);
     var type;
@@ -70,14 +74,14 @@ class Notifications extends React.Component {
       icon: "tim-icons icon-bell-55",
       autoDismiss: 7
     };
-    this.refs.notificationAlert.notificationAlert(options);
+    this.notificationAlert.current.notificationAlert(options);
   };
   render() {
     return (
       <>
         <div className="content">
           <div className="react-notification-alert-container">
-            <NotificationAlert ref="notificationAlert" />
+            <NotificationAlert ref={this.notificationAlert} />
           </div>
           <Row>
             <Col md="6">

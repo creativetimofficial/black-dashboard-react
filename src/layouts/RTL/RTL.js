@@ -40,12 +40,13 @@ class Admin extends React.Component {
       sidebarOpened:
         document.documentElement.className.indexOf("nav-open") !== -1
     };
+    this.mainPanel = React.createRef();
   }
   componentDidMount() {
     if (navigator.platform.indexOf("Win") > -1) {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
-      ps = new PerfectScrollbar(this.refs.mainPanel, { suppressScrollX: true });
+      ps = new PerfectScrollbar(this.mainPanel.current, { suppressScrollX: true });
       let tables = document.querySelectorAll(".table-responsive");
       for (let i = 0; i < tables.length; i++) {
         ps = new PerfectScrollbar(tables[i]);
@@ -87,7 +88,7 @@ class Admin extends React.Component {
       }
       document.documentElement.scrollTop = 0;
       document.scrollingElement.scrollTop = 0;
-      this.refs.mainPanel.scrollTop = 0;
+      this.mainPanel.current.scrollTop = 0;
     }
   }
   // this function opens and closes the sidebar on small devices
@@ -143,7 +144,7 @@ class Admin extends React.Component {
           />
           <div
             className="main-panel"
-            ref="mainPanel"
+            ref={this.mainPanel}
             data={this.state.backgroundColor}
           >
             <RTLNavbar
