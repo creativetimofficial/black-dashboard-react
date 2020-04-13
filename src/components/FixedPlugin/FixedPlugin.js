@@ -18,21 +18,19 @@
 import React, { Component } from "react";
 
 // reactstrap components
-import { Button } from "reactstrap";
+import { Button, Dropdown, DropdownToggle, Badge } from "reactstrap";
 
 class FixedPlugin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classes: "dropdown show-dropdown"
+      dropDownIsOpen: false
     };
   }
   handleClick = () => {
-    if (this.state.classes === "dropdown show-dropdown") {
-      this.setState({ classes: "dropdown show-dropdown show" });
-    } else {
-      this.setState({ classes: "dropdown show-dropdown" });
-    }
+    this.setState({
+		dropDownIsOpen: !this.state.dropDownIsOpen
+	})
   };
   activateMode = mode => {
     switch (mode) {
@@ -47,43 +45,43 @@ class FixedPlugin extends Component {
   render() {
     return (
       <div className="fixed-plugin">
-        <div className={this.state.classes}>
-          <div onClick={this.handleClick}>
+        <Dropdown isOpen={this.state.dropDownIsOpen} toggle={this.handleClick}>
+          <DropdownToggle tag="div">
             <i className="fa fa-cog fa-2x" />
-          </div>
+          </DropdownToggle>
           <ul className="dropdown-menu show">
             <li className="header-title">SIDEBAR BACKGROUND</li>
             <li className="adjustments-line">
               <div className="badge-colors text-center">
-                <span
-                  className={
-                    this.props.bgColor === "primary"
-                      ? "badge filter badge-primary active"
-                      : "badge filter badge-primary"
+                <Badge
+					color="primary"
+                  	className={
+	                    this.props.bgColor === "primary"
+    	                  ? "active"
+        	              : ""
                   }
-                  data-color="primary"
                   onClick={() => {
                     this.props.handleBgClick("primary");
                   }}
                 />{" "}
-                <span
-                  className={
+                <Badge
+					color="info"
+                  	className={
                     this.props.bgColor === "blue"
-                      ? "badge filter badge-info active"
-                      : "badge filter badge-info"
+                      ? "active"
+                      : ""
                   }
-                  data-color="blue"
                   onClick={() => {
                     this.props.handleBgClick("blue");
                   }}
                 />{" "}
-                <span
-                  className={
+                <Badge
+					color="success"
+                  	className={
                     this.props.bgColor === "green"
-                      ? "badge filter badge-success active"
-                      : "badge filter badge-success"
+                      ? "active"
+                      : ""
                   }
-                  data-color="green"
                   onClick={() => {
                     this.props.handleBgClick("green");
                   }}
@@ -92,12 +90,12 @@ class FixedPlugin extends Component {
             </li>
             <li className="adjustments-line text-center color-change">
               <span className="color-label">LIGHT MODE</span>{" "}
-              <span
-                className="badge light-badge mr-2"
+              <Badge
+                className="light-badge mr-2"
                 onClick={() => this.activateMode("light")}
               />{" "}
-              <span
-                className="badge dark-badge ml-2"
+              <Badge
+                className="dark-badge ml-2"
                 onClick={() => this.activateMode("dark")}
               />{" "}
               <span className="color-label">DARK MODE</span>{" "}
@@ -134,7 +132,7 @@ class FixedPlugin extends Component {
               </Button>
             </li>
           </ul>
-        </div>
+        </Dropdown>
       </div>
     );
   }
