@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.13.0",
     "@types/react": "16.9.33",
     "chart.js": "2.9.3",
     "classnames": "2.2.6",
