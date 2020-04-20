@@ -29,6 +29,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 import routes from "routes.js";
 
 import logo from "assets/img/react-logo.png";
+import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
 
@@ -111,9 +112,6 @@ class Admin extends React.Component {
       }
     });
   };
-  handleBgClick = color => {
-    this.setState({ backgroundColor: color });
-  };
   getBrandText = path => {
     for (let i = 0; i < routes.length; i++) {
       if (
@@ -160,10 +158,14 @@ class Admin extends React.Component {
             )}
           </div>
         </div>
-        <FixedPlugin
-          bgColor={this.state.backgroundColor}
-          handleBgClick={this.handleBgClick}
-        />
+        <BackgroundColorContext.Consumer>
+					{({ color, changeColor }) => (
+						<FixedPlugin
+							bgColor={color}
+							handleBgClick={changeColor}
+						/>
+					)}
+				</BackgroundColorContext.Consumer>
       </>
     );
   }
