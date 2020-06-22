@@ -109,49 +109,47 @@ class Admin extends React.Component {
 	};
 	render() {
 		return (
-			<>
-				<div className="wrapper">
-					<Sidebar
-						{...this.props}
-						routes={routes}
-						logo={{
-							outterLink: "https://www.creative-tim.com/",
-							text: "Creative Tim",
-							imgSrc: logo,
-						}}
-						toggleSidebar={this.toggleSidebar}
-					/>
-					<div
-						className="main-panel"
-						ref={this.mainPanel}
-					>
-						<AdminNavbar
-							{...this.props}
-							brandText={this.getBrandText(this.props.location.pathname)}
-							toggleSidebar={this.toggleSidebar}
-							sidebarOpened={this.state.sidebarOpened}
-						/>
-						<Switch>
-							{this.getRoutes(routes)}
-							<Redirect from="*" to="/admin/dashboard" />
-						</Switch>
-						{
-							// we don't want the Footer to be rendered on map page
-							this.props.location.pathname.indexOf("maps") !== -1 ? null : (
-								<Footer fluid />
-							)
-						}
-					</div>
-				</div>
-				<BackgroundColorContext.Consumer>
-					{({ color, changeColor }) => (
-						<FixedPlugin
-							bgColor={color}
-							handleBgClick={changeColor}
-						/>
-					)}
-				</BackgroundColorContext.Consumer>
-			</>
+			<BackgroundColorContext.Consumer>
+				{({ color, changeColor }) => (
+					<React.Fragment>
+						<div className="wrapper">
+							<Sidebar
+								{...this.props}
+								routes={routes}
+								logo={{
+									outterLink: "https://www.creative-tim.com/",
+									text: "Creative Tim",
+									imgSrc: logo,
+								}}
+								toggleSidebar={this.toggleSidebar}
+							/>
+							<div
+								className="main-panel"
+								ref={this.mainPanel}
+								data={color}
+							>
+								<AdminNavbar
+									{...this.props}
+									brandText={this.getBrandText(this.props.location.pathname)}
+									toggleSidebar={this.toggleSidebar}
+									sidebarOpened={this.state.sidebarOpened}
+								/>
+								<Switch>
+									{this.getRoutes(routes)}
+									<Redirect from="*" to="/admin/dashboard" />
+								</Switch>
+								{
+									// we don't want the Footer to be rendered on map page
+									this.props.location.pathname.indexOf("maps") !== -1 ? null : (
+										<Footer fluid />
+									)
+								}
+							</div>
+						</div>
+						<FixedPlugin bgColor={color} handleBgClick={changeColor} />
+					</React.Fragment>
+				)}
+			</BackgroundColorContext.Consumer>
 		);
 	}
 }
