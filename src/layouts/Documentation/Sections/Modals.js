@@ -160,7 +160,7 @@ class Modals extends React.Component {
       modalTooltips: false,
       popover: false,
       modalMini: false,
-      modalLarge: false
+      modalLarge: false,
     };
     this.toggleModalDemo = this.toggleModalDemo.bind(this);
     this.toggleModalLong = this.toggleModalLong.bind(this);
@@ -171,32 +171,32 @@ class Modals extends React.Component {
   }
   toggleModalDemo() {
     this.setState({
-      modalDemo: !this.state.modalDemo
+      modalDemo: !this.state.modalDemo,
     });
   }
   toggleModalLong() {
     this.setState({
-      modalLong: !this.state.modalLong
+      modalLong: !this.state.modalLong,
     });
   }
   toggleModalLogin() {
     this.setState({
-      modalLogin: !this.state.modalLogin
+      modalLogin: !this.state.modalLogin,
     });
   }
   toggleModalTooltips() {
     this.setState({
-      modalTooltips: !this.state.modalTooltips
+      modalTooltips: !this.state.modalTooltips,
     });
   }
   toggleModalLarge() {
     this.setState({
-      modalLarge: !this.state.modalLarge
+      modalLarge: !this.state.modalLarge,
     });
   }
   toggleModalMini() {
     this.setState({
-      modalMini: !this.state.modalMini
+      modalMini: !this.state.modalMini,
     });
   }
   render() {
@@ -451,7 +451,8 @@ class Modals extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap modal documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );
