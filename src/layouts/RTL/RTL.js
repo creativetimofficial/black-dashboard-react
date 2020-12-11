@@ -150,6 +150,7 @@ function RTL(props) {
                 }
               </div>
             </div>
+            <FixedPlugin bgColor={color} handleBgClick={changeColor} />
           </React.Fragment>
         )}
       </BackgroundColorContext.Consumer>
