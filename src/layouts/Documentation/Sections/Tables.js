@@ -212,7 +212,8 @@ class Tables extends React.Component {
             rel="noopener noreferrer"
           >
             here
-          </a>.
+          </a>
+          .
         </p>
         <p>Beside these tables, there are normal tables as well.</p>
       </div>
