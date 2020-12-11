@@ -8,7 +8,7 @@
 ### Added components
 
 ### Deleted dependencies
-
+- history (instead of using `history`, we'll be using `BrowserRouter` from `react-router-dom`)
 ### Added dependencies
 
 ### Updated dependencies
