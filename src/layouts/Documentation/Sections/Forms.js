@@ -31,7 +31,7 @@ import {
   Col,
   Button,
   Card,
-  CardBody
+  CardBody,
 } from "reactstrap";
 
 const overviewExample = `import React from "react";
@@ -699,17 +699,17 @@ class Forms extends React.Component {
     super(props);
     this.state = {
       focused1: "",
-      focused2: ""
+      focused2: "",
     };
   }
-  onFocus = inputName => {
+  onFocus = (inputName) => {
     this.setState({
-      [inputName]: "input-group-focus"
+      [inputName]: "input-group-focus",
     });
   };
-  onBlur = inputName => {
+  onBlur = (inputName) => {
     this.setState({
-      [inputName]: ""
+      [inputName]: "",
     });
   };
   render() {
@@ -921,14 +921,15 @@ class Forms extends React.Component {
           <b>
             a single class for both input types that improves the layout and
             behavior of their HTML elements
-          </b>. Checkboxes are for selecting one or several options in a list,
-          while radios are for selecting one option from many.
+          </b>
+          . Checkboxes are for selecting one or several options in a list, while
+          radios are for selecting one option from many.
         </p>
         <p>
           Disabled checkboxes and radios are supported, but to provide a{" "}
           <code className="highlighter-rouge">not-allowed</code> cursor on hover
-          of the parent <code className="highlighter-rouge">&lt;Label&gt;</code>,
-          you’ll need to add the{" "}
+          of the parent <code className="highlighter-rouge">&lt;Label&gt;</code>
+          , you’ll need to add the{" "}
           <code className="highlighter-rouge">.disabled</code> className to the
           parent <code className="highlighter-rouge">check</code>. The disabled
           className will also lighten the text color to help indicate the
@@ -1297,9 +1298,7 @@ class Forms extends React.Component {
             <code className="highlighter-rouge">&lt;select&gt;</code> and
             <code className="highlighter-rouge">&lt;button&gt;</code> elements)
             inside a
-            <code className="highlighter-rouge">
-              &lt;fieldset disabled&gt;
-            </code>{" "}
+            <code className="highlighter-rouge">&lt;fieldset disabled&gt;</code>{" "}
             as disabled, preventing both keyboard and mouse interactions on
             them. However, if your form also includes
             <code className="highlighter-rouge">
@@ -1332,7 +1331,8 @@ class Forms extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap documentation
-          </a>.
+          </a>
+          .
         </p>
       </>
     );
