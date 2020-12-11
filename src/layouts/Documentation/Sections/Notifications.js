@@ -171,7 +171,7 @@ class Notifications extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
+      visible: true,
     };
     this.onDismiss = this.onDismiss.bind(this);
     this.notify = this.notify.bind(this);
@@ -244,7 +244,7 @@ class Notifications extends React.Component {
       ),
       type: type,
       autoDismiss: 7,
-      icon: "tim-icons icon-bell-55"
+      icon: "tim-icons icon-bell-55",
     };
     this.refs.notify.notificationAlert(options);
   }
@@ -450,7 +450,8 @@ class Notifications extends React.Component {
             rel="noopener noreferrer"
           >
             react-notification-alert documentation
-          </a>.
+          </a>
+          .
         </p>
         <br />
         <br />
@@ -463,7 +464,8 @@ class Notifications extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap alerts documentation
-          </a>.
+          </a>
+          .
         </p>
         <br />
         <br />
