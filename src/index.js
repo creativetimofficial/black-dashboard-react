@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.1.0
+* Black Dashboard React v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
@@ -17,8 +17,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { createHashHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
 
 import AdminLayout from "layouts/Admin/Admin.js";
@@ -30,24 +29,26 @@ import "layouts/Documentation/assets-for-demo/react-docs.scss";
 import "assets/scss/black-dashboard-react.scss";
 import "assets/demo/demo.css";
 import "assets/css/nucleo-icons.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
+import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
 
 ReactPixel.init("111649226022273");
 ReactPixel.pageView();
 ReactPixel.fbq("track", "PageView");
 
-const hist = createHashHistory();
-
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      <Route path="/rtl" render={props => <RTLLayout {...props} />} />
-      <Route
-        path="/documentation"
-        render={props => <Documentation {...props} />}
-      />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>,
+  <ThemeContextWrapper>
+    <BackgroundColorWrapper>
+      <HashRouter>
+        <Switch>
+          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+          <Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
+          <Redirect from="/" to="/admin/dashboard" />
+        </Switch>
+      </HashRouter>
+    </BackgroundColorWrapper>
+  </ThemeContextWrapper>,
   document.getElementById("root")
 );

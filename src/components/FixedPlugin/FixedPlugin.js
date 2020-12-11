@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.1.0
+* Black Dashboard React v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
@@ -15,11 +15,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 // reactstrap components
-import { Button } from "reactstrap";
+import { Button, Dropdown, DropdownToggle, Badge } from "reactstrap";
+import { ThemeContext, themes } from "contexts/ThemeContext";
+import { backgroundColors } from "contexts/BackgroundColorContext";
 
 import {
   FacebookShareButton,
@@ -29,149 +30,133 @@ import {
 } from "react-share";
 import GitHubButton from "react-github-button";
 
-class FixedPlugin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      classes: "dropdown show-dropdown"
-    };
-  }
-  handleClick = () => {
-    if (this.state.classes === "dropdown show-dropdown") {
-      this.setState({ classes: "dropdown show-dropdown show" });
-    } else {
-      this.setState({ classes: "dropdown show-dropdown" });
-    }
+function FixedPlugin(props) {
+  const [dropDownIsOpen, setdropDownIsOpen] = React.useState(false);
+  const handleClick = () => {
+    setdropDownIsOpen(!dropDownIsOpen);
   };
-  activateMode = mode => {
-    switch (mode) {
-      case "light":
-        document.body.classList.add("white-content");
-        break;
-      default:
-        document.body.classList.remove("white-content");
-        break;
-    }
-  };
-  render() {
-    return (
-      <div className="fixed-plugin">
-        <div className={this.state.classes}>
-          <div onClick={this.handleClick}>
-            <i className="fa fa-cog fa-2x" />
-          </div>
-          <ul className="dropdown-menu show">
-            <li className="header-title">SIDEBAR BACKGROUND</li>
-            <li className="adjustments-line">
-              <div className="badge-colors text-center">
-                <span
-                  className={
-                    this.props.bgColor === "primary"
-                      ? "badge filter badge-primary active"
-                      : "badge filter badge-primary"
-                  }
-                  data-color="primary"
-                  onClick={() => {
-                    this.props.handleBgClick("primary");
-                  }}
-                />{" "}
-                <span
-                  className={
-                    this.props.bgColor === "blue"
-                      ? "badge filter badge-info active"
-                      : "badge filter badge-info"
-                  }
-                  data-color="blue"
-                  onClick={() => {
-                    this.props.handleBgClick("blue");
-                  }}
-                />{" "}
-                <span
-                  className={
-                    this.props.bgColor === "green"
-                      ? "badge filter badge-success active"
-                      : "badge filter badge-success"
-                  }
-                  data-color="green"
-                  onClick={() => {
-                    this.props.handleBgClick("green");
-                  }}
-                />{" "}
-              </div>
-            </li>
-            <li className="adjustments-line text-center color-change">
-              <span className="color-label">LIGHT MODE</span>{" "}
-              <span
-                className="badge light-badge mr-2"
-                onClick={() => this.activateMode("light")}
-              />{" "}
-              <span
-                className="badge dark-badge ml-2"
-                onClick={() => this.activateMode("dark")}
-              />{" "}
-              <span className="color-label">DARK MODE</span>{" "}
-            </li>
-            <li className="button-container">
-              <Button
-                href="https://www.creative-tim.com/product/black-dashboard-react"
+  return (
+    <div className="fixed-plugin">
+      <Dropdown isOpen={dropDownIsOpen} toggle={handleClick}>
+        <DropdownToggle tag="div">
+          <i className="fa fa-cog fa-2x" />
+        </DropdownToggle>
+        <ul className="dropdown-menu show">
+          <li className="header-title">SIDEBAR BACKGROUND</li>
+          <li className="adjustments-line">
+            <div className="badge-colors text-center">
+              <Badge
                 color="primary"
-                block
-                className="btn-round"
-              >
-                Download Now
-              </Button>
-              <Link to="/documentation/tutorial">
-                <Button color="default" block className="btn-round" outline>
-                  Documentation
-                </Button>
-              </Link>
-            </li>
-            <li className="header-title">Want more components?</li>
-            <li className="button-container">
-              <Button
-                href="https://www.creative-tim.com/product/black-dashboard-pro-react?ref=bdr-fixed-plugin"
-                className="btn-round"
-                block
-                color="danger"
-              >
-                Get pro version
-              </Button>
-            </li>
-            <li className="header-title" id="sharrreTitle">
-              Thank you for sharing!
-            </li>
-            <li className="button-container text-center">
-              <FacebookShareButton url="https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard">
-                <FacebookIcon size={32} round={true} />
-              </FacebookShareButton>
-              <TwitterShareButton
-                url="https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard"
-                title="Black Dashboard React by Creative Tim | Free React Admin Template"
-                hashtags={[
-                  "react",
-                  "creativetim",
-                  "dark",
-                  "dashboard",
-                  "bootstrap",
-                  "reactstrap",
-                  "reactjs"
-                ]}
-                via="creativetim"
-              >
-                <TwitterIcon size={32} round={true} />
-              </TwitterShareButton>
-              <br />
-              <GitHubButton
-                type="stargazers"
-                namespace="creativetimofficial"
-                repo="black-dashboard-react"
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  }
+                className={
+                  props.bgColor === backgroundColors.primary ? "active" : ""
+                }
+                onClick={() => {
+                  props.handleBgClick(backgroundColors.primary);
+                }}
+              />{" "}
+              <Badge
+                color="info"
+                className={
+                  props.bgColor === backgroundColors.blue ? "active" : ""
+                }
+                onClick={() => {
+                  props.handleBgClick(backgroundColors.blue);
+                }}
+              />{" "}
+              <Badge
+                color="success"
+                className={
+                  props.bgColor === backgroundColors.green ? "active" : ""
+                }
+                onClick={() => {
+                  props.handleBgClick(backgroundColors.green);
+                }}
+              />{" "}
+            </div>
+          </li>
+          <li className="adjustments-line text-center color-change">
+            <ThemeContext.Consumer>
+              {({ changeTheme }) => (
+                <>
+                  <span className="color-label">LIGHT MODE</span>{" "}
+                  <Badge
+                    className="light-badge mr-2"
+                    onClick={() => changeTheme(themes.light)}
+                  />{" "}
+                  <Badge
+                    className="dark-badge ml-2"
+                    onClick={() => changeTheme(themes.dark)}
+                  />{" "}
+                  <span className="color-label">DARK MODE</span>{" "}
+                </>
+              )}
+            </ThemeContext.Consumer>
+          </li>
+          <li className="button-container">
+            <Button
+              href="https://www.creative-tim.com/product/black-dashboard-react"
+              color="primary"
+              block
+              className="btn-round"
+            >
+              Download Now
+            </Button>
+            <Button
+              color="default"
+              block
+              className="btn-round"
+              outline
+              href="https://demos.creative-tim.com/black-dashboard-react/#/documentation/tutorial"
+            >
+              Documentation
+            </Button>
+          </li>
+          <li className="header-title">Want more components?</li>
+          <li className="button-container">
+            <Button
+              href="https://www.creative-tim.com/product/black-dashboard-pro-react"
+              className="btn-round"
+              disabled
+              block
+              color="danger"
+            >
+              Get pro version
+            </Button>
+          </li>
+          <li className="header-title" id="sharrreTitle">
+            Thank you for sharing!
+          </li>
+          <li className="button-container text-center">
+            <FacebookShareButton url="https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard">
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+            <TwitterShareButton
+              url="https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard"
+              title="Black Dashboard React by Creative Tim | Free React Admin Template"
+              hashtags={[
+                "react",
+                "creativetim",
+                "dark",
+                "dashboard",
+                "bootstrap",
+                "reactstrap",
+                "reactjs"
+              ]}
+              via="creativetim"
+            >
+              <TwitterIcon size={32} round={true} />
+            </TwitterShareButton>
+            <br />
+            <GitHubButton
+              type="stargazers"
+              namespace="creativetimofficial"
+              repo="black-dashboard-react"
+            />
+          </li>
+        </ul>
+      </Dropdown>
+    </div>
+  );
 }
 
 export default FixedPlugin;

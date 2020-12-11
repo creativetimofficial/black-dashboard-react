@@ -1,3 +1,48 @@
+## [1.2.0] 2020-12-14
+### Bug fixing
+- Added hooks support
+- https://github.com/creativetimofficial/black-dashboard-react/issues/19
+- https://github.com/creativetimofficial/black-dashboard-react/issues/17
+### Major style changes
+- All Bootstrap imports from `src/assets/scss/black-dashboard-react/bootstrap` have been changed with imports from `node_modules` from `Bootstrap`
+### Deleted components
+### Added components
+### Deleted dependencies
+- history (instead of using `history`, we'll be using `BrowserRouter` from `react-router-dom`)
+- @types/googlemaps
+- @types/react
+- @types/markerclustererplus
+- react-google-maps (Instead of it, we're going to use simple plain JS Google maps)
+### Added dependencies
++ node-sass-package-importer@5.3.2 (for importing `Bootstrap` from `node_modules`)
++ bootstrap@4.5.3 (instead of using downloaded zip of `Bootstrap`, we'll use it from `node_modules`)
++ jquery@3.5.1 (to stop `Bootstrap` warning on a clean install)
+### Updated dependencies
+```
+@fortawesome/fontawesome-free    5.13.0   →   5.15.1
+chart.js                          2.9.3   →    2.9.4
+node-sass                        4.13.1   →   4.14.1
+react                           16.13.1   →   17.0.1
+react-chartjs-2                   2.9.0   →   2.11.1
+react-dom                       16.13.1   →   17.0.1
+react-notification-alert         0.0.12   →   0.0.13
+react-router-dom                  5.1.2   →    5.2.0
+react-scripts                     3.4.1   →    4.0.1
+reactstrap                        8.4.1   →    8.7.1
+eslint-plugin-flowtype           3.13.0   →    5.2.0
+typescript                        3.8.3   →    4.1.2
+```
+### Important Notes
+**The jQuery and TypeScript dependencies are installed only to stop console warnings on install. They are not actually used in our product. So the product is not based on jQuery, and it is not based on TypeScript!**
+### Warning
+_Some warnings may appear when running the installation command, but they do not affect the UI or the functionality of the product._
+_The following warnings will appear when running the installation command, but they do not affect the UI or the functionality of the product (they will be solved in our next update - they come from the plugins that we are using, and they haven't yet upgraded to the latest React version):_
+```
+npm WARN react-popper@1.3.7 requires a peer of react@0.14.x || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN create-react-context@0.3.0 requires a peer of react@^0.14.0 || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+```
+Happy Hacking!
+
 ## [1.1.0] 2020-03-13
 ### Bug fixing
 - Github issues:
