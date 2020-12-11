@@ -172,7 +172,7 @@ class Alerts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
+      visible: true,
     };
   }
   onDismiss = () => {
@@ -217,57 +217,63 @@ class Alerts extends React.Component {
             This is a primary alert with{" "}
             <a href="#pablo" className="alert-link">
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="info">
             This is a info alert with{" "}
             <a
               href="#pablo"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="success">
             This is a success alert with{" "}
             <a
               href="#pablo"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="danger">
             This is a danger alert with{" "}
             <a
               href="#pablo"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="warning">
             This is a warning alert with{" "}
             <a
               href="#pablo"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="default">
             This is a default alert with{" "}
             <a
               href="#pablo"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
         </div>
         <SyntaxHighlighter language="jsx" style={prism}>
@@ -311,7 +317,8 @@ class Alerts extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap alerts documentation
-          </a>.
+          </a>
+          .
         </p>
         <br />
         <br />
