@@ -24,7 +24,7 @@ import { backgroundColors } from "contexts/BackgroundColorContext";
 
 function FixedPlugin(props) {
   const [dropDownIsOpen, setdropDownIsOpen] = React.useState(false);
-  handleClick = () => {
+  const handleClick = () => {
     setdropDownIsOpen(!dropDownIsOpen);
   };
   return (
