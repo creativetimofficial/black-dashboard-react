@@ -33,7 +33,7 @@ import {
 } from "reactstrap";
 
 function Notifications() {
-  const notificationAlertRef = React.useEffect(null);
+  const notificationAlertRef = React.useRef(null);
   const notify = (place) => {
     var color = Math.floor(Math.random() * 5 + 1);
     var type;
@@ -168,7 +168,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => this.notify("tl")}
+                            onClick={() => notify("tl")}
                           >
                             Top Left
                           </Button>
@@ -177,7 +177,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => this.notify("tc")}
+                            onClick={() => notify("tc")}
                           >
                             Top Center
                           </Button>
@@ -186,7 +186,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => this.notify("tr")}
+                            onClick={() => notify("tr")}
                           >
                             Top Right
                           </Button>
@@ -201,7 +201,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => this.notify("bl")}
+                            onClick={() => notify("bl")}
                           >
                             Bottom Left
                           </Button>
@@ -210,7 +210,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => this.notify("bc")}
+                            onClick={() => notify("bc")}
                           >
                             Bottom Center
                           </Button>
@@ -219,7 +219,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => this.notify("br")}
+                            onClick={() => notify("br")}
                           >
                             Bottom Right
                           </Button>
