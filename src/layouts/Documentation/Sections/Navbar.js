@@ -19,7 +19,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import style from "react-syntax-highlighter/styles/prism";
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
 const codeAdminNavbar = `... other code
 
@@ -119,7 +119,7 @@ class Navbar extends React.Component {
           This is how it should look like in your render function of your
           class/function:
         </p>
-        <SyntaxHighlighter language="jsx" style={style}>
+        <SyntaxHighlighter language="jsx" style={prism}>
           {codeAdminNavbar}
         </SyntaxHighlighter>
         <p>
@@ -156,7 +156,7 @@ class Navbar extends React.Component {
           This is how it should look like in your render function of your
           class/function:
         </p>
-        <SyntaxHighlighter language="jsx" style={style}>
+        <SyntaxHighlighter language="jsx" style={prism}>
           {codeRTLNavbar}
         </SyntaxHighlighter>
         <p>
