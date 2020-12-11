@@ -1,6 +1,7 @@
 ## [1.2.0] 2020-12-14
 ### Bug fixing
 - Added hooks support
+- https://github.com/creativetimofficial/black-dashboard-react/issues/19
 ### Major style changes
 - All Bootstrap imports from `src/assets/scss/black-dashboard-react/bootstrap` have been changed with imports from `node_modules` from `Bootstrap`
 ### Deleted components
