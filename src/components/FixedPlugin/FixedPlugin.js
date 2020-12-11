@@ -26,7 +26,7 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   FacebookIcon,
-  TwitterIcon
+  TwitterIcon,
 } from "react-share";
 import GitHubButton from "react-github-button";
 
@@ -140,7 +140,7 @@ function FixedPlugin(props) {
                 "dashboard",
                 "bootstrap",
                 "reactstrap",
-                "reactjs"
+                "reactjs",
               ]}
               via="creativetim"
             >
