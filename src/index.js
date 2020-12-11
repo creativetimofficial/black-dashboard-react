@@ -45,6 +45,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           <Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
+          <Route path="/documentation" render={(props) => <Documentation {...props} />} />
           <Redirect from="/" to="/admin/dashboard" />
         </Switch>
       </HashRouter>
