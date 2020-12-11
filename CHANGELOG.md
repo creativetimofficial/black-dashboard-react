@@ -1,12 +1,10 @@
 ## [1.2.0] 2020-12-14
 ### Bug fixing
-
+- Added hooks support
 ### Major style changes
-
+- All Bootstrap imports from `src/assets/scss/black-dashboard-react/bootstrap` have been changed with imports from `node_modules` from `Bootstrap`
 ### Deleted components
-
 ### Added components
-
 ### Deleted dependencies
 - history (instead of using `history`, we'll be using `BrowserRouter` from `react-router-dom`)
 - @types/googlemaps
@@ -15,6 +13,7 @@
 - react-google-maps (Instead of it, we're going to use simple plain JS Google maps)
 ### Added dependencies
 + node-sass-package-importer@5.3.2 (for importing `Bootstrap` from `node_modules`)
++ bootstrap@4.5.3 (instead of using downloaded zip of `Bootstrap`, we'll use it from `node_modules`)
 ### Updated dependencies
 ```
 @fortawesome/fontawesome-free    5.13.0   →   5.15.1
