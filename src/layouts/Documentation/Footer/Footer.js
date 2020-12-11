@@ -49,14 +49,16 @@ class Footer extends React.Component {
               rel="noopener noreferrer"
             >
               Invision
-            </a>. Coded by{" "}
+            </a>
+            . Coded by{" "}
             <a
               href="https://www.creative-tim.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               Creative Tim
-            </a>.
+            </a>
+            .
           </div>
         </Container>
       </footer>
