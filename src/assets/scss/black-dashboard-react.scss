@@ -19,48 +19,48 @@
  // Core
 
 @import "black-dashboard-react/custom/functions";
-@import "black-dashboard-react/bootstrap/functions";
+@import "~bootstrap/scss/functions";
 
 @import "black-dashboard-react/custom/variables";
-@import "black-dashboard-react/bootstrap/variables";
+@import "~bootstrap/scss/variables";
 
 @import "black-dashboard-react/custom/mixins";
-@import "black-dashboard-react/bootstrap/mixins";
+@import "~bootstrap/scss/mixins";
 
  // Bootstrap components
 
-@import "black-dashboard-react/bootstrap/root";
-@import "black-dashboard-react/bootstrap/reboot";
-@import "black-dashboard-react/bootstrap/type";
-@import "black-dashboard-react/bootstrap/images";
-@import "black-dashboard-react/bootstrap/code";
-@import "black-dashboard-react/bootstrap/grid";
-@import "black-dashboard-react/bootstrap/tables";
-@import "black-dashboard-react/bootstrap/forms";
-@import "black-dashboard-react/bootstrap/buttons";
-@import "black-dashboard-react/bootstrap/transitions";
-@import "black-dashboard-react/bootstrap/dropdown";
-@import "black-dashboard-react/bootstrap/button-group";
-@import "black-dashboard-react/bootstrap/input-group";
-@import "black-dashboard-react/bootstrap/custom-forms";
-@import "black-dashboard-react/bootstrap/nav";
-@import "black-dashboard-react/bootstrap/navbar";
-@import "black-dashboard-react/bootstrap/card";
-@import "black-dashboard-react/bootstrap/breadcrumb";
-@import "black-dashboard-react/bootstrap/pagination";
-@import "black-dashboard-react/bootstrap/badge";
-@import "black-dashboard-react/bootstrap/jumbotron";
-@import "black-dashboard-react/bootstrap/alert";
-@import "black-dashboard-react/bootstrap/progress";
-@import "black-dashboard-react/bootstrap/media";
-@import "black-dashboard-react/bootstrap/list-group";
-@import "black-dashboard-react/bootstrap/close";
-@import "black-dashboard-react/bootstrap/modal";
-@import "black-dashboard-react/bootstrap/tooltip";
-@import "black-dashboard-react/bootstrap/popover";
-@import "black-dashboard-react/bootstrap/carousel";
-@import "black-dashboard-react/bootstrap/utilities";
-@import "black-dashboard-react/bootstrap/print";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
 
  // Custom components
 
