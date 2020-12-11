@@ -18,8 +18,7 @@
 /*eslint-disable*/
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
-import { applescript } from "react-syntax-highlighter/styles/hljs";
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
 const fileStructure = `black-dashboard-react
 .
@@ -431,7 +430,7 @@ import "assets/css/nucleo-icons.css";`}
         </p>
         <SyntaxHighlighter
           language="html"
-          style={applescript}
+          style={prism}
         >{`<!--     Fonts and icons     -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />`}</SyntaxHighlighter>
