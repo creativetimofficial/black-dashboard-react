@@ -73,7 +73,8 @@ class RoutingSystem extends React.Component {
             rel="noopener noreferrer"
           >
             react-router-dom
-          </a>.
+          </a>
+          .
           <br />
           If you do not understand them, please take in consideration replacing
           them with normal routes and use the <b>src/routes.js</b> just for
