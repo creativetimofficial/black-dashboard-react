@@ -30,8 +30,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
 
-const hist = createBrowserHistory();
-
 ReactDOM.render(
 	<ThemeContextWrapper>
 		<BackgroundColorWrapper>
