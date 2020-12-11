@@ -29,7 +29,7 @@ import {
   Form,
   Input,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class UserProfile extends React.Component {
@@ -171,7 +171,7 @@ class UserProfile extends React.Component {
                     <div className="block block-two" />
                     <div className="block block-three" />
                     <div className="block block-four" />
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
                         className="avatar"
