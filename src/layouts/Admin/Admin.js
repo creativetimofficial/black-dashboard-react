@@ -36,7 +36,7 @@ var ps;
 function Admin(props) {
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
-  const [sidebarOpened, setsidebarOpened] = React.useEffect(
+  const [sidebarOpened, setsidebarOpened] = React.useState(
     document.documentElement.className.indexOf("nav-open") !== -1
   );
   React.useEffect(() => {
@@ -107,7 +107,6 @@ function Admin(props) {
         <React.Fragment>
           <div className="wrapper">
             <Sidebar
-              {...props}
               routes={routes}
               logo={{
                 outterLink: "https://www.creative-tim.com/",
@@ -118,7 +117,6 @@ function Admin(props) {
             />
             <div className="main-panel" ref={mainPanelRef} data={color}>
               <AdminNavbar
-                {...props}
                 brandText={getBrandText(location.pathname)}
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
