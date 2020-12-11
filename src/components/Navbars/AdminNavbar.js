@@ -34,7 +34,9 @@ import {
   NavLink,
   Nav,
   Container,
-  Modal
+  Modal,
+  NavbarToggler,
+  ModalHeader
 } from "reactstrap";
 
 class AdminNavbar extends React.Component {
@@ -99,42 +101,30 @@ class AdminNavbar extends React.Component {
                   toggled: this.props.sidebarOpened
                 })}
               >
-                <button
-                  className="navbar-toggler"
-                  type="button"
+                <NavbarToggler
                   onClick={this.props.toggleSidebar}
                 >
                   <span className="navbar-toggler-bar bar1" />
                   <span className="navbar-toggler-bar bar2" />
                   <span className="navbar-toggler-bar bar3" />
-                </button>
+                </NavbarToggler>
               </div>
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
                 {this.props.brandText}
               </NavbarBrand>
             </div>
-            <button
-              aria-expanded={false}
-              aria-label="Toggle navigation"
-              className="navbar-toggler"
-              data-target="#navigation"
-              data-toggle="collapse"
-              id="navigation"
-              type="button"
+            <NavbarToggler
               onClick={this.toggleCollapse}
             >
               <span className="navbar-toggler-bar navbar-kebab" />
               <span className="navbar-toggler-bar navbar-kebab" />
               <span className="navbar-toggler-bar navbar-kebab" />
-            </button>
+            </NavbarToggler>
             <Collapse navbar isOpen={this.state.collapseOpen}>
               <Nav className="ml-auto" navbar>
                 <InputGroup className="search-bar">
                   <Button
                     color="link"
-                    data-target="#searchModal"
-                    data-toggle="modal"
-                    id="search-button"
                     onClick={this.toggleModalSearch}
                   >
                     <i className="tim-icons icon-zoom-split" />
@@ -184,7 +174,6 @@ class AdminNavbar extends React.Component {
                   <DropdownToggle
                     caret
                     color="default"
-                    data-toggle="dropdown"
                     nav
                     onClick={e => e.preventDefault()}
                   >
@@ -217,18 +206,16 @@ class AdminNavbar extends React.Component {
           isOpen={this.state.modalSearch}
           toggle={this.toggleModalSearch}
         >
-          <div className="modal-header">
-            <Input id="inlineFormInputGroup" placeholder="SEARCH" type="text" />
+          <ModalHeader>
+            <Input placeholder="SEARCH" type="text" />
             <button
               aria-label="Close"
               className="close"
-              data-dismiss="modal"
-              type="button"
               onClick={this.toggleModalSearch}
             >
               <i className="tim-icons icon-simple-remove" />
             </button>
-          </div>
+          </ModalHeader>
         </Modal>
       </>
     );
