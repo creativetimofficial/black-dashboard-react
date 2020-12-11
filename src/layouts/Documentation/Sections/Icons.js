@@ -18,7 +18,7 @@
 /*eslint-disable*/
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 import { Row, Col, Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 
