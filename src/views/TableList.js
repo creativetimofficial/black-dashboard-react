@@ -25,7 +25,7 @@ import {
   CardTitle,
   Table,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class Tables extends React.Component {
