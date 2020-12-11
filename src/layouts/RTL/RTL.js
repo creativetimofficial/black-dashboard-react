@@ -39,7 +39,7 @@ class Admin extends React.Component {
     this.state = {
       backgroundColor: "blue",
       sidebarOpened:
-        document.documentElement.className.indexOf("nav-open") !== -1
+        document.documentElement.className.indexOf("nav-open") !== -1,
     };
     this.mainPanel = React.createRef();
   }
@@ -47,7 +47,9 @@ class Admin extends React.Component {
     if (navigator.platform.indexOf("Win") > -1) {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
-      ps = new PerfectScrollbar(this.mainPanel.current, { suppressScrollX: true });
+      ps = new PerfectScrollbar(this.mainPanel.current, {
+        suppressScrollX: true,
+      });
       let tables = document.querySelectorAll(".table-responsive");
       for (let i = 0; i < tables.length; i++) {
         ps = new PerfectScrollbar(tables[i]);
@@ -97,7 +99,7 @@ class Admin extends React.Component {
     document.documentElement.classList.toggle("nav-open");
     this.setState({ sidebarOpened: !this.state.sidebarOpened });
   };
-  getRoutes = routes => {
+  getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/rtl") {
         return (
@@ -112,7 +114,7 @@ class Admin extends React.Component {
       }
     });
   };
-  getBrandText = path => {
+  getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
       if (
         this.props.location.pathname.indexOf(
@@ -136,7 +138,7 @@ class Admin extends React.Component {
             logo={{
               outterLink: "https://www.creative-tim.com/",
               text: "الإبداعية تيم",
-              imgSrc: logo
+              imgSrc: logo,
             }}
             toggleSidebar={this.toggleSidebar}
           />
@@ -152,20 +154,19 @@ class Admin extends React.Component {
               sidebarOpened={this.state.sidebarOpened}
             />
             <Switch>{this.getRoutes(routes)}</Switch>
-            {// we don't want the Footer to be rendered on map page
-            this.props.location.pathname.indexOf("maps") !== -1 ? null : (
-              <Footer fluid />
-            )}
+            {
+              // we don't want the Footer to be rendered on map page
+              this.props.location.pathname.indexOf("maps") !== -1 ? null : (
+                <Footer fluid />
+              )
+            }
           </div>
         </div>
         <BackgroundColorContext.Consumer>
-					{({ color, changeColor }) => (
-						<FixedPlugin
-							bgColor={color}
-							handleBgClick={changeColor}
-						/>
-					)}
-				</BackgroundColorContext.Consumer>
+          {({ color, changeColor }) => (
+            <FixedPlugin bgColor={color} handleBgClick={changeColor} />
+          )}
+        </BackgroundColorContext.Consumer>
       </>
     );
   }
