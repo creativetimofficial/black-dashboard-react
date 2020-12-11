@@ -1,4 +1,4 @@
-## [1.2.0] 2020-12-14
+## [1.2.0] 2020-12-11
 ### Bug fixing
 - Added hooks support
 - https://github.com/creativetimofficial/black-dashboard-react/issues/19
