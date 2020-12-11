@@ -54,24 +54,24 @@ var docsRoutes = [
       {
         path: "/documentation/tutorial",
         component: Tutorial,
-        name: "Tutorial"
+        name: "Tutorial",
       },
       {
         path: "/documentation/colors",
         component: Colors,
-        name: "Colors"
+        name: "Colors",
       },
       {
         path: "/documentation/routing-system",
         component: RoutingSystem,
-        name: "Routing System"
+        name: "Routing System",
       },
       {
         path: "/documentation/variables",
         component: Variables,
-        name: "Variables"
-      }
-    ]
+        name: "Variables",
+      },
+    ],
   },
   {
     name: "Core Components",
@@ -80,24 +80,24 @@ var docsRoutes = [
       {
         path: "/documentation/fixed-plugin",
         component: FixedPlugin,
-        name: "Fixed Plugin"
+        name: "Fixed Plugin",
       },
       {
         path: "/documentation/footer",
         component: Footer,
-        name: "Footer"
+        name: "Footer",
       },
       {
         path: "/documentation/navbar",
         component: Navbar,
-        name: "App Navbar"
+        name: "App Navbar",
       },
       {
         path: "/documentation/sidebar",
         component: Sidebar,
-        name: "Sidebar"
-      }
-    ]
+        name: "Sidebar",
+      },
+    ],
   },
   {
     name: "Reactstrap Components",
@@ -106,64 +106,64 @@ var docsRoutes = [
       {
         path: "/documentation/alert",
         component: Alerts,
-        name: "Alerts"
+        name: "Alerts",
       },
       {
         path: "/documentation/badge",
         component: Badges,
-        name: "Badges"
+        name: "Badges",
       },
       {
         path: "/documentation/breadcrumbs",
         component: Breadcrumbs,
-        name: "Breadcrumbs"
+        name: "Breadcrumbs",
       },
       {
         path: "/documentation/buttons",
         component: Buttons,
-        name: "Buttons"
+        name: "Buttons",
       },
       {
         path: "/documentation/cards",
         component: Cards,
-        name: "Cards"
+        name: "Cards",
       },
       {
         path: "/documentation/dropdowns",
         component: Dropdowns,
-        name: "Dropdowns"
+        name: "Dropdowns",
       },
       {
         path: "/documentation/forms",
         component: Forms,
-        name: "Forms"
+        name: "Forms",
       },
       {
         path: "/documentation/modal",
         component: Modals,
-        name: "Modals"
+        name: "Modals",
       },
       {
         path: "/documentation/navbars",
         component: Navbars,
-        name: "Navbars"
+        name: "Navbars",
       },
       {
         path: "/documentation/navs",
         component: Navs,
-        name: "Navs"
+        name: "Navs",
       },
       {
         path: "/documentation/tables",
         component: Tables,
-        name: "Tables"
+        name: "Tables",
       },
       {
         path: "/documentation/typography",
         component: Typography,
-        name: "Typography"
-      }
-    ]
+        name: "Typography",
+      },
+    ],
   },
   {
     name: "Plugins",
@@ -173,31 +173,31 @@ var docsRoutes = [
       {
         path: "/documentation/google-maps",
         component: GoogleMaps,
-        name: "GoogleMaps"
+        name: "GoogleMaps",
       },
       {
         path: "/documentation/react-google-maps",
         component: ReactGoogleMaps,
-        name: "ReactGoogleMaps"
+        name: "ReactGoogleMaps",
       },
       {
         path: "/documentation/icons",
         component: Icons,
-        name: "Nucleo Icons"
+        name: "Nucleo Icons",
       },
       {
         path: "/documentation/notifications",
         component: Notifications,
-        name: "Notifications"
+        name: "Notifications",
       },
       {
         path: "/documentation/perfect-scrollbar",
         component: PerfectScrollbar,
-        name: "PerfectScrollbar"
-      }
-    ]
+        name: "PerfectScrollbar",
+      },
+    ],
   },
-  { redirect: true, path: "/documentation", pathTo: "/documentation/tutorial" }
+  { redirect: true, path: "/documentation", pathTo: "/documentation/tutorial" },
 ];
 
 export default docsRoutes;
