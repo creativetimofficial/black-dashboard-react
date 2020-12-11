@@ -17,7 +17,7 @@
 */
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 import { Alert, Row, Col, Button } from "reactstrap";
 import Notify from "react-notification-alert";
 
