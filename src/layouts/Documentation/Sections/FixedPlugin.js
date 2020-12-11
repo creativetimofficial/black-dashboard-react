@@ -67,7 +67,8 @@ class FixedPlugin extends React.Component {
           Can be found inside{" "}
           <code className="highlighter-rouge">
             src/components/FixedPlugin/FixedPlugin.js
-          </code>.
+          </code>
+          .
         </p>
         <p>
           This component is the right menu and its purpose is so you can easily
@@ -102,11 +103,11 @@ class FixedPlugin extends React.Component {
         <p>
           For a better understaing please, take a look inside{" "}
           <code className="highlighter-rouge">src/layouts/Admin/Admin.js</code>{" "}
-          ,<code className="highlighter-rouge">src/layouts/RTL/RTL.js</code>{" "}
-          and{" "}
+          ,<code className="highlighter-rouge">src/layouts/RTL/RTL.js</code> and{" "}
           <code className="highlighter-rouge">
             src/components/FixedPlugin/FixedPlugin.js
-          </code>.
+          </code>
+          .
         </p>
       </>
     );
