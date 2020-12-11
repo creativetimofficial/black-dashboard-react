@@ -108,7 +108,8 @@ class PerfectScrollbar extends React.Component {
             >
               Full Documentation
             </a>
-          </strong>.
+          </strong>
+          .
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
           {code}
