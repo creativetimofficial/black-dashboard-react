@@ -30,7 +30,7 @@ import {
   ListGroup,
   ListGroupItem,
   CardImgOverlay,
-  Button
+  Button,
 } from "reactstrap";
 
 const codeExample = `<Card style={{width: '20rem'}}>
@@ -426,7 +426,8 @@ class Cards extends React.Component {
             rel="noopener noreferrer"
           >
             official reactstrap documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );
