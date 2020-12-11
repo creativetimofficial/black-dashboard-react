@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.1.0
+* Black Dashboard React v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -34,7 +34,7 @@ class Header extends React.Component {
         <Nav className="flex-row d-none d-md-flex" navbar>
           <NavItem>
             <NavLink href="#" className="p-2">
-              1.1.0
+              1.2.0
             </NavLink>
           </NavItem>
           <NavItem>
