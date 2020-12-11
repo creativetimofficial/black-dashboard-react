@@ -41,6 +41,7 @@ import Typography from "layouts/Documentation/Sections/Typography.js";
 // Plugins
 import Charts from "layouts/Documentation/Sections/Charts.js";
 import GoogleMaps from "layouts/Documentation/Sections/GoogleMaps.js";
+import ReactGoogleMaps from "layouts/Documentation/Sections/ReactGoogleMaps.js";
 import Icons from "layouts/Documentation/Sections/Icons.js";
 import Notifications from "layouts/Documentation/Sections/Notifications.js";
 import PerfectScrollbar from "layouts/Documentation/Sections/PerfectScrollbar.js";
@@ -173,6 +174,11 @@ var docsRoutes = [
         path: "/documentation/google-maps",
         component: GoogleMaps,
         name: "GoogleMaps"
+      },
+      {
+        path: "/documentation/react-google-maps",
+        component: ReactGoogleMaps,
+        name: "ReactGoogleMaps"
       },
       {
         path: "/documentation/icons",
