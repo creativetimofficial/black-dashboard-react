@@ -31,16 +31,16 @@ import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
 
 ReactDOM.render(
-	<ThemeContextWrapper>
-		<BackgroundColorWrapper>
-			<BrowserRouter>
-				<Switch>
-					<Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-					<Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
-					<Redirect from="/" to="/admin/dashboard" />
-				</Switch>
-			</BrowserRouter>
-		</BackgroundColorWrapper>
-	</ThemeContextWrapper>,
-	document.getElementById("root")
+  <ThemeContextWrapper>
+    <BackgroundColorWrapper>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+          <Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
+          <Redirect from="/" to="/admin/dashboard" />
+        </Switch>
+      </BrowserRouter>
+    </BackgroundColorWrapper>
+  </ThemeContextWrapper>,
+  document.getElementById("root")
 );
