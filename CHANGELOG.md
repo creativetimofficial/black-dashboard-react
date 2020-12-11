@@ -1,3 +1,23 @@
+## [1.2.0] 2020-12-14
+### Bug fixing
+
+### Major style changes
+
+### Deleted components
+
+### Added components
+
+### Deleted dependencies
+
+### Added dependencies
+
+### Updated dependencies
+```
+
+```
+### Warning
+_If needed_
+
 ## [1.1.0] 2020-03-13
 ### Bug fixing
 - Github issues:
