@@ -27,7 +27,7 @@ import {
   UncontrolledButtonDropdown,
   Button,
   Col,
-  Row
+  Row,
 } from "reactstrap";
 
 const codeExamples = `<UncontrolledDropdown>
@@ -116,7 +116,7 @@ class Dropdowns extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -433,7 +433,8 @@ class Dropdowns extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap dropdowns documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );
