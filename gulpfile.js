@@ -9,7 +9,7 @@ gulp.task("licenses", async function() {
       gap.prependText(`/*!
 
 =========================================================
-* Black Dashboard React - v1.1.0
+* Black Dashboard React - v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
@@ -33,7 +33,7 @@ gulp.task("licenses", async function() {
       gap.prependText(`<!--
 
 =========================================================
-* Black Dashboard React - v1.1.0
+* Black Dashboard React - v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
@@ -57,7 +57,7 @@ gulp.task("licenses", async function() {
       gap.prependText(`/*!
 
 =========================================================
-* Black Dashboard React - v1.1.0
+* Black Dashboard React - v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
