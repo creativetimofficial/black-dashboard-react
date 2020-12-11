@@ -39,7 +39,7 @@ import {
   Table,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
@@ -47,19 +47,19 @@ import {
   chartExample1,
   chartExample2,
   chartExample3,
-  chartExample4
+  chartExample4,
 } from "variables/charts.js";
 
 class Rtl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bigChartData: "data1"
+      bigChartData: "data1",
     };
   }
-  setBgChartData = name => {
+  setBgChartData = (name) => {
     this.setState({
-      bigChartData: name
+      bigChartData: name,
     });
   };
   render() {
@@ -83,7 +83,7 @@ class Rtl extends React.Component {
                         <Button
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.bigChartData === "data1"
+                            active: this.state.bigChartData === "data1",
                           })}
                           color="primary"
                           id="0"
@@ -109,7 +109,7 @@ class Rtl extends React.Component {
                           size="sm"
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.bigChartData === "data2"
+                            active: this.state.bigChartData === "data2",
                           })}
                           onClick={() => this.setBgChartData("data2")}
                         >
@@ -131,7 +131,7 @@ class Rtl extends React.Component {
                           size="sm"
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.bigChartData === "data3"
+                            active: this.state.bigChartData === "data3",
                           })}
                           onClick={() => this.setBgChartData("data3")}
                         >
@@ -240,19 +240,19 @@ class Rtl extends React.Component {
                     <DropdownMenu aria-labelledby="dropdownMenuLink">
                       <DropdownItem
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         عمل
                       </DropdownItem>
                       <DropdownItem
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         عمل آخر
                       </DropdownItem>
                       <DropdownItem
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         شيء آخر هنا
                       </DropdownItem>
