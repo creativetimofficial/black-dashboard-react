@@ -9,22 +9,24 @@
 
 ### Deleted dependencies
 - history (instead of using `history`, we'll be using `BrowserRouter` from `react-router-dom`)
+- @types/googlemaps
+- @types/react
+- @types/markerclustererplus
+- react-google-maps (Instead of it, we're going to use simple plain JS Google maps)
 ### Added dependencies
-
++ node-sass-package-importer@5.3.2 (for importing `Bootstrap` from `node_modules`)
 ### Updated dependencies
 ```
 @fortawesome/fontawesome-free    5.13.0   →   5.15.1
 chart.js                          2.9.3   →    2.9.4
 node-sass                        4.13.1   →   4.14.1
 react                           16.13.1   →   17.0.1
-@types/react                    16.9.33   →   17.0.0
 react-chartjs-2                   2.9.0   →   2.11.1
 react-dom                       16.13.1   →   17.0.1
 react-notification-alert         0.0.12   →   0.0.13
 react-router-dom                  5.1.2   →    5.2.0
 react-scripts                     3.4.1   →    4.0.1
 reactstrap                        8.4.1   →    8.7.1
-@types/googlemaps                3.39.3   →   3.40.4
 eslint-plugin-flowtype           3.13.0   →    5.2.0
 typescript                        3.8.3   →    4.1.2
 ```
