@@ -34,7 +34,7 @@ import {
   Form,
   FormGroup,
   Input,
-  Button
+  Button,
 } from "reactstrap";
 
 const colors = [
@@ -44,7 +44,7 @@ const colors = [
   "warning",
   "white",
   "primary",
-  "info"
+  "info",
 ];
 
 const codeNav = `import React from 'react';
@@ -511,17 +511,17 @@ class Navigation extends React.Component {
     this.dropdownToggle = this.dropdownToggle.bind(this);
     this.state = {
       isOpen: false,
-      dropdownOpen: false
+      dropdownOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
   dropdownToggle(e) {
     this.setState({
-      dropdownOpen: !this.state.dropdownOpen
+      dropdownOpen: !this.state.dropdownOpen,
     });
   }
   render() {
@@ -642,7 +642,7 @@ class Navigation extends React.Component {
                   <Dropdown
                     tag="nav"
                     isOpen={this.state.dropdownOpen}
-                    toggle={e => this.dropdownToggle(e)}
+                    toggle={(e) => this.dropdownToggle(e)}
                   >
                     <DropdownToggle caret nav>
                       <p>Dropdown Link</p>
@@ -846,7 +846,8 @@ class Navigation extends React.Component {
             <a href="https://caniuse.com/#feat=css-sticky">
               isn’t fully supported in every browser
             </a>
-          </strong>.
+          </strong>
+          .
         </p>
         <div className="bd-example" data-example-id="">
           <Navbar expand="lg" color={"primary"} light>
@@ -1023,7 +1024,8 @@ class Navigation extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap navbar documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );
