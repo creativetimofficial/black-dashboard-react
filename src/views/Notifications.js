@@ -29,15 +29,15 @@ import {
   CardBody,
   CardTitle,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class Notifications extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.notificationAlert = React.createRef();
   }
-  notify = place => {
+  notify = (place) => {
     var color = Math.floor(Math.random() * 5 + 1);
     var type;
     switch (color) {
@@ -72,7 +72,7 @@ class Notifications extends React.Component {
       ),
       type: type,
       icon: "tim-icons icon-bell-55",
-      autoDismiss: 7
+      autoDismiss: 7,
     };
     this.notificationAlert.current.notificationAlert(options);
   };
@@ -166,7 +166,8 @@ class Notifications extends React.Component {
                     <Row>
                       <Col className="ml-auto mr-auto text-center" md="6">
                         <CardTitle tag="h4">
-                          Notifications Places<p className="category">
+                          Notifications Places
+                          <p className="category">
                             Click to view notifications
                           </p>
                         </CardTitle>
