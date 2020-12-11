@@ -36,7 +36,7 @@ var ps;
 function RTL(props) {
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
-  const [sidebarOpened, setsidebarOpened] = React.useEffect(
+  const [sidebarOpened, setsidebarOpened] = React.useState(
     document.documentElement.className.indexOf("nav-open") !== -1
   );
   React.useEffect(() => {
@@ -126,7 +126,6 @@ function RTL(props) {
           <React.Fragment>
             <div className="wrapper">
               <Sidebar
-                {...props}
                 routes={routes}
                 rtlActive
                 logo={{
@@ -138,7 +137,6 @@ function RTL(props) {
               />
               <div className="main-panel" ref={mainPanelRef} data={color}>
                 <RTLNavbar
-                  {...props}
                   brandText={getBrandText(location.pathname)}
                   toggleSidebar={toggleSidebar}
                   sidebarOpened={sidebarOpened}
@@ -146,7 +144,7 @@ function RTL(props) {
                 <Switch>{getRoutes(routes)}</Switch>
                 {
                   // we don't want the Footer to be rendered on map page
-                  location.pathname == "/admin/maps" ? null : <Footer fluid />
+                  location.pathname === "/admin/maps" ? null : <Footer fluid />
                 }
               </div>
             </div>
