@@ -77,7 +77,7 @@ function Rtl() {
                         className={classNames("btn-simple", {
                           active: bigChartData === "data1",
                         })}
-                        color="primary"
+                        color="info"
                         id="0"
                         size="sm"
                         onClick={() => setBgChartData("data1")}
@@ -96,7 +96,7 @@ function Rtl() {
                         </span>
                       </Button>
                       <Button
-                        color="primary"
+                        color="info"
                         id="1"
                         size="sm"
                         tag="label"
@@ -114,7 +114,7 @@ function Rtl() {
                         </span>
                       </Button>
                       <Button
-                        color="primary"
+                        color="info"
                         id="2"
                         size="sm"
                         tag="label"
