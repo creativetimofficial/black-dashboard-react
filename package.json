@@ -5,6 +5,7 @@
   "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.1",
+    "bootstrap": "4.5.3",
     "chart.js": "2.9.4",
     "classnames": "2.2.6",
     "node-sass": "4.14.1",
