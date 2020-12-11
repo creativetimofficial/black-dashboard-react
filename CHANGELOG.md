@@ -14,6 +14,7 @@
 ### Added dependencies
 + node-sass-package-importer@5.3.2 (for importing `Bootstrap` from `node_modules`)
 + bootstrap@4.5.3 (instead of using downloaded zip of `Bootstrap`, we'll use it from `node_modules`)
++ jquery@3.5.1 (to stop `Bootstrap` warning on a clean install)
 ### Updated dependencies
 ```
 @fortawesome/fontawesome-free    5.13.0   →   5.15.1
