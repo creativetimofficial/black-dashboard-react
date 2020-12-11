@@ -82,12 +82,6 @@ function Dashboard(props) {
                         size="sm"
                         onClick={() => setBgChartData("data1")}
                       >
-                        <input
-                          defaultChecked
-                          className="d-none"
-                          name="options"
-                          type="radio"
-                        />
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Accounts
                         </span>
@@ -105,7 +99,6 @@ function Dashboard(props) {
                         })}
                         onClick={() => setBgChartData("data2")}
                       >
-                        <input className="d-none" name="options" type="radio" />
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Purchases
                         </span>
@@ -123,7 +116,6 @@ function Dashboard(props) {
                         })}
                         onClick={() => setBgChartData("data3")}
                       >
-                        <input className="d-none" name="options" type="radio" />
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Sessions
                         </span>
