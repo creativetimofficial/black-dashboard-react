@@ -126,22 +126,22 @@ class Badges extends React.Component {
           default the badge to a link.
         </p>
         <div className="bd-example">
-          <Badge href="#" color="primary" onClick={e => e.preventDefault()}>
+          <Badge href="#" color="primary" onClick={(e) => e.preventDefault()}>
             Primary
           </Badge>
-          <Badge href="#" color="info" onClick={e => e.preventDefault()}>
+          <Badge href="#" color="info" onClick={(e) => e.preventDefault()}>
             Info
           </Badge>
-          <Badge href="#" color="success" onClick={e => e.preventDefault()}>
+          <Badge href="#" color="success" onClick={(e) => e.preventDefault()}>
             Success
           </Badge>
-          <Badge href="#" color="danger" onClick={e => e.preventDefault()}>
+          <Badge href="#" color="danger" onClick={(e) => e.preventDefault()}>
             Danger
           </Badge>
-          <Badge href="#" color="warning" onClick={e => e.preventDefault()}>
+          <Badge href="#" color="warning" onClick={(e) => e.preventDefault()}>
             Warning
           </Badge>
-          <Badge href="#" color="default" onClick={e => e.preventDefault()}>
+          <Badge href="#" color="default" onClick={(e) => e.preventDefault()}>
             Default
           </Badge>
         </div>
@@ -157,7 +157,8 @@ class Badges extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap badge documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );
