@@ -54,7 +54,8 @@ class Breadcrumbs extends React.Component {
           and{" "}
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">
             <code className="highlighter-rouge">content</code>
-          </a>.
+          </a>
+          .
         </p>
         <div className="bd-example">
           <Breadcrumb>
@@ -62,7 +63,7 @@ class Breadcrumbs extends React.Component {
           </Breadcrumb>
           <Breadcrumb>
             <BreadcrumbItem>
-              <a href="#/" onClick={e => e.preventDefault()}>
+              <a href="#/" onClick={(e) => e.preventDefault()}>
                 Home
               </a>
             </BreadcrumbItem>
@@ -70,12 +71,12 @@ class Breadcrumbs extends React.Component {
           </Breadcrumb>
           <Breadcrumb>
             <BreadcrumbItem>
-              <a href="#/" onClick={e => e.preventDefault()}>
+              <a href="#/" onClick={(e) => e.preventDefault()}>
                 Home
               </a>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <a href="#/" onClick={e => e.preventDefault()}>
+              <a href="#/" onClick={(e) => e.preventDefault()}>
                 Library
               </a>
             </BreadcrumbItem>
@@ -97,7 +98,8 @@ class Breadcrumbs extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap breadcrumbs documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );
