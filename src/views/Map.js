@@ -16,23 +16,19 @@
 
 */
 import React from "react";
-// react plugin used to create google maps
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker
-} from "react-google-maps";
 
 // reactstrap components
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 
-const MapWrapper = withScriptjs(
-  withGoogleMap(props => (
-    <GoogleMap
-      defaultZoom={13}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
-      defaultOptions={{
+const MapWrapper = () => {
+  const mapRef = React.useRef(null);
+  React.useEffect(() => {
+    let google = window.google;
+    let map = mapRef.current;
+    let lat = "40.748817";
+    let lng = "-73.985428";
+    const myLatlng = new google.maps.LatLng(lat, lng);
+    const mapOptions = {
         scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
         styles: [
           {
@@ -275,13 +271,32 @@ const MapWrapper = withScriptjs(
               }
             ]
           }
-        ]
-      }}
-    >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
-    </GoogleMap>
-  ))
-);
+        ],
+      };
+
+      map = new google.maps.Map(map, mapOptions);
+
+      const marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        title: "BLK Design System PRO React!",
+      });
+
+      const contentString =
+        '<div class="info-window-content"><h2>BLK Dashboard React</h2>' +
+        "<p>A freebie Admin for ReactStrap, Bootstrap, React, and React Hooks.</p></div>";
+
+      const infowindow = new google.maps.InfoWindow({
+        content: contentString,
+      });
+
+      google.maps.event.addListener(marker, "click", function () {
+        infowindow.open(map, marker);
+      });
+    }, []);
+    return <div ref={mapRef} />;
+  };
 
 class Map extends React.Component {
   render() {
@@ -298,12 +313,7 @@ class Map extends React.Component {
                     className="map"
                     style={{ position: "relative", overflow: "hidden" }}
                   >
-                    <MapWrapper
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
-                      loadingElement={<div style={{ height: `100%` }} />}
-                      containerElement={<div style={{ height: `100%` }} />}
-                      mapElement={<div style={{ height: `100%` }} />}
-                    />
+                    <MapWrapper />
                   </div>
                 </CardBody>
               </Card>
