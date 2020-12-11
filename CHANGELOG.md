@@ -33,7 +33,13 @@ typescript                        3.8.3   →    4.1.2
 ### Important Notes
 **The jQuery and TypeScript dependencies are installed only to stop console warnings on install. They are not actually used in our product. So the product is not based on jQuery, and it is not based on TypeScript!**
 ### Warning
-_If needed_
+_Some warnings may appear when running the installation command, but they do not affect the UI or the functionality of the product._
+_The following warnings will appear when running the installation command, but they do not affect the UI or the functionality of the product (they will be solved in our next update - they come from the plugins that we are using, and they haven't yet upgraded to the latest React version):_
+```
+npm WARN react-popper@1.3.7 requires a peer of react@0.14.x || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN create-react-context@0.3.0 requires a peer of react@^0.14.0 || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+```
+Happy Hacking!
 
 ## [1.1.0] 2020-03-13
 ### Bug fixing
