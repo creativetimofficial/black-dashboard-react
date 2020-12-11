@@ -73,12 +73,12 @@ class Typography extends React.Component {
                   </div>
                   <div className="typography-line">
                     <p>
-                      <span>Paragraph</span>
-                      I will be the leader of a company that ends up being worth
-                      billions of dollars, because I got the answers. I
-                      understand culture. I am the nucleus. I think that’s a
-                      responsibility that I have, to push possibilities, to show
-                      people, this is the level that things could be at.
+                      <span>Paragraph</span>I will be the leader of a company
+                      that ends up being worth billions of dollars, because I
+                      got the answers. I understand culture. I am the nucleus. I
+                      think that’s a responsibility that I have, to push
+                      possibilities, to show people, this is the level that
+                      things could be at.
                     </p>
                   </div>
                   <div className="typography-line">
@@ -194,13 +194,14 @@ class Typography extends React.Component {
                   <div className="typography-line">
                     <span>Code</span>
                     <p>
-                      This is <code>.css-class-as-code</code>
-                      , an example of an inline code element. Wrap inline code
-                      within a <code>{`<code>...</code>`}</code>
+                      This is <code>.css-class-as-code</code>, an example of an
+                      inline code element. Wrap inline code within a{" "}
+                      <code>{`<code>...</code>`}</code>
                       tag.
                     </p>
                     <pre>
-                      1. #This is an example of preformatted text.<br />
+                      1. #This is an example of preformatted text.
+                      <br />
                       2. #Here is another line of code
                     </pre>
                   </div>
