@@ -94,7 +94,8 @@ class Sidebar extends React.Component {
           Can be found in{" "}
           <code className="highlighter-rouge">
             src/components/Sidebar/Sidebar.js
-          </code>.
+          </code>
+          .
         </p>
         <p>
           This is the left menu which is present on the{" "}
@@ -123,7 +124,8 @@ class Sidebar extends React.Component {
           <code className="highlighter-rouge">src/layouts/RTL/RTL.js</code> and{" "}
           <code className="highlighter-rouge">
             src/components/Sidebar/Sidebar.js
-          </code>.
+          </code>
+          .
         </p>
         <h2>Props</h2>
         <SyntaxHighlighter language="jsx" style={prism}>
