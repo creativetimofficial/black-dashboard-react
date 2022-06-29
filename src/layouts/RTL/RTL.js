@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.2.0
+* Black Dashboard React v1.2.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -44,7 +44,7 @@ function RTL(props) {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
       ps = new PerfectScrollbar(mainPanelRef.current, {
-        suppressScrollX: true,
+        suppressScrollX: true
       });
       let tables = document.querySelectorAll(".table-responsive");
       for (let i = 0; i < tables.length; i++) {
@@ -131,7 +131,7 @@ function RTL(props) {
                 logo={{
                   outterLink: "https://www.creative-tim.com/",
                   text: "الإبداعية تيم",
-                  imgSrc: logo,
+                  imgSrc: logo
                 }}
                 toggleSidebar={toggleSidebar}
               />

@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.2.0
+* Black Dashboard React v1.2.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -29,7 +29,7 @@ import {
   Form,
   Input,
   Row,
-  Col,
+  Col
 } from "reactstrap";
 
 function UserProfile() {
@@ -174,7 +174,7 @@ function UserProfile() {
                     <img
                       alt="..."
                       className="avatar"
-                      src={require("assets/img/emilyz.jpg").default}
+                      src={require("assets/img/emilyz.jpg")}
                     />
                     <h5 className="title">Mike Andrew</h5>
                   </a>
