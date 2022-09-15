@@ -1,0 +1,54 @@
+{
+  "name": "black-dashboard-react",
+  "version": "1.2.1",
+  "private": true,
+  "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "6.1.1",
+    "bootstrap": "4.5.3",
+    "chart.js": "3.4.1",
+    "classnames": "2.3.1",
+    "perfect-scrollbar": "1.5.5",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-chartjs-2": "3.0.4",
+    "react-dom": "18.2.0",
+    "react-notification-alert": "0.0.13",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^3.1.0",
+    "reactstrap": "8.7.1",
+    "sass": "1.53.0"
+  },
+  "scripts": {
+    "start": "PORT=3456 react-scripts start",
+    "build": "react-scripts build && gulp licenses",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile-scss": "sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css",
+    "minify-scss": "sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.min.css --style compressed"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "optionalDependencies": {
+    "eslint-plugin-flowtype": "8.0.3",
+    "jquery": "3.6.0",
+    "typescript": "4.7.4"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.9"
+  }
+}
