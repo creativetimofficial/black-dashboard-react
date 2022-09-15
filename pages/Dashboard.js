@@ -48,7 +48,7 @@ import {
   chartExample2,
   chartExample3,
   chartExample4
-} from "variables/charts.js";
+} from "../variables/charts";
 
 function Dashboard(props) {
   const [bigChartData, setbigChartData] = React.useState("data1");
@@ -129,10 +129,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <Line
+                  {/* <Line
                     data={chartExample1[bigChartData]}
                     options={chartExample1.options}
-                  />
+                  /> */}
                 </div>
               </CardBody>
             </Card>
@@ -149,10 +149,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <Line
+                  {/* <Line
                     data={chartExample2.data}
                     options={chartExample2.options}
-                  />
+                  /> */}
                 </div>
               </CardBody>
             </Card>
@@ -168,10 +168,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <Bar
+                  {/* <Bar
                     data={chartExample3.data}
                     options={chartExample3.options}
-                  />
+                  /> */}
                 </div>
               </CardBody>
             </Card>
@@ -186,10 +186,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <Line
+                  {/* <Line
                     data={chartExample4.data}
                     options={chartExample4.options}
-                  />
+                  /> */}
                 </div>
               </CardBody>
             </Card>
@@ -211,7 +211,7 @@ function Dashboard(props) {
                   >
                     <i className="tim-icons icon-settings-gear-63" />
                   </DropdownToggle>
-                  <DropdownMenu aria-labelledby="dropdownMenuLink" right>
+                  <DropdownMenu aria-labelledby="dropdownMenuLink" end>
                     <DropdownItem
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}

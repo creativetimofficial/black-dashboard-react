@@ -17,7 +17,7 @@
 */
 import React from "react";
 // react plugin for creating notifications over the dashboard
-import NotificationAlert from "react-notification-alert";
+import NotificationAlert from "../components/NotificationAlert/NotificationAlert";
 
 // reactstrap components
 import {
@@ -29,7 +29,7 @@ import {
   CardBody,
   CardTitle,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 function Notifications() {
@@ -69,7 +69,7 @@ function Notifications() {
       ),
       type: type,
       icon: "tim-icons icon-bell-55",
-      autoDismiss: 7
+      autoDismiss: 7,
     };
     notificationAlertRef.current.notificationAlert(options);
   };

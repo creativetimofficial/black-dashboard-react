@@ -20,7 +20,7 @@
 // #############################
 
 // chartExample1 and chartExample2 options
-let chart1_2_options = {
+export const chart1_2_options = {
   maintainAspectRatio: false,
   legend: {
     display: false
@@ -73,7 +73,7 @@ let chart1_2_options = {
 // #########################################
 // // // used inside src/views/Dashboard.js
 // #########################################
-let chartExample1 = {
+export const chartExample1 = {
   data1: (canvas) => {
     let ctx = canvas.getContext("2d");
 
@@ -215,7 +215,7 @@ let chartExample1 = {
 // #########################################
 // // // used inside src/views/Dashboard.js
 // #########################################
-let chartExample2 = {
+export const chartExample2 = {
   data: (canvas) => {
     let ctx = canvas.getContext("2d");
 
@@ -254,7 +254,7 @@ let chartExample2 = {
 // #########################################
 // // // used inside src/views/Dashboard.js
 // #########################################
-let chartExample3 = {
+export const chartExample3 = {
   data: (canvas) => {
     let ctx = canvas.getContext("2d");
 
@@ -333,7 +333,7 @@ let chartExample3 = {
 // #########################################
 // // // used inside src/views/Dashboard.js
 // #########################################
-const chartExample4 = {
+export const chartExample4 = {
   data: (canvas) => {
     let ctx = canvas.getContext("2d");
 
@@ -419,9 +419,9 @@ const chartExample4 = {
   }
 };
 
-module.exports = {
-  chartExample1, // in src/views/Dashboard.js
-  chartExample2, // in src/views/Dashboard.js
-  chartExample3, // in src/views/Dashboard.js
-  chartExample4 // in src/views/Dashboard.js
-};
+// module.exports = {
+//   chartExample1, // in src/views/Dashboard.js
+//   chartExample2, // in src/views/Dashboard.js
+//   chartExample3, // in src/views/Dashboard.js
+//   chartExample4 // in src/views/Dashboard.js
+// };
