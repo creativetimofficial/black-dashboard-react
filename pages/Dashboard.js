@@ -19,8 +19,31 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react plugin used to create charts
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+  BarElement,
+} from "chart.js";
 import { Line, Bar } from "react-chartjs-2";
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 // reactstrap components
 import {
   Button,
@@ -129,10 +152,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  {/* <Line
-                    data={chartExample1[bigChartData]}
+                  <Line
+                    data={chartExample1[bigChartData]()}
                     options={chartExample1.options}
-                  /> */}
+                  />
                 </div>
               </CardBody>
             </Card>
@@ -149,10 +172,11 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  {/* <Line
-                    data={chartExample2.data}
+                  <Line
+                    datasetIdKey="id"
+                    data={chartExample2.data()}
                     options={chartExample2.options}
-                  /> */}
+                  />
                 </div>
               </CardBody>
             </Card>
@@ -168,10 +192,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  {/* <Bar
-                    data={chartExample3.data}
+                  <Bar
+                    data={chartExample3.data()}
                     options={chartExample3.options}
-                  /> */}
+                  />
                 </div>
               </CardBody>
             </Card>
@@ -186,10 +210,10 @@ function Dashboard(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  {/* <Line
-                    data={chartExample4.data}
+                  <Line
+                    data={chartExample4.data()}
                     options={chartExample4.options}
-                  /> */}
+                  />
                 </div>
               </CardBody>
             </Card>
@@ -201,7 +225,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h6 className="title d-inline">Tasks(5)</h6>
                 <p className="card-category d-inline"> today</p>
-                <UncontrolledDropdown>
+                {/* <UncontrolledDropdown>
                   <DropdownToggle
                     caret
                     className="btn-icon"
@@ -231,7 +255,7 @@ function Dashboard(props) {
                       Something else
                     </DropdownItem>
                   </DropdownMenu>
-                </UncontrolledDropdown>
+                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
                 <div className="table-full-width table-responsive">
