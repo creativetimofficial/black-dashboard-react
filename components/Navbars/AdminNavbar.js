@@ -36,7 +36,7 @@ import {
   Container,
   Modal,
   NavbarToggler,
-  ModalHeader
+  ModalHeader,
 } from "reactstrap";
 
 function AdminNavbar(props) {
@@ -78,7 +78,7 @@ function AdminNavbar(props) {
           <div className="navbar-wrapper">
             <div
               className={classNames("navbar-toggle d-inline", {
-                toggled: props.sidebarOpened
+                toggled: props.sidebarOpened,
               })}
             >
               <NavbarToggler onClick={props.toggleSidebar}>
@@ -151,7 +151,7 @@ function AdminNavbar(props) {
                   onClick={(e) => e.preventDefault()}
                 >
                   <div className="photo">
-                    <img alt="..." src={require("assets/img/anime3.png")} />
+                    <img alt="..." src={require("public/img/anime3.png")} />
                   </div>
                   <b className="caret d-none d-lg-block d-xl-block" />
                   <p className="d-lg-none">Log out</p>

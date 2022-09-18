@@ -21,15 +21,15 @@ import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Footer from "components/Footer/Footer.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+import AdminNavbar from "../../components/Navbars/AdminNavbar.js";
+import Footer from "../../components/Footer/Footer.js";
+import Sidebar from "../../components/Sidebar/Sidebar.js";
+import FixedPlugin from "../../components/FixedPlugin/FixedPlugin.js";
 
-import routes from "routes.js";
+import routes from "../../routes.js";
 
-import logo from "assets/img/react-logo.png";
-import { BackgroundColorContext } from "contexts/BackgroundColorContext";
+import logo from "public/img/react-logo.png";
+import { BackgroundColorContext } from "../../contexts/BackgroundColorContext";
 
 var ps;
 
@@ -44,7 +44,7 @@ function Admin(props) {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
       ps = new PerfectScrollbar(mainPanelRef.current, {
-        suppressScrollX: true
+        suppressScrollX: true,
       });
       let tables = document.querySelectorAll(".table-responsive");
       for (let i = 0; i < tables.length; i++) {
@@ -111,7 +111,7 @@ function Admin(props) {
               logo={{
                 outterLink: "https://www.creative-tim.com/",
                 text: "Creative Tim",
-                imgSrc: logo
+                imgSrc: logo,
               }}
               toggleSidebar={toggleSidebar}
             />
