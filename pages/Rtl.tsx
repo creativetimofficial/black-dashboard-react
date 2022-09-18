@@ -20,7 +20,30 @@ import React from "react";
 import classNames from "classnames";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+  BarElement,
+} from "chart.js";
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 // reactstrap components
 import {
   Button,
@@ -39,7 +62,7 @@ import {
   Table,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
@@ -47,8 +70,8 @@ import {
   chartExample1,
   chartExample2,
   chartExample3,
-  chartExample4
-} from "variables/charts.js";
+  chartExample4,
+} from "../variables/charts";
 
 function Rtl() {
   const [bigChartData, setbigChartData] = React.useState("data1");
@@ -75,7 +98,7 @@ function Rtl() {
                       <Button
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data1"
+                          active: bigChartData === "data1",
                         })}
                         color="info"
                         id="0"
@@ -95,7 +118,7 @@ function Rtl() {
                         size="sm"
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data2"
+                          active: bigChartData === "data2",
                         })}
                         onClick={() => setBgChartData("data2")}
                       >
@@ -112,7 +135,7 @@ function Rtl() {
                         size="sm"
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data3"
+                          active: bigChartData === "data3",
                         })}
                         onClick={() => setBgChartData("data3")}
                       >
@@ -130,7 +153,7 @@ function Rtl() {
               <CardBody>
                 <div className="chart-area">
                   <Line
-                    data={chartExample1[bigChartData]}
+                    data={chartExample1[bigChartData]()}
                     options={chartExample1.options}
                   />
                 </div>
@@ -150,7 +173,7 @@ function Rtl() {
               <CardBody>
                 <div className="chart-area">
                   <Line
-                    data={chartExample2.data}
+                    data={chartExample2.data()}
                     options={chartExample2.options}
                   />
                 </div>
@@ -169,7 +192,7 @@ function Rtl() {
               <CardBody>
                 <div className="chart-area">
                   <Bar
-                    data={chartExample3.data}
+                    data={chartExample3.data()}
                     options={chartExample3.options}
                   />
                 </div>
@@ -187,7 +210,7 @@ function Rtl() {
               <CardBody>
                 <div className="chart-area">
                   <Line
-                    data={chartExample4.data}
+                    data={chartExample4.data()}
                     options={chartExample4.options}
                   />
                 </div>
