@@ -15,6 +15,7 @@
     "classnames": "^2.3.2",
     "jquery": "^3.6.1",
     "next": "12.3.0",
+    "perfect-scrollbar": "^1.5.5",
     "react": "18.2.0",
     "react-chartjs-2": "^4.3.1",
     "react-dom": "18.2.0",
