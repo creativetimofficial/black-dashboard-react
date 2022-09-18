@@ -225,7 +225,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h6 className="title d-inline">Tasks(5)</h6>
                 <p className="card-category d-inline"> today</p>
-                {/* <UncontrolledDropdown>
+                <UncontrolledDropdown>
                   <DropdownToggle
                     caret
                     className="btn-icon"
@@ -235,7 +235,7 @@ function Dashboard(props) {
                   >
                     <i className="tim-icons icon-settings-gear-63" />
                   </DropdownToggle>
-                  <DropdownMenu aria-labelledby="dropdownMenuLink" end>
+                  <DropdownMenu aria-labelledby="dropdownMenuLink">
                     <DropdownItem
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
@@ -255,7 +255,7 @@ function Dashboard(props) {
                       Something else
                     </DropdownItem>
                   </DropdownMenu>
-                </UncontrolledDropdown> */}
+                </UncontrolledDropdown>
               </CardHeader>
               <CardBody>
                 <div className="table-full-width table-responsive">
