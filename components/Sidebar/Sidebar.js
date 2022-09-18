@@ -32,6 +32,7 @@ import {
   backgroundColors,
 } from "contexts/BackgroundColorContext";
 
+import Link from "next/link";
 var ps;
 
 function Sidebar(props) {
@@ -87,24 +88,24 @@ function Sidebar(props) {
       );
     } else {
       logoImg = (
-        <Link
-          to={logo.innerLink}
+        <a
+          href={logo.innerLink}
           className="simple-text logo-mini"
           onClick={props.toggleSidebar}
         >
           <div className="logo-img">
             <img src={logo.imgSrc} alt="react-logo" />
           </div>
-        </Link>
+        </a>
       );
       logoText = (
-        <Link
-          to={logo.innerLink}
+        <a
+          href={logo.innerLink}
           className="simple-text logo-normal"
           onClick={props.toggleSidebar}
         >
           {logo.text}
-        </Link>
+        </a>
       );
     }
   }
@@ -129,15 +130,17 @@ function Sidebar(props) {
                     }
                     key={key}
                   >
-                    <a
+                    <Link
                       href={prop.layout + prop.path}
                       className="nav-link"
                       activeClassName="active"
                       onClick={props.toggleSidebar}
                     >
-                      <i className={prop.icon} />
-                      <p>{rtlActive ? prop.rtlName : prop.name}</p>
-                    </a>
+                      <a>
+                        <i className={prop.icon} />
+                        <p>{rtlActive ? prop.rtlName : prop.name}</p>
+                      </a>
+                    </Link>
                   </li>
                 );
               })}
