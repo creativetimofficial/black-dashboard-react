@@ -17,7 +17,7 @@
 */
 import React from "react";
 // react plugin for creating notifications over the dashboard
-import NotificationAlert from "../components/NotificationAlert/NotificationAlert";
+import NotificationAlert from "../../components/NotificationAlert/NotificationAlert";
 
 // reactstrap components
 import {
