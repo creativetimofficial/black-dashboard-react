@@ -19,13 +19,14 @@
 import React from "react";
 // import { NavLink, Link, useLocation } from "react-router-dom";
 // nodejs library to set properties for components
+import { useRouter } from "next/router";
 import { PropTypes } from "prop-types";
 
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
+import { Nav, NavLink } from "reactstrap";
 import {
   BackgroundColorContext,
   backgroundColors,
@@ -34,7 +35,7 @@ import {
 var ps;
 
 function Sidebar(props) {
-  const location = useLocation();
+  const location = useRouter();
   const sidebarRef = React.useRef(null);
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
@@ -128,23 +129,23 @@ function Sidebar(props) {
                     }
                     key={key}
                   >
-                    <NavLink
-                      to={prop.layout + prop.path}
+                    <a
+                      href={prop.layout + prop.path}
                       className="nav-link"
                       activeClassName="active"
                       onClick={props.toggleSidebar}
                     >
                       <i className={prop.icon} />
                       <p>{rtlActive ? prop.rtlName : prop.name}</p>
-                    </NavLink>
+                    </a>
                   </li>
                 );
               })}
               <li className="active-pro">
-                <ReactstrapNavLink href="https://www.creative-tim.com/product/black-dashboard-pro-react?ref=bdr-user-archive-sidebar-upgrade-pro">
+                <NavLink href="https://www.creative-tim.com/product/black-dashboard-pro-react?ref=bdr-user-archive-sidebar-upgrade-pro">
                   <i className="tim-icons icon-spaceship" />
                   <p>Upgrade to PRO</p>
-                </ReactstrapNavLink>
+                </NavLink>
               </li>
             </Nav>
           </div>
