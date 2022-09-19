@@ -134,9 +134,8 @@ function Sidebar(props) {
                       href={prop.layout + prop.path}
                       className="nav-link"
                       activeClassName="active"
-                      onClick={props.toggleSidebar}
                     >
-                      <a>
+                      <a onClick={props.toggleSidebar}>
                         <i className={prop.icon} />
                         <p>{rtlActive ? prop.rtlName : prop.name}</p>
                       </a>
