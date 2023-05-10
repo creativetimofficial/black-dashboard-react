@@ -404,7 +404,7 @@ $font-paragraph:               1rem          !default;
 $font-weight-base:            $font-weight-normal !default;
 $shape-height-base:            1.428571 !default;
 
-$headings-margin-bottom:      ($spacer / 2);
+$headings-margin-bottom:      calc($spacer / 2);
 $headings-font-family:        inherit !default;
 $headings-font-weight:        $font-weight-normal !default;
 $headings-line-height:        1.2 !default;

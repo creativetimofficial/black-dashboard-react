@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.2.1
+* Black Dashboard React v1.2.2
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -39,7 +39,7 @@ import {
   Table,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
@@ -47,7 +47,7 @@ import {
   chartExample1,
   chartExample2,
   chartExample3,
-  chartExample4
+  chartExample4,
 } from "variables/charts.js";
 
 function Dashboard(props) {
@@ -75,7 +75,7 @@ function Dashboard(props) {
                       <Button
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data1"
+                          active: bigChartData === "data1",
                         })}
                         color="info"
                         id="0"
@@ -95,7 +95,7 @@ function Dashboard(props) {
                         size="sm"
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data2"
+                          active: bigChartData === "data2",
                         })}
                         onClick={() => setBgChartData("data2")}
                       >
@@ -112,7 +112,7 @@ function Dashboard(props) {
                         size="sm"
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data3"
+                          active: bigChartData === "data3",
                         })}
                         onClick={() => setBgChartData("data3")}
                       >

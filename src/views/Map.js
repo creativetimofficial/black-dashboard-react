@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.2.1
+* Black Dashboard React v1.2.2
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -35,243 +35,243 @@ const MapWrapper = () => {
           elementType: "geometry",
           stylers: [
             {
-              color: "#1d2c4d"
-            }
-          ]
+              color: "#1d2c4d",
+            },
+          ],
         },
         {
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#8ec3b9"
-            }
-          ]
+              color: "#8ec3b9",
+            },
+          ],
         },
         {
           elementType: "labels.text.stroke",
           stylers: [
             {
-              color: "#1a3646"
-            }
-          ]
+              color: "#1a3646",
+            },
+          ],
         },
         {
           featureType: "administrative.country",
           elementType: "geometry.stroke",
           stylers: [
             {
-              color: "#4b6878"
-            }
-          ]
+              color: "#4b6878",
+            },
+          ],
         },
         {
           featureType: "administrative.land_parcel",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#64779e"
-            }
-          ]
+              color: "#64779e",
+            },
+          ],
         },
         {
           featureType: "administrative.province",
           elementType: "geometry.stroke",
           stylers: [
             {
-              color: "#4b6878"
-            }
-          ]
+              color: "#4b6878",
+            },
+          ],
         },
         {
           featureType: "landscape.man_made",
           elementType: "geometry.stroke",
           stylers: [
             {
-              color: "#334e87"
-            }
-          ]
+              color: "#334e87",
+            },
+          ],
         },
         {
           featureType: "landscape.natural",
           elementType: "geometry",
           stylers: [
             {
-              color: "#023e58"
-            }
-          ]
+              color: "#023e58",
+            },
+          ],
         },
         {
           featureType: "poi",
           elementType: "geometry",
           stylers: [
             {
-              color: "#283d6a"
-            }
-          ]
+              color: "#283d6a",
+            },
+          ],
         },
         {
           featureType: "poi",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#6f9ba5"
-            }
-          ]
+              color: "#6f9ba5",
+            },
+          ],
         },
         {
           featureType: "poi",
           elementType: "labels.text.stroke",
           stylers: [
             {
-              color: "#1d2c4d"
-            }
-          ]
+              color: "#1d2c4d",
+            },
+          ],
         },
         {
           featureType: "poi.park",
           elementType: "geometry.fill",
           stylers: [
             {
-              color: "#023e58"
-            }
-          ]
+              color: "#023e58",
+            },
+          ],
         },
         {
           featureType: "poi.park",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#3C7680"
-            }
-          ]
+              color: "#3C7680",
+            },
+          ],
         },
         {
           featureType: "road",
           elementType: "geometry",
           stylers: [
             {
-              color: "#304a7d"
-            }
-          ]
+              color: "#304a7d",
+            },
+          ],
         },
         {
           featureType: "road",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#98a5be"
-            }
-          ]
+              color: "#98a5be",
+            },
+          ],
         },
         {
           featureType: "road",
           elementType: "labels.text.stroke",
           stylers: [
             {
-              color: "#1d2c4d"
-            }
-          ]
+              color: "#1d2c4d",
+            },
+          ],
         },
         {
           featureType: "road.highway",
           elementType: "geometry",
           stylers: [
             {
-              color: "#2c6675"
-            }
-          ]
+              color: "#2c6675",
+            },
+          ],
         },
         {
           featureType: "road.highway",
           elementType: "geometry.fill",
           stylers: [
             {
-              color: "#9d2a80"
-            }
-          ]
+              color: "#9d2a80",
+            },
+          ],
         },
         {
           featureType: "road.highway",
           elementType: "geometry.stroke",
           stylers: [
             {
-              color: "#9d2a80"
-            }
-          ]
+              color: "#9d2a80",
+            },
+          ],
         },
         {
           featureType: "road.highway",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#b0d5ce"
-            }
-          ]
+              color: "#b0d5ce",
+            },
+          ],
         },
         {
           featureType: "road.highway",
           elementType: "labels.text.stroke",
           stylers: [
             {
-              color: "#023e58"
-            }
-          ]
+              color: "#023e58",
+            },
+          ],
         },
         {
           featureType: "transit",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#98a5be"
-            }
-          ]
+              color: "#98a5be",
+            },
+          ],
         },
         {
           featureType: "transit",
           elementType: "labels.text.stroke",
           stylers: [
             {
-              color: "#1d2c4d"
-            }
-          ]
+              color: "#1d2c4d",
+            },
+          ],
         },
         {
           featureType: "transit.line",
           elementType: "geometry.fill",
           stylers: [
             {
-              color: "#283d6a"
-            }
-          ]
+              color: "#283d6a",
+            },
+          ],
         },
         {
           featureType: "transit.station",
           elementType: "geometry",
           stylers: [
             {
-              color: "#3a4762"
-            }
-          ]
+              color: "#3a4762",
+            },
+          ],
         },
         {
           featureType: "water",
           elementType: "geometry",
           stylers: [
             {
-              color: "#0e1626"
-            }
-          ]
+              color: "#0e1626",
+            },
+          ],
         },
         {
           featureType: "water",
           elementType: "labels.text.fill",
           stylers: [
             {
-              color: "#4e6d70"
-            }
-          ]
-        }
-      ]
+              color: "#4e6d70",
+            },
+          ],
+        },
+      ],
     };
 
     map = new google.maps.Map(map, mapOptions);
@@ -280,7 +280,7 @@ const MapWrapper = () => {
       position: myLatlng,
       map: map,
       animation: google.maps.Animation.DROP,
-      title: "BLK Design System PRO React!"
+      title: "BLK Design System PRO React!",
     });
 
     const contentString =
@@ -288,7 +288,7 @@ const MapWrapper = () => {
       "<p>A freebie Admin for ReactStrap, Bootstrap, React, and React Hooks.</p></div>";
 
     const infowindow = new google.maps.InfoWindow({
-      content: contentString
+      content: contentString,
     });
 
     google.maps.event.addListener(marker, "click", function () {
