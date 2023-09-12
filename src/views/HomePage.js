@@ -26,6 +26,9 @@ function Tables() {
     targetAmount: '',
   });
 
+  const [monthsNeeded, setMonthsNeeded] = useState(null);
+
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     console.log(formData);
@@ -41,11 +44,43 @@ function Tables() {
 
     try {
       const response = await axios.post('http://localhost:3005/calculate', formData);
+      const months = response.data.monthsNeeded;
+      console.log(`It will take ${months} months to reach your goal.`);
+      setMonthsNeeded(months);
       console.log(response.data);
     } catch (error) {
       console.error('Error sending data to the backend:', error);
     }
   };
+
+  // Generate table rows based on the number of months needed
+  const generateTableRows = () => {
+    if (monthsNeeded === null) {
+      return null;
+    }
+
+    const rows = [];
+    let currentSavings = parseFloat(formData.initialSaving);
+    const monthlyDeposit = parseFloat(formData.monthlyDeposit);
+    const monthlyProfit = parseFloat(formData.investmentProfit);
+
+    for (let month = 1; month <= monthsNeeded; month++) {
+      const monthlyGrowth = (currentSavings + monthlyDeposit) * (monthlyProfit / 100);
+      currentSavings += monthlyDeposit + monthlyGrowth;
+
+      rows.push(
+        <tr key={month}>
+          <td>{month}</td>
+          <td>${monthlyDeposit.toFixed(2)}</td>
+          <td>${monthlyGrowth.toFixed(2)}</td>
+          <td className="text-center">${currentSavings.toFixed(2)}</td>
+        </tr>
+      );
+    }
+
+    return rows;
+  };
+
 
   return (
     <>
@@ -154,6 +189,31 @@ function Tables() {
                     </Button>
                   </CardFooter>
                 </Form>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col md="12">
+            <Card className="card-plain">
+              <CardHeader>
+                <CardTitle tag="h4">Results</CardTitle>
+                <p className="category">Total savings for monthly</p>
+              </CardHeader>
+              <CardBody>
+              {monthsNeeded !== null && (
+                  <Table className="tablesorter" responsive>
+                    <thead className="text-primary">
+                      <tr>
+                        <th>Month</th>
+                        <th>Monthly Deposit</th>
+                        <th>Monthly Profit</th>
+                        <th className="text-center">Total Saving</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {generateTableRows()}
+                    </tbody>
+                  </Table>
+                )}
               </CardBody>
             </Card>
           </Col>
