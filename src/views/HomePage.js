@@ -40,7 +40,7 @@ function Tables() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('/calculate', formData);
+      const response = await axios.post('http://localhost:3005/calculate', formData);
       console.log(response.data);
     } catch (error) {
       console.error('Error sending data to the backend:', error);
