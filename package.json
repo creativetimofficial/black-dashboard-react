@@ -20,6 +20,7 @@
     "react-notification-alert": "0.0.13",
     "react-router-dom": "6.11.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.3",
     "sass": "1.62.1"
   },
   "scripts": {

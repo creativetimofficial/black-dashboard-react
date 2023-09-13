@@ -1,6 +1,8 @@
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from "react";
 import axios from 'axios';
+import {Notifications} from "./Notifications.js"
 // reactstrap components
 import {
   Button,
@@ -15,6 +17,7 @@ import {
   Col,
   CardTitle,
   Table,
+  Alert
 } from "reactstrap";
 
 function Tables() {
@@ -27,7 +30,9 @@ function Tables() {
   });
 
   const [monthsNeeded, setMonthsNeeded] = useState(null);
+  const [formError, setFormError] = useState(false);
 
+  
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -42,11 +47,21 @@ function Tables() {
   const handleSubmit = async (event) => { 
     event.preventDefault();
 
+        // Check if any of the required fields are empty
+        if (!formData.initialSaving || !formData.monthlyDeposit || !formData.investmentProfit || !formData.targetAmount) {
+          setFormError(true);
+          return;
+        }
+
     try {
       const response = await axios.post('http://localhost:3005/calculate', formData);
       const months = response.data.monthsNeeded;
       console.log(`It will take ${months} months to reach your goal.`);
       setMonthsNeeded(months);
+      setFormError(false); // Reset form error
+
+      toast.success(`Success! It will take ${months} months to reach your goal. Scroll down to see details.`);
+
       console.log(response.data);
     } catch (error) {
       console.error('Error sending data to the backend:', error);
@@ -85,6 +100,7 @@ function Tables() {
   return (
     <>
       <div className="content">
+      <ToastContainer />
         <Row>
           <Col md="12">
             <Card>
@@ -183,6 +199,11 @@ function Tables() {
                       </tr>
                     </tbody>
                   </Table>
+                  {formError && (
+                    <Alert color="warning">
+                      Please fill in all required fields.
+                    </Alert>
+                  )}
                   <CardFooter>
                     <Button className="btn-fill" color="primary" type="submit">
                       Calculate
