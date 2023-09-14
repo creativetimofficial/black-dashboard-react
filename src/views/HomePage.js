@@ -53,6 +53,16 @@ function Tables() {
           return;
         }
 
+        if (
+          parseFloat(formData.initialSaving) < 0 ||
+          parseFloat(formData.monthlyDeposit) < 0 ||
+          parseFloat(formData.investmentProfit) < 0 ||
+          parseFloat(formData.targetAmount) < 0
+        ) {
+          setFormError(true);
+          return;
+        }
+
     try {
       const response = await axios.post('http://localhost:3005/calculate', formData);
       const months = response.data.monthsNeeded;
@@ -123,6 +133,8 @@ function Tables() {
                                 type="number"
                                 value={formData.initialSaving}
                                 onChange={handleInputChange}
+                                min="0"
+                                required
                               />
                             </FormGroup>
                           </Col>
@@ -140,6 +152,8 @@ function Tables() {
                           type="number"
                           onChange={handleInputChange}
                           value={formData.monthlyDeposit}
+                          min="0"
+                          required
                         />
                       </FormGroup>
                     </Col></td>
@@ -156,6 +170,8 @@ function Tables() {
                            type="select"
                            onChange={handleInputChange}
                            value={formData.invest}
+                           min="0"
+                           required
                          >
                         <option>Yes</option>
                         <option>No</option>
@@ -176,6 +192,8 @@ function Tables() {
                           onChange={handleInputChange}
                           placeholder="Enter the expected monthly profit"
                           type="number"
+                          min="0"
+                          required
                         />
                       </FormGroup>
                     </Col>
@@ -193,6 +211,8 @@ function Tables() {
                           placeholder="Enter the target amount"
                           value={formData.targetAmount}
                           type="number"
+                          min="0"
+                          required
                         />
                       </FormGroup>
                     </Col></td>
