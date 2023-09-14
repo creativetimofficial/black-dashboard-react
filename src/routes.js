@@ -40,22 +40,22 @@ var routes = [
     component: <Dashboard />,
     layout: "/admin",
   },
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    rtlName: "Kullanıcı Profili",
-    icon: "tim-icons icon-single-02",
-    component: <UserProfile />,
-    layout: "/admin",
-  },
-  {
-    path: "/rtl-support",
-    name: "Türkçe",
-    rtlName: "Türkçe",
-    icon: "tim-icons icon-world",
-    component: <Rtl />,
-    layout: "/rtl",
-  },
+  // {
+  //   path: "/user-profile",
+  //   name: "User Profile",
+  //   rtlName: "Kullanıcı Profili",
+  //   icon: "tim-icons icon-single-02",
+  //   component: <UserProfile />,
+  //   layout: "/admin",
+  // },
+  // {
+  //   path: "/rtl-support",
+  //   name: "Türkçe",
+  //   rtlName: "Türkçe",
+  //   icon: "tim-icons icon-world",
+  //   component: <Rtl />,
+  //   layout: "/rtl",
+  // },
 
 ];
 export default routes;

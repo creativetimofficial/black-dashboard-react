@@ -96,7 +96,7 @@ let chartExample1 = {
       ],
       datasets: [
         {
-          label: "My First dataset",
+          label: "Total Savings",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",
