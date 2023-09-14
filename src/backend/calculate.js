@@ -7,7 +7,31 @@ app.use(cors());
 
 function calculateGoal(initialSavings, monthlyDeposit, monthlyProfit, invest, goalAmount) {
   if(invest === "No"){
-    return 'You are not investing.'
+
+    if (initialSavings >= goalAmount) {
+      return 0; // Already reached the goal.
+    }
+    initialSavings = parseFloat(initialSavings);
+    monthlyDeposit = parseFloat(monthlyDeposit);
+    monthlyProfit = parseFloat(monthlyProfit);
+    goalAmount = parseFloat(goalAmount);
+    let months = 0;
+    let currentSavings = initialSavings;
+  
+    while (currentSavings < goalAmount) {
+      // Calculate monthly growth from investments
+   
+  
+      // Update current savings
+      currentSavings += monthlyDeposit;
+
+      months++;
+  
+    }
+  
+    return months;
+
+
   } else {
 
     if (initialSavings >= goalAmount) {
@@ -17,7 +41,7 @@ function calculateGoal(initialSavings, monthlyDeposit, monthlyProfit, invest, go
     monthlyDeposit = parseFloat(monthlyDeposit);
     monthlyProfit = parseFloat(monthlyProfit);
     goalAmount = parseFloat(goalAmount);
-    let days = 0;
+    let months = 0;
     let currentSavings = initialSavings;
   
     while (currentSavings < goalAmount) {
@@ -28,11 +52,11 @@ function calculateGoal(initialSavings, monthlyDeposit, monthlyProfit, invest, go
       // Update current savings
       currentSavings += monthlyDeposit + monthlyGrowth;
 
-      days++;
+      months++;
   
     }
   
-    return days;
+    return months;
   }
 
 }

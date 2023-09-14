@@ -18,7 +18,8 @@
 }
 .sidebar,
 .off-canvas-sidebar{
-  @include linear-gradient($primary-states, $primary);
+  //@include linear-gradient( #263148, #344675);
+  background:  #263148;
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;

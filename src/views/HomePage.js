@@ -48,7 +48,7 @@ function Tables() {
     event.preventDefault();
 
         // Check if any of the required fields are empty
-        if (!formData.initialSaving || !formData.monthlyDeposit || !formData.investmentProfit || !formData.targetAmount) {
+        if (!formData.initialSaving || !formData.monthlyDeposit || !formData.targetAmount) {
           setFormError(true);
           return;
         }
@@ -56,7 +56,6 @@ function Tables() {
         if (
           parseFloat(formData.initialSaving) < 0 ||
           parseFloat(formData.monthlyDeposit) < 0 ||
-          parseFloat(formData.investmentProfit) < 0 ||
           parseFloat(formData.targetAmount) < 0
         ) {
           setFormError(true);
@@ -77,7 +76,44 @@ function Tables() {
       console.error('Error sending data to the backend:', error);
     }
   };
+  const renderInvestmentProfitField = () => {
+    if (formData.invest === 'No') {
+      return null; // Return nothing if "No" is selected
+    }
 
+    return (
+      <tr>
+        <td>
+          <Col className="pl-md-1" md="3">
+            <FormGroup>
+              <label><b>Expected Monthly Investment Profit (%)</b></label>
+              <Input
+                id="investmentProfit"
+                name="investmentProfit"
+                value={formData.investmentProfit}
+                onChange={handleInputChange}
+                placeholder="Enter the expected monthly profit"
+                type="number"
+                min="0"
+                
+              />
+            </FormGroup>
+          </Col>
+        </td>
+      </tr>
+    );
+  };
+
+    // Conditionally render the "Monthly Profit" column
+    const renderMonthlyProfitColumn = () => {
+      if (formData.invest === 'No') {
+        return null; // Return nothing if "No" is selected
+      }
+  
+      return (
+        <th>Monthly Profit</th>
+      );
+    };
   // Generate table rows based on the number of months needed
   const generateTableRows = () => {
     if (monthsNeeded === null) {
@@ -90,17 +126,29 @@ function Tables() {
     const monthlyProfit = parseFloat(formData.investmentProfit);
 
     for (let month = 1; month <= monthsNeeded; month++) {
-      const monthlyGrowth = (currentSavings + monthlyDeposit) * (monthlyProfit / 100);
-      currentSavings += monthlyDeposit + monthlyGrowth;
 
-      rows.push(
-        <tr key={month}>
-          <td>{month}</td>
-          <td>${monthlyDeposit.toFixed(2)}</td>
-          <td>${monthlyGrowth.toFixed(2)}</td>
-          <td className="text-center">${currentSavings.toFixed(2)}</td>
-        </tr>
-      );
+
+      if (formData.invest === 'Yes') {
+        const monthlyGrowth = (currentSavings + monthlyDeposit) * (monthlyProfit / 100);
+        currentSavings += monthlyDeposit + monthlyGrowth;
+        rows.push(
+          <tr key={month}>
+            <td>{month}</td>
+            <td>${monthlyDeposit.toFixed(2)}</td>
+            <td>${monthlyGrowth.toFixed(2)}</td>
+            <td className="text-center">${currentSavings.toFixed(2)}</td>
+          </tr>
+        );
+      } else {
+        currentSavings += monthlyDeposit;
+        rows.push(
+          <tr key={month}>
+            <td>{month}</td>
+            <td>${monthlyDeposit.toFixed(2)}</td>
+            <td className="text-center">${currentSavings.toFixed(2)}</td>
+          </tr>
+        );
+      }
     }
 
     return rows;
@@ -115,7 +163,7 @@ function Tables() {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Calculate</CardTitle>
+                <CardTitle tag="h2"><b>Calculate</b></CardTitle>
               </CardHeader>
               <CardBody>
                 <Form onSubmit={handleSubmit}>
@@ -125,7 +173,7 @@ function Tables() {
                         <td>
                           <Col className="pl-md-1" md="3">
                             <FormGroup>
-                              <label>Initial Saving ($)</label>
+                              <label><b>Initial Saving ($)</b></label>
                               <Input
                                 id="initialSaving"
                                 name="initialSaving"
@@ -144,7 +192,7 @@ function Tables() {
                       <td>
                     <Col className="pl-md-1" md="3">
                       <FormGroup>
-                        <label>Monthly Deposit ($)</label>
+                        <label><b>Monthly Deposit ($)</b></label>
                         <Input
                           id="monthlyDeposit"
                           name="monthlyDeposit"
@@ -162,7 +210,7 @@ function Tables() {
                         <td>
                      <Col className="px-md-1" md="3">
                        <FormGroup>
-                         <label>Do you invest?</label>
+                         <label><b>Do you invest?</b></label>
                          <Input
                            id="invest"
                            name="invest"
@@ -171,7 +219,7 @@ function Tables() {
                            onChange={handleInputChange}
                            value={formData.invest}
                            min="0"
-                           required
+                           
                          >
                         <option>Yes</option>
                         <option>No</option>
@@ -180,30 +228,12 @@ function Tables() {
                      </Col>
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                        <Col className="pl-md-1" md="3">
-                      <FormGroup>
-                        <label>Expected Monthly Investment Profit (%)</label>
-                        <Input
-                          id="investmentProfit"
-                          name="investmentProfit"
-                          value={formData.investmentProfit}
-                          onChange={handleInputChange}
-                          placeholder="Enter the expected monthly profit"
-                          type="number"
-                          min="0"
-                          required
-                        />
-                      </FormGroup>
-                    </Col>
-                        </td>
-                      </tr>
+                      {renderInvestmentProfitField()}
                       <tr>
                       <td>
                     <Col className="pl-md-1" md="3">
                       <FormGroup>
-                        <label>Target Amount ($)</label>
+                        <label><b>Target Amount ($)</b></label>
                         <Input
                           id="targetAmount"
                           name="targetAmount"
@@ -225,7 +255,7 @@ function Tables() {
                     </Alert>
                   )}
                   <CardFooter>
-                    <Button className="btn-fill" color="primary" type="submit">
+                    <Button className="btn-fill" type="submit">
                       Calculate
                     </Button>
                   </CardFooter>
@@ -236,7 +266,7 @@ function Tables() {
           <Col md="12">
             <Card className="card-plain">
               <CardHeader>
-                <CardTitle tag="h4">Results</CardTitle>
+                <CardTitle tag="h2"><b>Results</b></CardTitle>
                 <p className="category">Total savings for monthly</p>
               </CardHeader>
               <CardBody>
@@ -246,7 +276,7 @@ function Tables() {
                       <tr>
                         <th>Month</th>
                         <th>Monthly Deposit</th>
-                        <th>Monthly Profit</th>
+                        {renderMonthlyProfitColumn()}
                         <th className="text-center">Total Saving</th>
                       </tr>
                     </thead>

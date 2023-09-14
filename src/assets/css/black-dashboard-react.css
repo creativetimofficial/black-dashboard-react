@@ -16731,11 +16731,11 @@ hr {
 
 .sidebar,
 .off-canvas-sidebar {
-  background: #ba54f5;
-  background: -webkit-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: -o-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: -moz-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+  background: #344675;
+  /* background: -webkit-linear-gradient(0deg, #344675 0%, #e14eca 100%);
+  background: -o-linear-gradient(0deg, #344675 0%, #e14eca 100%);
+  background: -moz-linear-gradient(0deg, #344675 0%, #e14eca 100%); */
+  background: linear-gradient(to bottom left, #344675, #263148, #344675);
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;
