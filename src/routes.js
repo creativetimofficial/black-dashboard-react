@@ -23,6 +23,8 @@ import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import HomePage from "views/HomePage.js";
+import Crypto from "views/Cryptos.js";
+
 var routes = [
   {
     path: "/home-page",
@@ -38,6 +40,14 @@ var routes = [
     rtlName: "Grafikler",
     icon: "tim-icons icon-chart-pie-36",
     component: <Dashboard />,
+    layout: "/admin",
+  },
+  {
+    path: "/cryptos",
+    name: "Crypto Currencies",
+    rtlName: "Kripto Paralar",
+    icon: "tim-icons icon-chart-pie-36",
+    component: <Crypto />,
     layout: "/admin",
   },
   // {

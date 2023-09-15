@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+h1 {
+  font-weight: 900;
+  color: #f38b2a;
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: 900;
+  color: #353535;
+}
+
+.moeda-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: #fff;
+}
+
+.moeda-search {
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.moeda-text {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.moeda-input {
+  padding-left: 16px;
+  width: 500px;
+  outline: none;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 19px;
+  border-color: #1b1d6e;
+  background-color: #fff;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.moeda-input::placeholder {
+  color: rgb(170, 170, 170);
+}
