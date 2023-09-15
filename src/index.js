@@ -37,7 +37,7 @@ root.render(
     <BackgroundColorWrapper>
       <BrowserRouter>
         <Routes>
-          <Route path="/admin/*" element={<AdminLayout />} />
+          
           <Route path="/rtl/*" element={<RTLLayout />} />
           <Route
             path="*"
