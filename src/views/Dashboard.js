@@ -466,16 +466,16 @@ function Dashboard(props) {
           <Col lg="6" md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Simple Table</CardTitle>
+                <CardTitle tag="h4">Result</CardTitle>
               </CardHeader>
               <CardBody>
                 <Table className="tablesorter" responsive>
                   <thead className="text-primary">
                     <tr>
-                      <th>Name</th>
-                      <th>Country</th>
-                      <th>City</th>
-                      <th className="text-center">Salary</th>
+                      <th>Month</th>
+                      <th>Monthly Deposit</th>
+                      {renderMonthlyProfitColumn()}
+                      <th className="text-center">Total Saving</th>
                     </tr>
                   </thead>
                   <tbody>
