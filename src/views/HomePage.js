@@ -2,7 +2,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from "react";
 import axios from 'axios';
-import {Notifications} from "./Notifications.js"
 // reactstrap components
 import {
   Button,

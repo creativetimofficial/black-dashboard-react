@@ -19,40 +19,6 @@
 // // // Chart variables
 // #############################
 
-// chartExample1 and chartExample2 options
-const handleSubmit = async (event) => { 
-  event.preventDefault();
-
-      // Check if any of the required fields are empty
-      if (!formData.initialSaving || !formData.monthlyDeposit || !formData.targetAmount) {
-        setFormError(true);
-        return;
-      }
-
-      if (
-        parseFloat(formData.initialSaving) < 0 ||
-        parseFloat(formData.monthlyDeposit) < 0 ||
-        parseFloat(formData.targetAmount) < 0
-      ) {
-        setFormError(true);
-        return;
-      }
-
-  try {
-    const response = await axios.post('http://localhost:3005/calculate', formData);
-    const months = response.data.monthsNeeded;
-    console.log(`It will take ${months} months to reach your goal.`);
-    setMonthsNeeded(months);
-    setFormError(false); // Reset form error
-
-    toast.success(`Success! It will take ${months} months to reach your goal. Scroll down to see details.`);
-
-    console.log(response.data);
-  } catch (error) {
-    console.error('Error sending data to the backend:', error);
-  }
-};
-
 
 let chart1_2_options = {
   maintainAspectRatio: false,
