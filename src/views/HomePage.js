@@ -63,7 +63,7 @@ function Tables() {
 
     try {
       const response = await axios.post('http://localhost:3005/calculate', formData);
-      const months = response.data.monthsNeeded;
+      const {months, weeks, days} = response.data;
       console.log(`It will take ${months} months to reach your goal.`);
       setMonthsNeeded(months);
       setFormError(false); // Reset form error
