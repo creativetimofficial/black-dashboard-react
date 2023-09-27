@@ -28,7 +28,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import logo from "assets/img/react-logo.png";
+import logo from "assets/img/dollar-icon-png-2.png";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
@@ -96,17 +96,18 @@ function Admin(props) {
       }
     }
     return "Brand";
-  };
+  };https://www.youtube.com/watch?v=tI77CzWk3zM&ab_channel=Ata
   return (
     <BackgroundColorContext.Consumer>
       {({ color, changeColor }) => (
         <React.Fragment>
           <div className="wrapper">
+            
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: "https://www.creative-tim.com/",
-                text: "Creative Tim",
+                outterLink: "https://www.nezamanmilyoner.com/",
+                text: "Ne Zaman Milyoner?",
                 imgSrc: logo,
               }}
               toggleSidebar={toggleSidebar}

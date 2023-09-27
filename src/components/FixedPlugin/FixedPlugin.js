@@ -34,38 +34,7 @@ function FixedPlugin(props) {
           <i className="fa fa-cog fa-2x" />
         </DropdownToggle>
         <ul className="dropdown-menu show">
-          <li className="header-title">SIDEBAR BACKGROUND</li>
-          <li className="adjustments-line">
-            <div className="badge-colors text-center">
-              <Badge
-                color="primary"
-                className={
-                  props.bgColor === backgroundColors.primary ? "active" : ""
-                }
-                onClick={() => {
-                  props.handleBgClick(backgroundColors.primary);
-                }}
-              />{" "}
-              <Badge
-                color="info"
-                className={
-                  props.bgColor === backgroundColors.blue ? "active" : ""
-                }
-                onClick={() => {
-                  props.handleBgClick(backgroundColors.blue);
-                }}
-              />{" "}
-              <Badge
-                color="success"
-                className={
-                  props.bgColor === backgroundColors.green ? "active" : ""
-                }
-                onClick={() => {
-                  props.handleBgClick(backgroundColors.green);
-                }}
-              />{" "}
-            </div>
-          </li>
+               
           <li className="adjustments-line text-center color-change">
             <ThemeContext.Consumer>
               {({ changeTheme }) => (
@@ -84,37 +53,7 @@ function FixedPlugin(props) {
               )}
             </ThemeContext.Consumer>
           </li>
-          <li className="button-container">
-            <Button
-              href="https://www.creative-tim.com/product/black-dashboard-react"
-              color="primary"
-              block
-              className="btn-round"
-            >
-              Download Now
-            </Button>
-            <Button
-              color="default"
-              block
-              className="btn-round"
-              outline
-              href="https://demos.creative-tim.com/black-dashboard-react/#/documentation/tutorial"
-            >
-              Documentation
-            </Button>
-          </li>
-          <li className="header-title">Want more components?</li>
-          <li className="button-container">
-            <Button
-              href="https://www.creative-tim.com/product/black-dashboard-pro-react"
-              className="btn-round"
-              disabled
-              block
-              color="danger"
-            >
-              Get pro version
-            </Button>
-          </li>
+     
         </ul>
       </Dropdown>
     </div>

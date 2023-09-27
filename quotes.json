@@ -1,0 +1,37 @@
+[{
+    "person": "Elon Musk",
+    "quote": "If you get up in the morning and think the future is going to be better, it is a bright day. Otherwise, it’s not.",
+    "image": "assets/img/elon.png",
+    "title": "CEO of Tesla & SpaceX"
+},
+{
+    "person": "Warren Buffett",
+    "quote": "We simply attempt to be fearful when others are greedy and to be greedy only when others are fearful",
+    "image": "assets/img/buffett.png",
+    "title": "Investor"
+},
+{
+    "person": "Warren Buffett",
+    "quote": "Never depend on a single income. Make an investment to create a second source.",
+    "image": "assets/img/buffett.png",
+    "title": "Investor"
+},
+{
+    "person": "Bill Gates",
+    "quote": "I'm a quote",
+    "image": "assets/img/gates.png",
+    "title": "Founder of Microsoft"
+},
+{
+    "person": "Jeff Bezos",
+    "quote": "Given a 10% chance of a 100 times payoff, you should take that bet every time.",
+    "image": "assets/img/bezos.png",
+    "title": "Founder & CEO of Amazon"
+},
+{
+    "person": "Mark Zuckerberg",
+    "quote": "The biggest risk is not taking any risk in a world that is changing really quickly, the only strategy that is guaranteed to fail is not taking risks.",
+    "image": "assets/img/zuckerberg.png",
+    "title": "Founder & CEO of Facebook"
+}
+]

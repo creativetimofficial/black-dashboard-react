@@ -5,7 +5,7 @@ import {
 } from "contexts/BackgroundColorContext";
 
 export default function BackgroundColorWrapper(props) {
-  const [color, setColor] = useState(backgroundColors.blue);
+  const [color, setColor] = useState(backgroundColors.dark);
 
   function changeColor(color) {
     setColor(color);

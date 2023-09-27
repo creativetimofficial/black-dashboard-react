@@ -1,0 +1,68 @@
+.moeda-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .moeda-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #d7d7d7;
+    width: 900px;
+  }
+  
+  .moeda {
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+    min-width: 300px;
+  }
+  
+  .moeda h2 {
+    font-size: 16px;
+    width: 150px;
+  }
+  
+  .moeda img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .moeda-symbol {
+    text-transform: uppercase;
+  }
+  
+  .moeda-data {
+    display: flex;
+    text-align: right;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .moeda-price {
+    width: 110px;
+  }
+  
+  .moeda-volume {
+    width: 155px;
+  }
+  
+  .moeda-marketcap {
+    width: 230px;
+  }
+  
+  .moeda-percent {
+    width: 100px;
+  }
+  
+  .red {
+    color: #f00606;
+  }
+  
+  .green {
+    color: #1fa710;
+  }
+  

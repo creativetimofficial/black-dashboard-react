@@ -19,7 +19,7 @@
 // // // Chart variables
 // #############################
 
-// chartExample1 and chartExample2 options
+
 let chart1_2_options = {
   maintainAspectRatio: false,
   legend: {
@@ -96,7 +96,7 @@ let chartExample1 = {
       ],
       datasets: [
         {
-          label: "My First dataset",
+          label: "Total Savings",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",

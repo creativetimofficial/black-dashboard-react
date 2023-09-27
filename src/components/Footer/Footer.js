@@ -27,17 +27,17 @@ function Footer() {
       <Container fluid>
         <Nav>
           <NavItem>
-            <NavLink href="https://www.creative-tim.com/?ref=bdr-user-archive-footer">
-              Creative Tim
+            <NavLink href="https://www.linkedin.com/in/koraybarkin">
+              KORAY BARKIN  
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.creative-tim.com/presentation?ref=bdr-user-archive-footer">
-              About Us
+            <NavLink href="https://www.github.com/KorayBarkin">
+              GITHUB
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.creative-tim.com/blog?ref=bdr-user-archive-footer">
+            <NavLink href="https://koraybarkin.medium.com/">
               Blog
             </NavLink>
           </NavItem>
@@ -46,12 +46,12 @@ function Footer() {
           © {new Date().getFullYear()} made with{" "}
           <i className="tim-icons icon-heart-2" /> by{" "}
           <a
-            href="https://www.creative-tim.com/?ref=bdr-user-archive-footer"
+            href="https://www.linkedin.com/in/koraybarkin"
             target="_blank"
           >
-            Creative Tim
+              Koray Barkın
           </a>{" "}
-          for a better web.
+          
         </div>
       </Container>
     </footer>
