@@ -1,22 +1,22 @@
 {
   "name": "black-dashboard-react",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "6.4.0",
+    "@fortawesome/fontawesome-free": "6.5.1",
     "bootstrap": "4.6.2",
     "chart.js": "3.9.1",
-    "classnames": "2.3.2",
+    "classnames": "2.3.3",
     "perfect-scrollbar": "1.5.5",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-chartjs-2": "3.3.0",
     "react-dom": "18.2.0",
     "react-notification-alert": "0.0.13",
-    "react-router-dom": "6.11.1",
+    "react-router-dom": "6.21.1",
     "react-scripts": "5.0.1",
-    "sass": "1.62.1"
+    "sass": "1.69.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,10 +30,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -45,7 +41,8 @@
     "reactstrap": "8.10.1"
   },
   "devDependencies": {
-    "typescript": "5.0.4"
+    "typescript": "5.3.3",
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11"
   },
   "overrides": {
     "svgo": "3.0.2"
