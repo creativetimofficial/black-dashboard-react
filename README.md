@@ -1,10 +1,12 @@
-# [Black Dashboard React](https://demos.creative-tim.com/black-dashboard-react/#/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-react%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20React%20by%20Creative%20Tim%20%7C%20Free%20React%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-react%2F&via=creativetim&hashtags=react%2Ccreativetim%2Cdark%2Cdashboard%2Cbootstrap%2Creactstrap%2Creactjs)
+# [Black Dashboard NextJS](https://demos.creative-tim.com/black-dashboard-react/#/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-react%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20React%20by%20Creative%20Tim%20%7C%20Free%20React%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-react%2F&via=creativetim&hashtags=react%2Ccreativetim%2Cdark%2Cdashboard%2Cbootstrap%2Creactstrap%2Creactjs)
 
 ![version](https://img.shields.io/badge/version-1.2.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]() [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](./github-assets/black-dashboard-react.gif)
+This project is Next.js version of the Black Dashboard React project which is originally made by creativetim.
+It is developed by [Yousef Fatouraee](https://github.com/modulessoft/).
 
-Black Dashboard React is a beautiful [Bootstrap 4](http://getbootstrap.com/), [Reacstrap](https://reactstrap.github.io/) and [React](https://reactjs.org/) ([create-react-app](https://github.com/facebook/create-react-app)) Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
+Black Dashboard NextJS is a beautiful [Bootstrap 4](http://getbootstrap.com/), [Reacstrap](https://reactstrap.github.io/) and [NextJS](https://nextjs.org/) ([create-next-app](https://nextjs.org/docs/api-reference/create-next-app)) coded in TypeScript Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
 Black Dashboard React comes packed with all plugins that you might need inside a project and documentation on how to get started. It is light and easy to use, and also very powerful.
 
 Black Dashboard React features over 16 individual components, giving you the freedom of choosing and combining. This means that there are thousands of possible combinations. All components can take variations in color, that you can easily modify using SASS files. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
@@ -45,9 +47,9 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 ## Demo
 
-| Dashboard                                                                                                             | User Profile                                                                                                            | Tables                                                                                                               | Maps                                                                                                       | Notification                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/dashboard) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/user-page) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/table-list) | [![Maps Page](./github-assets/maps-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/maps) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/notifications) |
+| Dashboard                                                                                                              | User Profile                                                                                                             | Tables                                                                                                                | Maps                                                                                                        | Notification                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-nextjs/#/dashboard) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-nextjs/#/user-page) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-nextjs/#/table-list) | [![Maps Page](./github-assets/maps-page.png)](https://demos.creative-tim.com/black-dashboard-nextjs/#/maps) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-nextjs/#/notifications) |
 
 [View More](https://demos.creative-tim.com/black-dashboard-react/#/dashboard).
 
@@ -55,9 +57,8 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 Quick start options:
 
-- Clone the repo: `git clone https://github.com/creativetimofficial/black-dashboard-react.git`.
-- [Download from Github](https://github.com/creativetimofficial/black-dashboard-react/archive/master.zip).
-- [Download from Creative Tim](https://www.creative-tim.com/product/black-dashboard-react).
+- Clone the repo: `git clone https://github.com/majhoolsoft/black-dashboard-nextjs.git`.
+- [Download from Github](https://github.com/majhoolsoft/black-dashboard-nextjs/archive/Next.js.zip).
 
 ## Documentation
 
@@ -68,26 +69,15 @@ The documentation for the Black Dashboard React is hosted at our [website](https
 Within the download you'll find the following directories and files:
 
 ```
-black-dashboard-react
+black-dashboard-nextjs
 .
 ├── package.json
 ├── CHANGELOG.md
 ├── ISSUE_TEMPLATE.md
 ├── LICENSE.md
 ├── README.md
-├── Documentation
-│   └── documentation.html
-├── github-assets
-│   └── react.svg
-├── public
-│   ├── index.html
-│   └── manifest.json
-└── src
-    ├── index.js
-    ├── logo-white.svg
-    ├── logo.svg
-    ├── routes.js
-    ├── assets
+├── routes.js
+├── assets
     │   ├── css
     │   ├── demo
     │   ├── fonts
@@ -103,32 +93,42 @@ black-dashboard-react
     │       │   │   ├── utilities
     │       │   │   └── vendor
     │       └── black-dashboard.scss
-    ├── components
-    │   ├── FixedPlugin
-    │   │   └── FixedPlugin.js
-    │   ├── Footer
-    │   │   └── Footer.js
-    │   ├── Navbars
-    │   │   ├── AdminNavbar.js
-    │   │   └── RTLNavbar.js
-    │   └── Sidebar
-    │       └── Sidebar.js
+├── Documentation
+│   └── documentation.html
+├── github-assets
+│   └── react.svg
+├── public
+│   └── manifest.json
+├── pages
+    ├── index.tsx
+    ├── _document.tsx
+    ├── _app.tsx
+    ├── admin
+    │   └── Dashboard.tsx
+    │   └── Icons.tsx
+    │   └── Map.tsx
+    │   └── Notifications.tsx
+    │   └── Rtl.tsx
+    │   └── TableList.tsx
+    │   └── Typography.tsx
+    │   └── UserProfile.tsx
+├── components
+    ├── FixedPlugin
+    │   └── FixedPlugin.js
+    ├── Footer
+    │   └── Footer.js
+    ├── Navbars
+    │   ├── AdminNavbar.js
+    │   └── RTLNavbar.js
+    └── Sidebar
+        └── Sidebar.js
     ├── layouts
     │   ├── Admin
     │   │   └── Admin.js
     │   └── RTL
     │       └── RTL.js
-    ├── variables
-    │   └── charts.js
-    └── views
-        ├── Dashboard.js
-        ├── Icons.js
-        ├── Map.js
-        ├── Notifications.js
-        ├── Rtl.js
-        ├── TableList.js
-        ├── Typography.js
-        └── UserProfile.js
+└── variables
+    └── charts.js
 ```
 
 ## Browser Support
@@ -139,9 +139,8 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Resources
 
-- Demo: https://demos.creative-tim.com/black-dashboard-react/#/dashboard
-- Download Page: https://www.creative-tim.com/product/black-dashboard-react
-- Documentation: https://demos.creative-tim.com/black-dashboard-react/#/documentation/tutorial
+- Demo: https://demos.creative-tim.com/black-dashboard-nextjs/#/dashboard
+- Download Page: https://github.com/majhoolsoft/black-dashboard-nextjs
 - License Agreement: https://www.creative-tim.com/license
 - Support: https://www.creative-tim.com/contact-us
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/black-dashboard-react/issues)

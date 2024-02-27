@@ -16,35 +16,37 @@
 
 */
 import React from "react";
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+// import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Footer from "components/Footer/Footer.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+import AdminNavbar from "../../components/Navbars/AdminNavbar.js";
+import Footer from "../../components/Footer/Footer.js";
+import Sidebar from "../../components/Sidebar/Sidebar.js";
+import FixedPlugin from "../../components/FixedPlugin/FixedPlugin.js";
 
-import routes from "routes.js";
+import routes from "../../routes.js";
+const logo = "/img/react-logo.png";
 
-import logo from "assets/img/react-logo.png";
-import { BackgroundColorContext } from "contexts/BackgroundColorContext";
+import { BackgroundColorContext } from "../../contexts/BackgroundColorContext";
 
 var ps;
 
 function Admin(props) {
-  const location = useLocation();
+  const location = useRouter();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(
-    document.documentElement.className.indexOf("nav-open") !== -1
+    // document.documentElement.className.indexOf("nav-open") !== -1
+    false
   );
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
       ps = new PerfectScrollbar(mainPanelRef.current, {
-        suppressScrollX: true
+        suppressScrollX: true,
       });
       let tables = document.querySelectorAll(".table-responsive");
       for (let i = 0; i < tables.length; i++) {
@@ -78,21 +80,6 @@ function Admin(props) {
     document.documentElement.classList.toggle("nav-open");
     setsidebarOpened(!sidebarOpened);
   };
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
   const getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
       if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
@@ -111,7 +98,7 @@ function Admin(props) {
               logo={{
                 outterLink: "https://www.creative-tim.com/",
                 text: "Creative Tim",
-                imgSrc: logo
+                imgSrc: logo,
               }}
               toggleSidebar={toggleSidebar}
             />
@@ -121,16 +108,10 @@ function Admin(props) {
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
               />
-              <Switch>
-                {getRoutes(routes)}
-                <Redirect from="*" to="/admin/dashboard" />
-              </Switch>
-              {
-                // we don't want the Footer to be rendered on map page
-                location.pathname === "/admin/maps" ? null : <Footer fluid />
-              }
+              {props.children}
             </div>
           </div>
+          <Footer />
           <FixedPlugin bgColor={color} handleBgClick={changeColor} />
         </React.Fragment>
       )}
