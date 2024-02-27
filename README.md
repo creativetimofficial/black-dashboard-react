@@ -4,7 +4,7 @@
 
 ![Product Gif](./github-assets/black-dashboard-react.gif)
 This project is Next.js version of the Black Dashboard React project which is originally made by creativetim.
-It is developed by [Majhoolsoft](https://github.com/majhoolsoft/).
+It is developed by [Yousef Fatouraee](https://github.com/modulessoft/).
 
 Black Dashboard NextJS is a beautiful [Bootstrap 4](http://getbootstrap.com/), [Reacstrap](https://reactstrap.github.io/) and [NextJS](https://nextjs.org/) ([create-next-app](https://nextjs.org/docs/api-reference/create-next-app)) coded in TypeScript Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
 Black Dashboard React comes packed with all plugins that you might need inside a project and documentation on how to get started. It is light and easy to use, and also very powerful.
