@@ -24,6 +24,8 @@ import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 
+import FuelLog from "views/FuelLog.js";
+
 var routes = [
   {
     path: "/dashboard",
@@ -39,6 +41,14 @@ var routes = [
     rtlName: "الرموز",
     icon: "tim-icons icon-atom",
     component: <Icons />,
+    layout: "/admin",
+  },
+  {
+    path: "/logFuel",
+    name: "Log Fuel",
+    rtlName: "ملف تعريفي للمستخدم",
+    icon: "tim-icons icon-single-02",
+    component: <FuelLog />,
     layout: "/admin",
   },
   {
