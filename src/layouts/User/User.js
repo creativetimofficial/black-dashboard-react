@@ -34,7 +34,7 @@ import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 var ps;
 
 function Admin(props) {
-  const routes = dynamicRoutes["admin"];
+  const routes = dynamicRoutes["user"];
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(

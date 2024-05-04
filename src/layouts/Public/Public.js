@@ -21,20 +21,20 @@ import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Footer from "components/Footer/Footer.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+// import AdminNavbar from "components/Navbars/AdminNavbar.js";
+// import Footer from "components/Footer/Footer.js";
+// import Sidebar from "components/Sidebar/Sidebar.js";
+// import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import dynamicRoutes from "dynamicRoutes";
 
-import logo from "assets/img/react-logo.png";
+// import logo from "assets/img/react-logo.png";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
 
 function Admin(props) {
-  const routes = dynamicRoutes["admin"];
+  const routes = dynamicRoutes["public"];
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(
@@ -81,7 +81,7 @@ function Admin(props) {
   };
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/public") {
         return (
           <Route path={prop.path} element={prop.component} key={key} exact />
         );
@@ -103,7 +103,7 @@ function Admin(props) {
       {({ color, changeColor }) => (
         <React.Fragment>
           <div className="wrapper">
-            <Sidebar
+            {/* <Sidebar
               routes={routes}
               logo={{
                 outterLink: "https://www.creative-tim.com/",
@@ -111,27 +111,27 @@ function Admin(props) {
                 imgSrc: logo,
               }}
               toggleSidebar={toggleSidebar}
-            />
+            /> */}
             <div className="main-panel" ref={mainPanelRef} data={color}>
-              <AdminNavbar
+              {/* <AdminNavbar
                 brandText={getBrandText(location.pathname)}
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
-              />
+              /> */}
               <Routes>
                 {getRoutes(routes)}
-                <Route
+                {/* <Route
                   path="/"
                   element={<Navigate to="/admin/dashboard" replace />}
-                />
+                /> */}
               </Routes>
-              {
+              {/* {
                 // we don't want the Footer to be rendered on map page
                 location.pathname === "/admin/maps" ? null : <Footer fluid />
-              }
+              } */}
             </div>
           </div>
-          <FixedPlugin bgColor={color} handleBgClick={changeColor} />
+          {/* <FixedPlugin bgColor={color} handleBgClick={changeColor} /> */}
         </React.Fragment>
       )}
     </BackgroundColorContext.Consumer>

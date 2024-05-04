@@ -32,7 +32,13 @@ import {
   Col,
 } from "reactstrap";
 
+import { UserTypeContext } from "contexts/UserTypeContext";
+
 function FuelLog() {
+  const handleBtnClick = () => {
+    console.log("Button Clicked");
+  };
+
   return (
     <>
       <div className="content">
@@ -150,9 +156,21 @@ function FuelLog() {
                 </Form>
               </CardBody>
               <CardFooter>
-                <Button className="btn-fill" color="primary" type="submit">
-                  Save
-                </Button>
+                <UserTypeContext.Consumer>
+                  {({ changeType }) => (
+                    <Button
+                      className="btn-fill"
+                      color="primary"
+                      type="submit"
+                      onClick={() => {
+                        changeType("user");
+                        console.log("DONEEEEEEEEEEEEEEEEEEE 88888888");
+                      }}
+                    >
+                      Save
+                    </Button>
+                  )}
+                </UserTypeContext.Consumer>
               </CardFooter>
             </Card>
           </Col>
