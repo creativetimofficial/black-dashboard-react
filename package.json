@@ -5,14 +5,15 @@
   "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.4.0",
+    "ajv": "^8.16.0",
     "bootstrap": "4.6.2",
     "chart.js": "3.9.1",
     "classnames": "2.3.2",
     "perfect-scrollbar": "1.5.5",
     "prop-types": "15.8.1",
-    "react": "18.2.0",
+    "react": ">=16.8.0",
     "react-chartjs-2": "3.3.0",
-    "react-dom": "18.2.0",
+    "react-dom": ">=16.8.0",
     "react-notification-alert": "0.0.13",
     "react-router-dom": "6.11.1",
     "react-scripts": "5.0.1",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "build": "cross-env PUBLIC_URL=/ cross-env CI=false react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
@@ -45,6 +46,7 @@
     "reactstrap": "8.10.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "typescript": "5.0.4"
   },
   "overrides": {
